@@ -1,6 +1,6 @@
 // .vuepress/config.js
 module.exports = {
-    base: '/vuepress-blog/',
+    base: '/vuepress-blog',
     themeConfig: {
         logo: '/assets/img/logo.png',
         nav: [
