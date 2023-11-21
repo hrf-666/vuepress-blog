@@ -1,5 +1,7 @@
 // .vuepress/config.js
 module.exports = {
+    title: '开发文档',
+    description: '开发文档',
     base: '/vuepress-blog/',
     themeConfig: {
         logo: '/assets/img/logo.png',
