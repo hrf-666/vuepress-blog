@@ -4,7 +4,7 @@ heroImage: /assets/img/home.png
 heroText: 把握现在、就是创造未来
 tagline: 做自己的太阳，不必凭借谁的光
 actionText: 博客 →
-actionLink: /study-nodes/
+actionLink: /study-notes/back-end/java/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

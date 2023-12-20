@@ -1,11 +1,11 @@
 ---
 tags:
-  - 配置
-  - 主题
-  - 索引
+- 配置
+- 主题
+- 索引
 ---
 
-# 你好java
+# rrrr
 编程基础自测考试
 2、Java发展简介
 完善的生态系统
@@ -13,7 +13,7 @@ OAK（橡树）平台
 HotJava浏览器
 sun: Stanford University NetWork
 
-Java 标准开发 J2SE、JAVA SE
+# Java 标准开发 J2SE、JAVA SE
 Java 嵌入式开发 J2ME、JAVA ME
 Java 企开开发 J2EE、JAVA EE
 
@@ -35,7 +35,7 @@ JVM 调优问题
 
 Java源文件.java -> 字节码.class -> 机器码
 
-5、JDK简介
+# 5、JDK简介
 生产环境使用JDK1.8
 JDK Java Development Kit（包含JRE）
 JRE Java Runtime Envrinment
@@ -60,7 +60,7 @@ System.out.println("Hello World!");
 编译执行
 
 
-$ ls
+# $ ls
 Hello.java
 
 $ javac Hello.java  # 编译文件为字节码文件
