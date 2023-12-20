@@ -1,10 +1,10 @@
 // .vuepress/config.js
 module.exports = {
-    title: 'rui blog',
+    title: 'Rui Blog',
     head: [
         ['link', {rel: 'icon', href: '/assets/img/logo.png'}]
     ],
-    description: '技术分享，资源整合',
+    description: '点点滴滴',
     base: '/vuepress-blog/',
     locales: {
         // 键名是该语言所属的子路径
@@ -33,10 +33,10 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/assets/img/logo.png',
-        title: 'Rui',
+        title: 'Rui Blog',
         search: true,
         searchMaxSuggestions: 10,
-        smoothScroll: true,
+        smoothScroll: true,//页面滚动效果
         nav: [
             {text: '首页', link: '/'},
             {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
@@ -59,21 +59,24 @@ module.exports = {
                     }
                 ]
             },
-            {text: '源码', link: 'https://gitee.com/huang-ruifang/vuepress-blog'},
-
         ],
         // sidebar: 'auto'
-
         sidebar: [
             {
+                title: '首页',   // 必要的
+                path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                collapsable: false, // 可选的, 默认值是 true,
+                sidebarDepth: 1,    // 可选的, 默认值是 1
+            },
+            {
                 title: '常用',   // 必要的
-                path: '/study-notes/common/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                path: '/study-notes/common/common-tools/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: false, // 可选的, 默认值是 true,
                 sidebarDepth: 1,    // 可选的, 默认值是 1
                 children: [
                     {
                         title: '常用工具',   // 必要的
-                        path: '/study-notes/tools/common-tools/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                        path: '/study-notes/common/common-tools/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                         collapsable: false, // 可选的, 默认值是 true,
                         sidebarDepth: 1,    // 可选的, 默认值是 1
                     },
@@ -103,9 +106,6 @@ module.exports = {
                         path: '/study-notes/back-end/python/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                         collapsable: false, // 可选的, 默认值是 true,
                         sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/'
-                        ]
                     },
 
                 ],
@@ -135,9 +135,6 @@ module.exports = {
                         path: '/study-notes/front-end/javaScript/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                         collapsable: false, // 可选的, 默认值是 true,
                         sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/'
-                        ]
                     },
 
                 ],
