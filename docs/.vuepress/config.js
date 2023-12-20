@@ -32,16 +32,32 @@ module.exports = {
 
     ],
     themeConfig: {
-        logo: '/assets/img/logo.png',
         title: 'Rui Blog',
+        logo: '/assets/img/logo.png',
         search: true,
         searchMaxSuggestions: 10,
         smoothScroll: true,//页面滚动效果
+        // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+        repo: 'https://gitee.com/huang-ruifang/vuepress-blog',
+        // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+        // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+        repoLabel: '查看源码',
+        // 以下为可选的编辑链接选项
+        // 假如你的文档仓库和项目本身不在一个仓库：
+        // docsRepo: 'vuejs/vuepress',
+        // // 假如文档不是放在仓库的根目录下：
+        // docsDir: 'docs',
+        // // 假如文档放在一个特定的分支下：
+        // docsBranch: 'master',
+        // 默认是 false, 设置为 true 来启用
+        editLinks: true,
+        // 默认为 "Edit this page"
+        editLinkText: '帮助我们改善此页面！',
         nav: [
             {text: '首页', link: '/'},
             {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
             {
-                text: '博客',
+                text: '面试',
                 items: [
                     {
                         text: '后端',
@@ -59,8 +75,24 @@ module.exports = {
                     }
                 ]
             },
+            {
+                text: '博文',
+                link: '/blog-article/'
+            },
+            {
+                text: '代码Demo',
+                items: [
+                    {
+                        text: '后端Demo',
+                        link: '/code-demo/back-end-code/'
+                    },
+                    {
+                        text: '前端Demo',
+                        link: '/code-demo/front-end-code/'
+                    }
+                ]
+            },
         ],
-        // sidebar: 'auto'
         sidebar: [
             {
                 title: '首页',   // 必要的
