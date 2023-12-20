@@ -62,6 +62,7 @@ module.exports = {
                 items: [
                     {
                         text: '后端',
+                        // link: '/study-notes/back-end/',
                         items: [
                             {text: 'java', link: '/study-notes/back-end/java/'},
                             {text: 'python', link: '/study-notes/back-end/python/'}
@@ -69,6 +70,7 @@ module.exports = {
                     },
                     {
                         text: '前端',
+                        // link: '/study-notes/front-end/',
                         items: [
                             {text: 'html', link: '/study-notes/front-end/html/'},
                             {text: 'javaScript', link: '/study-notes/front-end/javaScript/'}
@@ -94,12 +96,11 @@ module.exports = {
                 ]
             },
         ],
+        // sidebar: 'auto',
         sidebar: [
             {
                 title: '首页',   // 必要的
                 path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                collapsable: false, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
             },
             {
                 title: '常用',   // 必要的
@@ -117,7 +118,7 @@ module.exports = {
             },
             {
                 title: '后端',
-                path: '/study-notes/back-end/java/',
+                path: '/study-notes/back-end/',
                 collapsable: false, // 可选的, 默认值是 true,
                 initialOpenGroupIndex: -1, // 可选的, 默认值是 0
                 children: [{
@@ -146,7 +147,7 @@ module.exports = {
             },
             {
                 title: '前端',
-                path: '/study-notes/front-end/java/',
+                path: '/study-notes/front-end/',
                 collapsable: false, // 可选的, 默认值是 true,
                 initialOpenGroupIndex: -1, // 可选的, 默认值是 0
                 children: [{
@@ -164,7 +165,7 @@ module.exports = {
                     ]
                 },
                     {
-                        title: 'JavaScropt',   // 必要的
+                        title: 'JavaScript',   // 必要的
                         path: '/study-notes/front-end/javaScript/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                         collapsable: false, // 可选的, 默认值是 true,
                         sidebarDepth: 1,    // 可选的, 默认值是 1
@@ -172,6 +173,10 @@ module.exports = {
 
                 ],
 
+            },
+            {
+                title: '其他',
+                path: '/other/',
             }
         ],
 
