@@ -1,5 +1,5 @@
 ---
-title: mybatis 查询返回List集合、map集合、List＜Map＞集合
+title: mybatis查询返回List集合、map集合、List＜Map＞集合
 date: 2023-09-19 10:58:00
 tags: 
  - 后端

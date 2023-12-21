@@ -1,8 +1,6 @@
 ---
 title: picGo+gitee设置图床
 date: 2023-08-24 10:58:25
-categories:
-  - 笔记
 tags:
   - 笔记
 ---

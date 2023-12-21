@@ -1,5 +1,5 @@
 ---
-title: easyui tree combotree去掉默认图标或更换图标
+title: easyui-tree-combotree去掉默认图标或更换图标
 date: 2023-09-04 10:58:25
 tags:
   - 笔记
