@@ -1,18 +1,17 @@
 ---
 title: picGo+gitee设置图床
 date: 2023-08-24 10:58:25
+lang: en-US
 sidebar: auto
-prev: ./README.md
-next: ./mybatis查询条件List集合、map集合、Array数组.md
+categories:
+  - 笔记
 tags:
   - 笔记
 ---
 
 
-[//]: # (@[TOC]&#40;picGo+gitee+typora设置图床&#41;)
-[[toc]]
+@[TOC](picGo+gitee+typora设置图床)
 
-[//]: # (# {{ $frontmatter.title }})
 #   picGo+gitee设置图床
 
 

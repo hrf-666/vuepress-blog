@@ -1,13 +1,12 @@
 ---
 title: mybatis 查询返回List集合、map集合、List＜Map＞集合
 date: 2023-09-19 10:58:00
+lang: en-US
 sidebar: auto
-prev: ./mybatis查询条件List集合、map集合、Array数组.md
-next: ./easyui-tree-combotree去掉默认图标.md
-tags: 
- - 后端
+tags: 后端
+categories: mybatis
 ---
-[[toc]]
+
 ## 返回map类型
 ```java
 1. xml中

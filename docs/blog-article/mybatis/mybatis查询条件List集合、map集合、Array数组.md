@@ -1,14 +1,11 @@
 ---
 title: mybatis 查询条件List集合、map集合、Array数组
 date: 2023-09-19 10:58:00
+lang: en-US
 sidebar: auto
-prev: ./picGo+gitee设置图床.md
-next: ./mybatis查询返回List集合、map集合、List＜Map＞集合.md
-tags: 
- - 后端
+tags: 后端
+categories: mybatis
 ---
-
-[[toc]]
 # 参数为集合
 ## 传入map类型
 ```java

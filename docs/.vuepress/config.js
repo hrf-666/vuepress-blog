@@ -1,8 +1,11 @@
-// .vuepress/config.js
+const {sidebarConfig} = require("./config/sidebar");
+const {navConfig} = require("./config/nav");
+const {pluginsConfig} = require("./config/plugins");
 module.exports = {
     title: 'Rui',
     head: [
-        ['link', {rel: 'icon', href: '/assets/img/logo.png'}]
+        ['link', {rel: 'icon', href: '/assets/img/logo.png'}],
+
     ],
     description: '点点滴滴',
     base: '/vuepress-blog/',
@@ -20,17 +23,7 @@ module.exports = {
     //         description: 'Vue 驱动的静态网站生成器'
     //     }
     // },
-    plugins: [
-        ['@vuepress/search', {
-            searchMaxSuggestions: 10
-        }],
-        ['@vuepress/active-header-links', {
-            sidebarLinkSelector: '.sidebar-link',
-            headerAnchorSelector: '.header-anchor'
-        }],
-        ['@vuepress/back-to-top'],
-
-    ],
+    plugins: pluginsConfig,
     themeConfig: {
         title: 'Rui',
         logo: '/assets/img/logo.png',
@@ -38,6 +31,7 @@ module.exports = {
         searchMaxSuggestions: 10,
         permalink: "/:year/:month/:day/:slug",
         smoothScroll: true,//页面滚动效果
+        subSildebar: 'auto', // 或者生成二级菜单
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         repo: 'https://gitee.com/huang-ruifang/vuepress-blog',
         // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
@@ -54,132 +48,7 @@ module.exports = {
         editLinks: true,
         // 默认为 "Edit this page"
         editLinkText: '帮助我们改善此页面！',
-        nav: [
-            {text: '首页', link: '/'},
-            {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
-            {
-                text: '面试',
-                items: [
-                    {
-                        text: '后端',
-                        // link: '/study-notes/back-end/',
-                        items: [
-                            {text: 'java', link: '/study-notes/back-end/java/'},
-                            {text: 'python', link: '/study-notes/back-end/python/'}
-                        ]
-                    },
-                    {
-                        text: '前端',
-                        // link: '/study-notes/front-end/',
-                        items: [
-                            {text: 'html', link: '/study-notes/front-end/html/'},
-                            {text: 'javaScript', link: '/study-notes/front-end/javaScript/'}
-                        ]
-                    }
-                ]
-            },
-            {
-                text: '博文',
-                link: '/blog-article/'
-            },
-            {
-                text: '代码Demo',
-                items: [
-                    {
-                        text: '后端Demo',
-                        link: '/code-demo/back-end-code/'
-                    },
-                    {
-                        text: '前端Demo',
-                        link: '/code-demo/front-end-code/'
-                    }
-                ]
-            },
-        ],
-        // sidebar: 'auto',
-        sidebar: [
-            {
-                title: '首页',   // 必要的
-                path: '/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-            },
-            {
-                title: '常用',   // 必要的
-                path: '/study-notes/common/common-tools/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                collapsable: false, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
-                children: [
-                    {
-                        title: '常用工具',   // 必要的
-                        path: '/study-notes/common/common-tools/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                        collapsable: false, // 可选的, 默认值是 true,
-                        sidebarDepth: 1,    // 可选的, 默认值是 1
-                    },
-                ]
-            },
-            {
-                title: '后端',
-                path: '/study-notes/back-end/',
-                collapsable: false, // 可选的, 默认值是 true,
-                initialOpenGroupIndex: -1, // 可选的, 默认值是 0
-                children: [{
-                    title: 'Java',   // 必要的
-                    path: '/study-notes/back-end/java/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                    collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
-                    children: [
-                        {
-                            title: '基础知识',   // 必要的
-                            path: '/study-notes/back-end/java/basic/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                            collapsable: false, // 可选的, 默认值是 true,
-                            sidebarDepth: 1,    // 可选的, 默认值是 1
-                        }
-                    ]
-                },
-                    {
-                        title: 'Python',   // 必要的
-                        path: '/study-notes/back-end/python/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                        collapsable: false, // 可选的, 默认值是 true,
-                        sidebarDepth: 1,    // 可选的, 默认值是 1
-                    },
-
-                ],
-
-            },
-            {
-                title: '前端',
-                path: '/study-notes/front-end/',
-                collapsable: false, // 可选的, 默认值是 true,
-                initialOpenGroupIndex: -1, // 可选的, 默认值是 0
-                children: [{
-                    title: 'Html',   // 必要的
-                    path: '/study-notes/front-end/html/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                    collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
-                    children: [
-                        {
-                            title: '基础知识',   // 必要的
-                            path: '/study-notes/front-end/html/basic/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                            collapsable: false, // 可选的, 默认值是 true,
-                            sidebarDepth: 1,    // 可选的, 默认值是 1
-                        }
-                    ]
-                },
-                    {
-                        title: 'JavaScript',   // 必要的
-                        path: '/study-notes/front-end/javaScript/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                        collapsable: false, // 可选的, 默认值是 true,
-                        sidebarDepth: 1,    // 可选的, 默认值是 1
-                    },
-
-                ],
-
-            },
-            {
-                title: '其他',
-                path: '/other/',
-            }
-        ],
-
-
+        nav: navConfig,
+        sidebar: sidebarConfig,
     }
 }
