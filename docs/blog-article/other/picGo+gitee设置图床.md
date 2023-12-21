@@ -1,8 +1,6 @@
 ---
 title: picGo+gitee设置图床
 date: 2023-08-24 10:58:25
-lang: en-US
-sidebar: auto
 categories:
   - 笔记
 tags:
@@ -10,11 +8,9 @@ tags:
 ---
 
 
-@[TOC](picGo+gitee+typora设置图床)
-
+[//]: # (@[TOC]&#40;picGo+gitee+typora设置图床&#41;)
+[//]: # ([[TOC]])
 #   picGo+gitee设置图床
-
-
 
 > 当我了解picGo+gitee可以设置图床的时候，我决定试一试。
 >

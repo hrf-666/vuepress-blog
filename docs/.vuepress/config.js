@@ -1,6 +1,7 @@
 const {sidebarConfig} = require("./config/sidebar");
 const {navConfig} = require("./config/nav");
 const {pluginsConfig} = require("./config/plugins");
+// console.log(sidebarConfig)
 module.exports = {
     title: 'Rui',
     head: [

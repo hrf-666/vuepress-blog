@@ -1,12 +1,13 @@
 ---
 title: mybatis 查询条件List集合、map集合、Array数组
 date: 2023-09-19 10:58:00
-lang: en-US
-sidebar: auto
-tags: 后端
+tags: 
+ - 后端
 categories: mybatis
 ---
-# 参数为集合
+
+[//]: # ([[TOC]])
+[//]: # (# 参数为集合)
 ## 传入map类型
 ```java
 Mapper接口如下，service将调用该接口方法，需要注意的是，
