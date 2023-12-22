@@ -19,7 +19,10 @@
               :key="navItem.id"
               :href="navItem.nav_url"
           >
-            <div class="nav_item_text">{{ navItem.nav }}</div>
+            <div class="nav_item_text">
+<!--              <img src="https://res.eemu.cn/LightPicture/2022/06/758fc8b1f2ca02b9.svg">-->
+              {{ navItem.nav }}
+            </div>
           </a>
         </div>
       </div>
