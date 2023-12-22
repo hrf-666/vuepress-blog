@@ -3,17 +3,16 @@ title: easyui-tree-combotree去掉默认图标或更换图标
 date: 2023-09-04 10:58:25
 tags:
   - 笔记
-  - 前端
 ---
 
 [//]: # (@[TOC]&#40;easyui tree combotree 去掉默认图标&#41;)
-[//]: # ([[TOC]])
-#   easyui tree combotree去掉默认图标或更换图标
+[[TOC]]
+#   easyui-tree-combotree去掉默认图标或更换图标
 
+::: tip
+当我使用easyui插件编写项目的时候，我想把前面的图标去除或更改图标
+:::
 
-> 当我使用easyui插件编写项目的时候，我想把前面的图标去除或更改图标
-
-<!--more-->
 ##  图标操作
 ###  1、加载Tree
 ```js
@@ -29,7 +28,7 @@ $("#cc").combotree({
 
 ```
 ###  2、Tree加载完成后运行
-```js
+```js {4}
 onLoadSuccess: function () {
     $('#cc').combotree('tree').tree("collapseAll");	 //全部关闭
     $(".tree-icon,.tree-file").removeClass("tree-icon tree-file");//去掉最后一级图标
@@ -38,7 +37,7 @@ onLoadSuccess: function () {
 
 ```
 ###  3、Node展开后运行
-```js
+```js 
 onExpand: function(node){
 	$('.tree-title').prev().removeClass("tree-folder-open");
  	$('.tree-checkbox,.tree-checkbox0').prev().removeClass("tree-folder-open");
@@ -47,7 +46,7 @@ onExpand: function(node){
 
 ##  修改图标
 ###  使用css
-```js
+```css
  <style>
     /*默认*/
     .tree-icon {
@@ -66,7 +65,9 @@ onExpand: function(node){
     </style>
 ```
 
-> 当然还有很多种方法,针对特定的场景进行编码，有用到再填充这个文档
+::: tip
+当然还有很多种方法,针对特定的场景进行编码，有用到再填充这个文档
+:::
 
 
 

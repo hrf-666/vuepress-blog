@@ -5,8 +5,8 @@ tags:
  - 后端
 ---
 
-[//]: # ([[TOC]])
-[//]: # (# 参数为集合)
+[[TOC]]
+# mybatis查询条件List集合、map集合、Array数组
 ## 传入map类型
 ```java
 Mapper接口如下，service将调用该接口方法，需要注意的是，
@@ -35,7 +35,7 @@ Mapper接口如下，service将调用该接口方法，需要注意的是，
     </select>
 ```
 
-## 传入List<Object>类型
+## 传入List类型
 ```java
 Mapper接口如下，service将调用该接口方法
 

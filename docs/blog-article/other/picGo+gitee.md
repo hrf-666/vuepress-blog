@@ -7,7 +7,7 @@ tags:
 
 
 [//]: # (@[TOC]&#40;picGo+gitee+typora设置图床&#41;)
-[//]: # ([[TOC]])
+[[TOC]]
 #   picGo+gitee设置图床
 
 > 当我了解picGo+gitee可以设置图床的时候，我决定试一试。

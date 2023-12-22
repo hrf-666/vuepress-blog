@@ -5,7 +5,10 @@ tags:
  - 后端
 ---
 
-[//]: # ([[TOC]])
+[[TOC]]
+
+# mybatis查询返回List集合、map集合、List()集合
+
 ## 返回map类型
 ```java
 1. xml中
@@ -24,7 +27,8 @@ tags:
     List<String> selectUser();
 ```
 
-## 返回List<Map<String,Obiect>>类型
+## 返回List()类型
+(返回List<Map<String,Obiect>>类型)
 ```java
 1. xml中
     <select id="selectUser"  resultType="java.util.HashMap">  

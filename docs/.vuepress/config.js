@@ -25,6 +25,9 @@ module.exports = {
     //     }
     // },
     plugins: pluginsConfig,
+    markdown: {
+        lineNumbers: true //行号
+    },
     themeConfig: {
         title: 'Rui',
         logo: '/assets/img/logo.png',
