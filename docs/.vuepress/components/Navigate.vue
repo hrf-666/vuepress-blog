@@ -18,9 +18,10 @@
               v-for="navItem in nav.arr"
               :key="navItem.id"
               :href="navItem.nav_url"
+              target="_blank"
           >
             <div class="nav_item_text">
-<!--              <img src="https://res.eemu.cn/LightPicture/2022/06/758fc8b1f2ca02b9.svg">-->
+              <!--              <img src="https://res.eemu.cn/LightPicture/2022/06/758fc8b1f2ca02b9.svg">-->
               {{ navItem.nav }}
             </div>
           </a>
@@ -123,25 +124,13 @@ body {
 
           @keyframes nav_item_url {
             0% {
-              -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
             }
 
             100% {
-              -webkit-transform: translateZ(20px) translateY(-20px);
-              transform: translateZ(20px) translateY(-20px);
-            }
-          }
-
-          @keyframes nav_item_url {
-            0% {
-              -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-            }
-
-            100% {
-              -webkit-transform: translateZ(20px) translateY(-20px);
-              transform: translateZ(20px) translateY(-20px);
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
             }
           }
 
