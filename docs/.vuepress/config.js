@@ -6,7 +6,6 @@ module.exports = {
     title: 'Rui',
     head: [
         ['link', {rel: 'icon', href: '/assets/img/logo.png'}],
-
     ],
     description: '点点滴滴',
     base: '/vuepress-blog/',

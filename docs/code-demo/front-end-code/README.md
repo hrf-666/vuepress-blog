@@ -1,7 +1,5 @@
 ---
 title: 前端Demo
-lang: en-US
-sidebar: auto
 tags:
  - Demo
  - 笔记

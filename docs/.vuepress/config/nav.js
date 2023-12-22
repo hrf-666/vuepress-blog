@@ -4,24 +4,6 @@ const navConfig = [
         {
             text: '面试',
             link: '/study-notes/'
-            // items: [
-            //     {
-            //         text: '后端',
-            //         // link: '/study-notes/back-end/',
-            //         items: [
-            //             {text: 'java', link: '/study-notes/back-end/java/'},
-            //             {text: 'python', link: '/study-notes/back-end/python/'}
-            //         ]
-            //     },
-            //     {
-            //         text: '前端',
-            //         // link: '/study-notes/front-end/',
-            //         items: [
-            //             {text: 'html', link: '/study-notes/front-end/html/'},
-            //             {text: 'javaScript', link: '/study-notes/front-end/javaScript/'}
-            //         ]
-            //     }
-            // ]
         },
         {
             text: '博文',
@@ -29,16 +11,7 @@ const navConfig = [
         },
         {
             text: '代码Demo',
-            items: [
-                {
-                    text: '后端Demo',
-                    link: '/code-demo/back-end-code/'
-                },
-                {
-                    text: '前端Demo',
-                    link: '/code-demo/front-end-code/'
-                }
-            ]
+            link: '/code-demo/',
         },
         {
             text: '友链',
