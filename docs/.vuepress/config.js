@@ -1,6 +1,8 @@
 const {sidebarConfig} = require("./config/sidebar");
 const {navConfig} = require("./config/nav");
 const {pluginsConfig} = require("./config/plugins");
+const {markdownConfig} = require("./config/markdownConfig");
+
 // console.log(sidebarConfig)
 module.exports = {
     title: 'Rui',
@@ -24,9 +26,7 @@ module.exports = {
     //     }
     // },
     plugins: pluginsConfig,
-    markdown: {
-        lineNumbers: true //行号
-    },
+    markdown: markdownConfig,
     themeConfig: {
         title: 'Rui',
         logo: '/assets/img/logo.png',
