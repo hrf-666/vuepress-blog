@@ -9,3 +9,5 @@ search: true
 #  友链
 
 [lautrans优秀的博客,内涵ai对话,导航，面试等](https://www.lautrans.cn/)
+
+[yyshino优秀的前端笔记](https://v-blog.yyshino.top/)
