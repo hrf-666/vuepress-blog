@@ -239,7 +239,7 @@ const navList = [
             },
             {
                 nav: "Gitee",
-                nav_url: "https://gitee.com/Shino00",
+                nav_url: "https://gitee.com/huang-ruifang/vuepress-blog",
                 nav_img: "https://gitee.com/favicon.ico",
                 id: "004",
             },
