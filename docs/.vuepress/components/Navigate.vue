@@ -21,7 +21,7 @@
               target="_blank"
           >
             <div class="nav_item_text">
-              <img :src='navItem.nav_img' alt="picture" onerror="this.src='/assets/img/logo.png'">
+              <img :src='navItem.nav_img' alt="picture" onerror="this.src='/vuepress-blog/assets/img/logo.png'">
 <!--              <img :src='navItem.nav_img' alt="picture" :onerror="errorImg">-->
               <br/>
               {{ navItem.nav }}
