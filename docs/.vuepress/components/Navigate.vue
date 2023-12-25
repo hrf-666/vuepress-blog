@@ -80,7 +80,7 @@ body {
       搜索框
       */
       .nav_search_container {
-        width: 50%;
+        width: 80%;
         margin: 20px auto;
         background-color: rgba(193, 167, 167, 0.589);
         border-radius: 20px;
@@ -98,8 +98,9 @@ body {
             margin-right: 10px;
             border-radius: 20px;
             height: 20px;
-            width: 20px;
+            width: 5%;
             display: inline-block;
+            position: absolute;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
