@@ -4,9 +4,10 @@
       <div class="search_title">
         <a @click="search">搜索</a>
         <input class="search" type="text" v-model="searchText" @keydown.enter="search" placeholder="百度"/>
-        <div class="clear-btn" @click="clearSearchText">
-        </div>
+        <!--删除按钮-->
+        <button class="clear-btn" @click="clearSearchText">x</button>
       </div>
+
     </div>
 
     <div class="nav_container">
@@ -85,15 +86,30 @@ body {
         border-radius: 20px;
 
         .search_title {
+          //background-color #2c815b;
           a {
             display: inline-block;
             height: 34px;
             line-height: 30px;
             margin: 0 15px;
           }
-
+          .clear-btn {
+            background-color: rgba(193, 167, 167, 0.589);
+            margin-right: 10px;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            border: 1px solid #d9d9d9;
+          }
+          .clear-btn:hover {
+            scale: 1.2;
+          }
           .search {
-            width: 220px;
+            width: 85%;
             height: 20px;
             padding: 10px;
             border: none;
@@ -101,7 +117,6 @@ body {
             text-decoration: none;
             background-color: rgba(233, 221, 221, 0);
           }
-
           .search:focus {
             outline: none;
           }
@@ -119,8 +134,6 @@ body {
         justify-content: center;
         align-content: flex-start;
         width: auto;
-        //background-color #4d0000
-
         .nav_item {
           text-align: center;
           margin: 20px 40px;
@@ -176,18 +189,6 @@ body {
               text-overflow: ellipsis;
               white-space: nowrap;
             }
-            //img::after {
-            //  //width: 66.662px;
-            //  //line-height: 90px;
-            //  //border-radius: 20px;
-            //  //// border: 1px solid #E7E7E7;
-            //  //box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
-            //  //text-align: center;
-            //  //overflow: hidden;
-            //  //text-overflow: ellipsis;
-            //  //white-space: nowrap;
-            //  background: url(/assets/img/logo.png ) no-repeat center;
-            //}
           }
 
           .nav_item_main:hover {
