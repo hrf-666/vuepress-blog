@@ -79,6 +79,7 @@ body {
       搜索框
       */
       .nav_search_container {
+        height: 60px;
         width: 50%;
         min-width: 330px;
         margin: 20px auto;
@@ -86,9 +87,11 @@ body {
         border-radius: 20px;
 
         .search_title {
+          height: 100%;
           display:flex;
           align-items: center;
           min-width: 330px;
+          justify-content: space-around;
           //background-color #2c815b;
           a {
             display: flex;
@@ -97,7 +100,7 @@ body {
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            height: 34px;
+            //height: 34px;
             margin: 0 15px;
             &:hover {
               color: #2c815b;
@@ -123,6 +126,7 @@ body {
             min-width: 170px;
             padding: 10px;
             border: none;
+            font-size: 18px;
             border-radius: 10px;
             text-decoration: none;
             background-color: rgba(233, 221, 221, 0);
