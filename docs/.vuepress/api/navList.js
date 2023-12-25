@@ -1,5 +1,45 @@
 const navList = [
     {
+        title: "后端 | 算法",
+        arr: [
+            {
+                nav: "LeetCode",
+                nav_url: "https://leetcode.cn/u/i3lissful-engelbartcwb/",
+                id: "000001",
+            },
+            {
+                nav: "前端算法",
+                nav_url: "https://www.yuque.com/morris-dlhjm/nnaevm",
+                id: "000002",
+            },
+            {
+                nav: "代码随想录",
+                nav_url: "https://programmercarl.com/",
+                id: "000003",
+            },
+            {
+                nav: "LABULADONG 的算法网站",
+                nav_url: "https://labuladong.gitee.io/algo/",
+                id: "000004",
+            },
+            {
+                nav: "Koa Wiki",
+                nav_url: "https://github.com/koajs/koa/wiki",
+                id: "000005",
+            },
+            {
+                nav: "Github Trend",
+                nav_url: "https://github.com/trending",
+                id: "000006",
+            },
+            {
+                nav: "Node.js Best Practices",
+                nav_url: "https://github.com/goldbergyoni/nodebestpractices",
+                id: "000007",
+            },
+        ],
+    },
+    {
         title: "动漫 | 漫画 | 兴趣",
         arr: [
             {
@@ -241,46 +281,7 @@ const navList = [
             },
         ],
     },
-    {
-        title: "后端 | 算法",
-        arr: [
-            {
-                nav: "LeetCode",
-                nav_url: "https://leetcode.cn/u/i3lissful-engelbartcwb/",
-                id: "000001",
-            },
-            {
-                nav: "前端算法",
-                nav_url: "https://www.yuque.com/morris-dlhjm/nnaevm",
-                id: "000002",
-            },
-            {
-                nav: "代码随想录",
-                nav_url: "https://programmercarl.com/",
-                id: "000003",
-            },
-            {
-                nav: "LABULADONG 的算法网站",
-                nav_url: "https://labuladong.gitee.io/algo/",
-                id: "000004",
-            },
-            {
-                nav: "Koa Wiki",
-                nav_url: "https://github.com/koajs/koa/wiki",
-                id: "000005",
-            },
-            {
-                nav: "Github Trend",
-                nav_url: "https://github.com/trending",
-                id: "000006",
-            },
-            {
-                nav: "Node.js Best Practices",
-                nav_url: "https://github.com/goldbergyoni/nodebestpractices",
-                id: "000007",
-            },
-        ],
-    },
+
 ]
 
 exports.navList = navList;
