@@ -25,6 +25,43 @@ const navList = [
         ],
     },
     {
+        title: "友链 | 储备",
+        arr: [
+            {
+                nav: "彭世瑜的博客",
+                nav_url: "https://mouday.github.io/coding-tree/#/doc/webpack",
+                nav_img: "https://mouday.github.io/favicon.ico",
+                id: "00000001",
+            },
+            {
+                nav: "lautrans",
+                nav_url: "https://www.lautrans.cn/blog/",
+                nav_img: "https://www.lautrans.cn/logo.png",
+                id: "00000002",
+            },
+            {
+                nav: "hexo搭建",
+                nav_url: "https://hrf-666.github.io/",
+                nav_img: "https://hrf-666.github.io/images/avatar.jpg",
+                id: "00000099",
+            },
+            {
+                nav: "vuepress+hope主题",
+                nav_url: "https://huang-ruifang.gitee.io/ruiblogs/",
+                nav_img: "",
+                id: "00000100",
+            },
+            {
+                nav: "vuepress+自定义主题",
+                nav_url: "https://huang-ruifang.gitee.io/hrf-blog",
+                nav_img: "https://huang-ruifang.gitee.io/hrf-blog/avatar.jpg",
+                id: "00000101",
+            },
+
+
+        ],
+    },
+    {
         // https://www.baidu.com/favicon.ico
         title: "后端 | 算法",
         arr: [
@@ -357,43 +394,7 @@ const navList = [
             },
         ],
     },
-    {
-        title: "友链 | 储备",
-        arr: [
-            {
-                nav: "彭世瑜的博客",
-                nav_url: "https://mouday.github.io/coding-tree/#/doc/webpack",
-                nav_img: "https://mouday.github.io/favicon.ico",
-                id: "00000001",
-            },
-            {
-                nav: "lautrans",
-                nav_url: "https://www.lautrans.cn/blog/",
-                nav_img: "https://www.lautrans.cn/logo.png",
-                id: "00000002",
-            },
-            {
-                nav: "hexo搭建",
-                nav_url: "https://hrf-666.github.io/",
-                nav_img: "https://hrf-666.github.io/images/avatar.jpg",
-                id: "00000099",
-            },
-            {
-                nav: "vuepress+hope主题",
-                nav_url: "https://huang-ruifang.gitee.io/ruiblogs/",
-                nav_img: "",
-                id: "00000100",
-            },
-            {
-                nav: "vuepress+自定义主题",
-                nav_url: "https://huang-ruifang.gitee.io/hrf-blog",
-                nav_img: "https://huang-ruifang.gitee.io/hrf-blog/avatar.jpg",
-                id: "00000101",
-            },
 
-
-        ],
-    },
 
 ]
 
