@@ -15,6 +15,13 @@ const navList = [
                 nav_img: "https://cn.bing.com/favicon.ico",
                 id: "0000002",
             },
+            {
+                nav: "QQ浏览器",
+                nav_url: "https://browser.qq.com",
+                nav_img: "https://browser.qq.com/favicon.ico",
+                id: "0000003",
+            },
+
 
 
         ],
@@ -138,7 +145,7 @@ const navList = [
             {
                 nav: "印记中文",
                 nav_url: "https://docschina.org/",
-                nav_img: "https://docschina.org/favicon.ico",
+                nav_img: "https://docschina.org/_next/static/media/docschina-logo.026ff887.svg",
                 id: "04",
             },
             {

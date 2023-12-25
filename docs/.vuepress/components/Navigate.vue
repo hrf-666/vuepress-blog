@@ -21,7 +21,8 @@
               target="_blank"
           >
             <div class="nav_item_text">
-              <img :src='navItem.nav_img'>
+              <img :src='navItem.nav_img' alt="picture" onerror="this.src='/assets/img/logo.png'">
+<!--              <img :src='navItem.nav_img' alt="picture" :onerror="errorImg">-->
               <br/>
               {{ navItem.nav }}
             </div>
@@ -34,10 +35,15 @@
 
 <script>
 const {navList} = require("../api/navList");
+
+
 export default {
   name: "Navigate",
   data() {
+    // const nullImage = require('@/assets/img/logo.png');
+    // console.log(nullImage,123)
     return {
+      // errorImg: 'this.src="' + nullImage + '"',
       navList: navList,
     };
   },
@@ -152,6 +158,18 @@ body {
               text-overflow: ellipsis;
               white-space: nowrap;
             }
+            //img::after {
+            //  //width: 66.662px;
+            //  //line-height: 90px;
+            //  //border-radius: 20px;
+            //  //// border: 1px solid #E7E7E7;
+            //  //box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+            //  //text-align: center;
+            //  //overflow: hidden;
+            //  //text-overflow: ellipsis;
+            //  //white-space: nowrap;
+            //  background: url(/assets/img/logo.png ) no-repeat center;
+            //}
           }
 
           .nav_item_main:hover {
