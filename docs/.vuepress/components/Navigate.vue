@@ -98,7 +98,7 @@ body {
             margin-right: 10px;
             border-radius: 20px;
             height: 20px;
-            width: 10%;
+            width: 20px;
             display: inline-block;
             align-items: center;
             justify-content: center;
