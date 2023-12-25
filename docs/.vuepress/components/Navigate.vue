@@ -7,7 +7,6 @@
         <!--删除按钮-->
         <button class="clear-btn" @click="clearSearchText">x</button>
       </div>
-
     </div>
 
     <div class="nav_container">
@@ -81,36 +80,47 @@ body {
       */
       .nav_search_container {
         width: 50%;
+        min-width: 330px;
         margin: 20px auto;
         background-color: rgba(193, 167, 167, 0.589);
         border-radius: 20px;
 
         .search_title {
+          display:flex;
+          align-items: center;
+          min-width: 330px;
           //background-color #2c815b;
           a {
-            display: inline-block;
+            display: flex;
+            cursor: pointer;
+            min-width: 40px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
             height: 34px;
-            line-height: 30px;
             margin: 0 15px;
+            &:hover {
+              color: #2c815b;
+            }
           }
           .clear-btn {
+            cursor: pointer;
             background-color: rgba(193, 167, 167, 0.589);
             margin-right: 10px;
             border-radius: 20px;
             height: 20px;
             width: 20px;
-            display: inline-block;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
             border: 1px solid #d9d9d9;
-          }
-          .clear-btn:hover {
-            scale: 1.2;
+            &:hover {
+              scale: 1.2;
+            }
           }
           .search {
             width: 85%;
-            height: 20px;
+            min-width: 170px;
             padding: 10px;
             border: none;
             border-radius: 10px;
