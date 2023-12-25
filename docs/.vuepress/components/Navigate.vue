@@ -2,7 +2,10 @@
   <div class="navigate_container">
     <div class="nav_search_container">
       <div class="search_title">
-        <a href="">搜索</a><input class="search" type="text"/>
+        <a @click="search">搜索</a>
+        <input class="search" type="text" v-model="searchText" @keydown.enter="search" placeholder="百度"/>
+        <div class="clear-btn" @click="clearSearchText">
+        </div>
       </div>
     </div>
 
@@ -40,13 +43,28 @@ const {navList} = require("../api/navList");
 export default {
   name: "Navigate",
   data() {
-    // const nullImage = require('@/assets/img/logo.png');
-    // console.log(nullImage,123)
     return {
-      // errorImg: 'this.src="' + nullImage + '"',
       navList: navList,
+      searchText: '',
+      currentSearchEngine: "https://www.baidu.com/s?wd=",
     };
   },
+  methods:{
+    search() {
+      let url
+      let content = this.searchText;
+      if (content.match("^https://") || content.match("^http://") || content.match("^www.")) {
+        url = content
+      } else {
+        url = this.currentSearchEngine + content;
+      }
+      this.searchText = '';
+      window.open(url);
+    },
+    clearSearchText() {
+      this.searchText = ''
+    }
+  }
 };
 </script>
 
