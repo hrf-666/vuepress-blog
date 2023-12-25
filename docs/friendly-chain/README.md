@@ -12,4 +12,6 @@ search: true
 
 [yyshino优秀的前端笔记](https://v-blog.yyshino.top/)
 
+[彭世瑜的博客](https://mouday.github.io/coding-tree/#/doc/webpack)
+
 [Java 后端学习笔记](https://ybtrzjt.com/guide/frontend/deploy/custom-width.html)
