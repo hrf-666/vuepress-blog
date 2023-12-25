@@ -44,7 +44,7 @@ const navList = [
             {
                 nav: "LABULADONG 的算法网站",
                 nav_url: "https://labuladong.gitee.io/algo/",
-                nav_img: "https://labuladong.gitee.io/favicon.ico",
+                nav_img: "https://labuladong.gitee.io/algo/logo.svg",
                 id: "000004",
             },
             {
