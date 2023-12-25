@@ -21,7 +21,8 @@
               target="_blank"
           >
             <div class="nav_item_text">
-              <!--              <img src="https://res.eemu.cn/LightPicture/2022/06/758fc8b1f2ca02b9.svg">-->
+              <img :src='navItem.nav_img'>
+              <br/>
               {{ navItem.nav }}
             </div>
           </a>
@@ -43,9 +44,9 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 body {
-  //background-color #2c815b
+  //background-color #2c815b;
     .navigate_container {
       a {
         text-decoration: none;
@@ -139,8 +140,9 @@ body {
                 CSS gap 属性是用来设置网格行与列之间的间隙（gutters），该属性是 row-gap 和 column-gap 的简写形式。
             */
 
-            .nav_item_text {
-              width: 96.662px;
+            .nav_item_text  img{
+              //width: 96.662px;
+              width: 66.662px;
               line-height: 90px;
               border-radius: 20px;
               // border: 1px solid #E7E7E7;
