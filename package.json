@@ -5,10 +5,16 @@
   "author": "Rui",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
+    "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "@vuepress/plugin-active-header-links": "^1.9.10",
     "@vuepress/plugin-back-to-top": "^1.9.10",
     "@vuepress/plugin-search": "^1.9.10",
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-copyright": "^1.0.2",
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3"
   },
   "scripts": {
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
