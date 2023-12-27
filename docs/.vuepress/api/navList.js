@@ -195,6 +195,13 @@ const navList = [
                 id: "00000002",
             },
             {
+                nav: "沉默王二",
+                nav_url: "https://javabetter.cn/sidebar/sanfene/nixi.html",
+                nav_img: "https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo-02.png",
+                id: "00000003",
+            },
+
+            {
                 nav: "hexo搭建",
                 nav_url: "https://hrf-666.github.io/",
                 nav_img: "https://hrf-666.github.io/images/avatar.jpg",
