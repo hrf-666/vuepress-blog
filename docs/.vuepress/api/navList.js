@@ -21,6 +21,25 @@ const navList = [
                 nav_img: "https://browser.qq.com/favicon.ico",
                 id: "0000003",
             },
+            {
+                nav: "稀土掘金",
+                nav_url: "https://juejin.cn/",
+                nav_img: "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/6c61ae65d1c41ae8221a670fa32d05aa.svg",
+                id: "0000004",
+            },
+            {
+                nav: "知乎",
+                nav_url: "https://www.zhihu.com/topic/19550228/top-answers",
+                nav_img: "https://www.zhihu.com/",
+                id: "0000009",
+            },
+            {
+                nav: "小红书",
+                nav_url: "https://www.xiaohongshu.com/explore",
+                nav_img: "https://www.xiaohongshu.com/explore",
+                id: "00000010",
+            },
+
 
         ],
     },
@@ -205,19 +224,19 @@ const navList = [
                 nav: "hexo搭建",
                 nav_url: "https://hrf-666.github.io/",
                 nav_img: "https://hrf-666.github.io/images/avatar.jpg",
-                id: "00000099",
+                id: "000000099",
             },
             {
                 nav: "vuepress+hope主题",
                 nav_url: "https://huang-ruifang.gitee.io/ruiblogs/",
                 nav_img: "",
-                id: "00000100",
+                id: "0000000100",
             },
             {
                 nav: "vuepress+自定义主题",
                 nav_url: "https://huang-ruifang.gitee.io/hrf-blog",
                 nav_img: "https://huang-ruifang.gitee.io/hrf-blog/avatar.jpg",
-                id: "00000101",
+                id: "0000000101",
             },
 
 
