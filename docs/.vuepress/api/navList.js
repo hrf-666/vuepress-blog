@@ -219,6 +219,12 @@ const navList = [
                 nav_img: "https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo-02.png",
                 id: "00000003",
             },
+            {
+                nav: "小傅哥 bugstack 虫洞栈",
+                nav_url: "https://bugstack.cn",
+                nav_img: "",
+                id: "00000003",
+            },
 
             {
                 nav: "hexo搭建",
