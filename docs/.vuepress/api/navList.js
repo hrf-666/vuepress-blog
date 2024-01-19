@@ -225,6 +225,12 @@ const navList = [
                 nav_img: "",
                 id: "00000004",
             },
+            {
+                nav: "廖雪峰的官方网站",
+                nav_url: "https://www.liaoxuefeng.com/wiki/1252599548343744",
+                nav_img: "",
+                id: "00000005",
+            },
 
             {
                 nav: "hexo搭建",
