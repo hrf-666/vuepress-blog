@@ -22,6 +22,10 @@ const navConfig = [
             text: '其他',
             link: '/other/'
         },
+        {
+            text: '阅读',
+            link: '/read/'
+        },
     ]
 
 exports.navConfig = navConfig;
