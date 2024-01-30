@@ -36,7 +36,10 @@ const blog_article_sidebarConfig = [
             {
                 title: 'easyui-tree-combotree去掉默认图标',   // 必要的
                 path: '/blog-article/front-end/easyui-tree-combotree',
-
+            },
+            {
+                title: 'VuePress加载网络图片',
+                path: '/blog-article/front-end/vuePress-loads-network-images.md',
             },
         ]
     },
