@@ -39,7 +39,7 @@ const blog_article_sidebarConfig = [
             },
             {
                 title: 'VuePress加载网络图片',
-                path: '/blog-article/front-end/vuePress-loads-network-images.md',
+                path: '/blog-article/front-end/vuePress-loads-network-images',
             },
         ]
     },
