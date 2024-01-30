@@ -8,6 +8,14 @@ module.exports = {
     title: 'Rui',
     head: [
         ['link', {rel: 'icon', href: '/assets/img/logo.png'}],
+        [
+            "meta",
+            {
+                name:"referrer",
+                content:"no-referrer"
+            }
+        ],
+
     ],
     description: '点点滴滴',
     base: '/vuepress-blog/',
