@@ -7,7 +7,7 @@ tags:
 ---
 
 # 后端
-[java基础知识](./java)
-[python](./python)
+- [java基础知识](./java)
+- [Python](./python)
 
 

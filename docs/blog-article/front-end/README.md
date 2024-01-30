@@ -1,8 +1,5 @@
 ---
 title: 博文
-tags:
- - 前端
- - 笔记
-search: true
+tags: [easyui]
 ---
-
+- [easyui tree combotree去掉默认图标](./easyui-tree-combotree.md)

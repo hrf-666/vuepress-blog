@@ -44,9 +44,15 @@ const blog_article_sidebarConfig = [
         title: '其他',   // 必要的
         path: '/blog-article/other/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         children: [
+        ]
+    },
+    {
+        title: '图床',   // 必要的
+        path: '/blog-article/drawing-bed/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: [
             {
                 title: 'picGo+gitee设置图床',   // 必要的
-                path: '/blog-article/other/picGo+gitee',
+                path: '/blog-article/drawing-bed/picGo+gitee',
 
             },
         ]
