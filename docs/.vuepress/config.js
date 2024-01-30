@@ -11,8 +11,8 @@ module.exports = {
         [
             "meta",
             {
-                name:"referrer",
-                content:"no-referrer"
+                name: "referrer",
+                content: "no-referrer"
             }
         ],
 
