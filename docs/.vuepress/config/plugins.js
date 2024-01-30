@@ -50,6 +50,12 @@ const pluginsConfig = [
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
+    // ['vuepress-plugin-pdf-export', {
+    //     fileName: 'document.pdf',
+    //     pageSize: 'A4',
+    //     margin: '1cm',
+    //     printBackground: true
+    // }]
     // ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
     //     width: '300px', // 默认 260px
     //     title: '消息提示',
@@ -61,7 +67,7 @@ const pluginsConfig = [
     //         },
     //         {
     //             type: 'image',
-    //             src: 'https://cdn.jsdelivr.net/gh/mqyqingfeng/picture/IMG_3516.JPG'
+    //             src: '/assets/img/logo.png'
     //         }
     //     ],
     //     footer: [
