@@ -8,17 +8,21 @@ module.exports = {
     title: 'Rui',
     head: [
         ['link', {rel: 'icon', href: '/assets/img/logo.png'}],
-        [
-            "meta",
-            {
-                name: "referrer",
-                content: "no-referrer"
-            }
-        ],
-
+        ["meta", {name: "referrer", content: "no-referrer"}],
+        ['link', {rel: 'manifest', href: '/manifest.json'}],
+        ['meta', {name: 'theme-color', content: '#ffffff'}],
+        ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
+        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
+        ['link', {rel: 'apple-touch-icon', href: '/assets/img/logo.png'}],
+        ['link', {rel: 'mask-icon', href: '/assets/img/logo.png', color: '#ffffff'}],
+        ['meta', {name: 'msapplication-TileImage', content: '/assets/img/logo.png'}],
+        ['meta', {name: 'msapplication-TileColor', content: '#000000'}]
     ],
     description: '点点滴滴',
     base: '/vuepress-blog/',
+    devServer: {
+        https: true
+    },
     // locales: {
     //     // 键名是该语言所属的子路径
     //     // 作为特例，默认语言可以使用 '/' 作为其路径。
