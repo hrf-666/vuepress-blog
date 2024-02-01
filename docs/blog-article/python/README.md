@@ -1,11 +1,11 @@
 ---
-title: python
+title: 初识python
 tags: [python]
 ---
 
 
-@[TOC](python)
-
+[//]: # (@[TOC]&#40;初识python&#41;)
+[[toc]]
 #  初识python
 
 > 当我了解python时我决定试一试
@@ -29,7 +29,7 @@ tags: [python]
 
 ###  安装成功
 
-![image-20230928111728058](https://img-blog.csdnimg.cn/img_convert/553d332958ac3453d501c838ace95080.png)
+![image-20230928111728058](https://huang-ruifang.gitee.io/pic-go/public/python/20230928112517.png)
 输入`exit();`进行退出。
 之后就学习python语法
 [python能够用来干什么？](https://zhuanlan.zhihu.com/p/63077993)
@@ -44,7 +44,7 @@ tags: [python]
 [Python][VsCode]报错 python：命令“Python:Select:Interpreter“ command ‘python.setInterpreter‘ not found
 [参考文章](https://blog.csdn.net/m0_56738500/article/details/127144144)
 
-# 学习python
+## 学习python
 参考[Python Flask Web 框架入门](https://www.cnblogs.com/cleven/p/10858016.html)
 
 
