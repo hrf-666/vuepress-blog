@@ -1,11 +1,11 @@
 {
-  "name": "TypeScript中文文档",
-  "short_name": "TypeScriptDocs",
+  "name": "Rui中文文档",
+  "short_name": "RuiDocs",
   "display": "standalone",
   "background_color": "#fff",
   "start_url": "/vuepress-blog/",
   "scope": "/vuepress-blog/",
-  "description": "TypeScript 中文文档 进阶教程",
+  "description": "Rui 中文文档 进阶教程",
   "icons": [{
     "src": "logo52.png",
     "sizes": "52x52",
