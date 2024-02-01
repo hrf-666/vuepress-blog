@@ -8,6 +8,8 @@ summary: VuePress 自动侧边栏
 [[toc]]
 
 ## 1. 问题
+> 由于VuePress的侧边栏是手动配置的，所以当文章数量增多时，维护成本很高。
+> 因此，我参考一些文章配置一个自动侧边栏的插件，可以实现自动配置侧边栏。
 
 ## 2. 源码
 
@@ -77,8 +79,9 @@ module.exports = {getChildren: getChildren}
 
 ```
 ## 3.使用
-![位置](https://gitee.com/huang-ruifang/pic-go/raw/master/public/vuepress-blog/20240201154450.png)
-[//]: # (https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/20240201154450.png)
+
+[//]: # (![位置]&#40;https://gitee.com/huang-ruifang/pic-go/raw/master/public/vuepress-blog/20240201154450.png&#41;)
+![位置](https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/20240201154450.png)
 ```js
 const {getChildren} = require("../utils/vuepress-sidebar-auto");
 const blog_article_sidebarConfig = [
