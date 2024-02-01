@@ -41,6 +41,10 @@ const blog_article_sidebarConfig = [
                 title: 'VuePress加载网络图片',
                 path: '/blog-article/front-end/vuePress-loads-network-images',
             },
+            {
+                title: 'js判断数组对象中某一属性是否包含重复的值',
+                path: '/blog-article/front-end/js-array-object-contain-duplicate-values',
+            },
         ]
     },
     {
