@@ -1,8 +1,10 @@
 ---
+title: 分布式理论
 icon: pen-to-square
 date: 2022-01-09
 tags: [分布式]
 ---
+[[toc]]
 
 ## 分布式理论
 

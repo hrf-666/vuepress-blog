@@ -1,9 +1,10 @@
 ---
+title: Java线程
 icon: pen-to-square
 date: 2022-01-09
 tags: [Java]
 ---
-
+[[toc]]
 ## 基础
 
 ### 1.并行跟并发有什么区别？

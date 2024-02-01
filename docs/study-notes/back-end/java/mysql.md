@@ -1,9 +1,10 @@
 ---
+title: MySQL
 icon: pen-to-square
 date: 2022-01-09
 tags: [java, mysql]
 ---
-
+[[toc]]
 ## 基础
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/sidebar/sanfene/mysql-1992b6dd-1c1d-4b8b-b98a-8407e8c51ff9.jpg)

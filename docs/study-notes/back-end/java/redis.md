@@ -1,9 +1,10 @@
 ---
+title: Redis
 icon: pen-to-square
 date: 2022-01-09
 tags: [redis]
 ---
-
+[[toc]]
 ## 基础
 
 ### 1.说说什么是Redis?

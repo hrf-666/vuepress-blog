@@ -1,9 +1,10 @@
 ---
+title: JavaSE
 icon: pen-to-square
 date: 2022-01-09
 tags: [Java]
 ---
-
+[[toc]]
 ## Java 概述
 
 ### 1.什么是 Java？

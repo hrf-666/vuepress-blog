@@ -1,9 +1,10 @@
 ---
+title: RocketMQ
 icon: pen-to-square
 date: 2022-01-09
 tags: [RocketMQ]
 ---
-
+[[toc]]
 ## 基础
 
 ### 1.为什么要使用消息队列呢？
