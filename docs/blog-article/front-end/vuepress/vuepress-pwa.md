@@ -93,5 +93,5 @@ module.exports = {
 ## 5. 常见问题
 
 参考:
-[2022 年了，还不了解 PWA ？ 教你 VuePress 博客如何快速兼容 PWA](https://juejin.cn/post/7065653370903592996)
-[VuePress 博客如何开启本地 HTTPS 访问](https://juejin.cn/post/7065248985719504933)
+- [2022 年了，还不了解 PWA ？ 教你 VuePress 博客如何快速兼容 PWA](https://juejin.cn/post/7065653370903592996)
+- [VuePress 博客如何开启本地 HTTPS 访问](https://juejin.cn/post/7065248985719504933)
