@@ -231,6 +231,14 @@ const navList = [
                 nav_img: "",
                 id: "00000005",
             },
+            {
+                nav: "Web全栈体系",
+                nav_url: "https://senior-frontend.pages.dev/jsadvanced/",
+                nav_img: "https://senior-frontend.pages.dev/logo.png",
+                id: "00000006",
+            },
+
+
 
             {
                 nav: "hexo搭建",
