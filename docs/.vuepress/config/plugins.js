@@ -24,12 +24,17 @@ const pluginsConfig = [
             buttonText: "刷新"
         }
     }],
+    // 右侧目录(暂时无效)
+    [
+        'vuepress-plugin-right-anchor'
+    ],
     // ["vuepress-plugin-nuggets-style-copy", {
     //     copyText: "复制代码",
     //     tip: {
     //         content: "复制成功"
     //     }
     // }],
+    // 拷贝
     [
         'copyright',
         {
@@ -37,6 +42,7 @@ const pluginsConfig = [
             minLength: 30, // 如果长度超过  30 个字符
         },
     ],
+    // 鼠标点击效果
     ['cursor-effects', {
         size: 2, // size of the particle, default: 2
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'

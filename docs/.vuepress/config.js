@@ -35,7 +35,7 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         permalink: "/:year/:month/:day/:slug",
-        smoothScroll: true,//页面滚动效果
+        // smoothScroll: true,//页面滚动效果
         subSidebar: 'auto', // 或者生成二级菜单
         // // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         // repo: 'https://gitee.com/huang-ruifang/vuepress-blog',

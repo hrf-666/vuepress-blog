@@ -3,6 +3,12 @@ title: JavaSE
 icon: pen-to-square
 date: 2022-01-09
 tags: [Java]
+rightAnchor:
+  showDepth: 1
+  expand:
+    trigger: hover
+    clickModeDefaultOpen: true
+  customClass: your-customClass
 ---
 [[toc]]
 ## Java 概述
