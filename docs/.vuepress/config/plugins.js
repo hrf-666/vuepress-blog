@@ -131,6 +131,7 @@ const pluginsConfig = [
     // }],
     // //大声诵读
     // ['text-to-speech', {contentSelector: '.content__default'}],
+    //复制代码vuepress-plugin-nuggets-style-copy
     // ["vuepress-plugin-nuggets-style-copy", {
     //     copyText: "复制代码",
     //     tip: {
