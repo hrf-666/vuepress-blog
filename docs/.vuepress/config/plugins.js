@@ -77,12 +77,27 @@ const pluginsConfig = [
     ["sakura", {
         num: 20,  // 默认数量
         show: true, //  是否显示
-        zIndex: -1,   // 层级
+        zIndex: 1,   // 层级
         img: {
             replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
             httpUrl: 'https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/sakura.png'     // 绝对路径
         }
     }],
+    // 复制代码块
+    ['@xiaopanda/vuepress-plugin-code-copy', {
+        buttonStaticIcon: true,
+        buttonIconTitle: '复制',
+        buttonAlign: 'top',
+        buttonColor: '#ffffff'
+    }
+    ]
+    // //复制代码vuepress-plugin-nuggets-style-copy
+    // ["vuepress-plugin-nuggets-style-copy", {
+    //     copyText: "复制代码",
+    //     tip: {
+    //         content: "复制成功"
+    //     }
+    // }],
     //效果没什么用 npm i vuepress-plugin-dynamic-title -D
     // ['dynamic-title',{
     //     // showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
@@ -129,13 +144,7 @@ const pluginsConfig = [
     // }],
     // //大声诵读
     // ['text-to-speech', {contentSelector: '.content__default'}],
-    //复制代码vuepress-plugin-nuggets-style-copy
-    // ["vuepress-plugin-nuggets-style-copy", {
-    //     copyText: "复制代码",
-    //     tip: {
-    //         content: "复制成功"
-    //     }
-    // }],
+
     // 拷贝
     // ['vuepress-plugin-pdf-export', {
     //     fileName: 'document.pdf',
