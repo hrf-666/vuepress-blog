@@ -26,7 +26,20 @@ const pluginsConfig = [
     }],
     // 右侧目录(暂时无效)
     [
-        'vuepress-plugin-right-anchor'
+        'vuepress-plugin-right-anchor',
+        {
+            showDepth: 1,
+            ignore: [
+                '/',
+                '/navigation/'
+                // 更多...
+            ],
+            expand: {
+                trigger: 'hover',
+                clickModeDefaultOpen: true
+            },
+            customClass: 'your-customClass',
+        }
     ],
     // ["vuepress-plugin-nuggets-style-copy", {
     //     copyText: "复制代码",
