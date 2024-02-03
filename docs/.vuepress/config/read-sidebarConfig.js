@@ -1,3 +1,4 @@
+const {getChildren} = require("../utils/vuepress-sidebar-auto");
 const read_sidebarConfig = [
     {
         title: '阅读',   // 必要的
@@ -5,6 +6,7 @@ const read_sidebarConfig = [
         initialOpenGroupIndex: -1, // 可选的, 默认值是 0
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: -1,    // 可选的, 默认值是 1
+        children: getChildren('./docs','/read/')
     },
 ]
 exports.read_sidebarConfig = read_sidebarConfig;
