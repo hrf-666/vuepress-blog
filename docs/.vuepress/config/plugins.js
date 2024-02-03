@@ -83,13 +83,14 @@ const pluginsConfig = [
             httpUrl: '/vuepress-blog/'     // 绝对路径
         }
     }],
-    ['dynamic-title',{
-        // showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-        showText: '(/≧▽≦/)欢迎回来~',
-        // hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-        hideText: '(●—●)bye bye~',
-        recoverTime: 1000,
-    }],
+    //效果没什么用 npm i vuepress-plugin-dynamic-title -D
+    // ['dynamic-title',{
+    //     // showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+    //     showText: '(/≧▽≦/)欢迎回来~',
+    //     // hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+    //     hideText: '(●—●)bye bye~',
+    //     recoverTime: 1000,
+    // }],
 
 
     // // 音乐播放
