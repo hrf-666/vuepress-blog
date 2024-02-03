@@ -24,7 +24,7 @@ const pluginsConfig = [
             buttonText: "刷新"
         }
     }],
-    // 右侧目录(暂时无效)
+    // 右侧目录
     [
         'vuepress-plugin-right-anchor',
         {
@@ -41,13 +41,13 @@ const pluginsConfig = [
             customClass: 'your-customClass',
         }
     ],
-    // ["vuepress-plugin-nuggets-style-copy", {
-    //     copyText: "复制代码",
-    //     tip: {
-    //         content: "复制成功"
-    //     }
-    // }],
-    // 拷贝
+    // 上次阅读
+    ['last-reading', {
+        popupConfig: {
+            message: '返回上次阅读',
+            buttonText: 'ok'
+        },
+    }],
     [
         'copyright',
         {
@@ -61,6 +61,51 @@ const pluginsConfig = [
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
+    // // 音乐播放
+    // [
+    //     "music-bar",
+    //     {
+    //         //手动添加歌曲,支持 URLs 或 base64 data URIs ,默认为空
+    //         //Add songs manually, support URLs or base64 data URIs, empty by default
+    //         playList: ["example.mp3"],
+    //         platform: [
+    //             //目前仅支持网易云 TODO:多平台支持,默认为空数组
+    //             //Currently only supports Netease Cloud Music,
+    //             //the default is an empty array TODO: Multi-platform support,
+    //             {
+    //                 name: "music.163.com",
+    //                 songIDs: [],//支持多个歌曲 ID  //Support multiple song IDs
+    //                 playListIDs: ["4909779787"] //支持多个歌单 ID  //Support multiple playlist IDs
+    //             }
+    //         ],
+    //
+    //         timeOut: 2000, //加载超时,单位毫秒,默认2000  //Load timeout in milliseconds, default 2000
+    //
+    //         firstClickPlay: true //首次点击自动播放,对移动端友好  //The first click autoplay, mobile friendly
+    //
+    //         //debugMode: <Boolean> Development mode, if in the dev environment,
+    //         //                     output log to console, enabled by default
+    //
+    //         //background: <String> //主容器样式  //Main container style
+    //         //                       default: "linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%)"
+    //
+    //         //frameColor: <String> default: $accentColor
+    //     }
+    // ],
+    // // 音乐播放
+    // ['vuepress-plugin-immersive-music-player', {
+    //     sliderStyle: {theme: 'isRainbow'},
+    //     playListID: 633015043,
+    // }],
+    // //大声诵读
+    // ['text-to-speech', {contentSelector: '.content__default'}],
+    // ["vuepress-plugin-nuggets-style-copy", {
+    //     copyText: "复制代码",
+    //     tip: {
+    //         content: "复制成功"
+    //     }
+    // }],
+    // 拷贝
     // ['vuepress-plugin-pdf-export', {
     //     fileName: 'document.pdf',
     //     pageSize: 'A4',
