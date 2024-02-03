@@ -16,3 +16,4 @@ search: true
 - [Malunan个人博客|IT技术博客](https://www.zmln1021.cn/)
 - [小邵子](https://docs.xiaoshaozi.site/zs-tool-%E6%A1%86%E6%9E%B6/vuepress/25%E3%80%81%E5%8F%B3%E4%BE%A7%E7%9B%AE%E5%BD%95.html#%E7%89%88%E6%9C%AC)
 - [vuepress-plugin for mrcode](https://zq99299.github.io/vuepress-plugin/vuepress-plugin-toolbar/)
+- [試毅-思伟_技术笔记](https://zhousiwei.gitee.io/ibooks/opensource/anires.html#%E7%BA%BF%E4%B8%8A%E9%A2%84%E8%A7%88)
