@@ -61,6 +61,37 @@ const pluginsConfig = [
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
+    //看板娘
+    ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
+        theme: ["blackCat"],
+        clean: false,
+        info: 'https://gitee.com/huang-ruifang/vuepress-blog',
+        messages: {
+            welcome: '',
+            home: '返回首页',
+            theme: '好吧，希望你能喜欢我的其他小伙伴。',
+            close: '再见'
+        }
+    }],
+    // 只要把这个放进 config的plugins中就可以了
+    ["sakura", {
+        num: 20,  // 默认数量
+        show: true, //  是否显示
+        zIndex: -1,   // 层级
+        img: {
+            replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+            httpUrl: '/vuepress-blog/'     // 绝对路径
+        }
+    }],
+    ['dynamic-title',{
+        // showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+        showText: '(/≧▽≦/)欢迎回来~',
+        // hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+        hideText: '(●—●)bye bye~',
+        recoverTime: 1000,
+    }],
+
+
     // // 音乐播放
     // [
     //     "music-bar",
