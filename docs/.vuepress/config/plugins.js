@@ -91,8 +91,6 @@ const pluginsConfig = [
     //     hideText: '(●—●)bye bye~',
     //     recoverTime: 1000,
     // }],
-
-
     // // 音乐播放
     // [
     //     "music-bar",
