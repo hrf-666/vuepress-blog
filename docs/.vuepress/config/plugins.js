@@ -41,13 +41,7 @@ const pluginsConfig = [
             customClass: 'your-customClass',
         }
     ],
-    // 上次阅读
-    ['last-reading', {
-        popupConfig: {
-            message: '返回上次阅读',
-            buttonText: 'ok'
-        },
-    }],
+
     [
         'copyright',
         {
@@ -61,36 +55,42 @@ const pluginsConfig = [
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
-    //看板娘
-    ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
-        theme: ["blackCat"],
-        clean: false,
-        info: 'https://gitee.com/huang-ruifang/vuepress-blog',
-        messages: {
-            welcome: '',
-            home: '返回首页',
-            theme: '好吧，希望你能喜欢我的其他小伙伴。',
-            close: '再见'
-        }
-    }],
-    // 只要把这个放进 config的plugins中就可以了
-    ["sakura", {
-        num: 20,  // 默认数量
-        show: true, //  是否显示
-        zIndex: 1,   // 层级
-        img: {
-            replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
-            httpUrl: 'https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/sakura.png'     // 绝对路径
-        }
-    }],
+    // // 上次阅读
+    // ['last-reading', {
+    //     popupConfig: {
+    //         message: '返回上次阅读',
+    //         buttonText: 'ok'
+    //     },
+    // }],
+    // // 只要把这个放进 config的plugins中就可以了
+    // ["sakura", {
+    //     num: 20,  // 默认数量
+    //     show: true, //  是否显示
+    //     zIndex: 1,   // 层级
+    //     img: {
+    //         replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+    //         httpUrl: 'https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/sakura.png'     // 绝对路径
+    //     }
+    // }],
+    // //看板娘
+    // ['@vuepress-reco/vuepress-plugin-kan-ban-niang', {
+    //     theme: ["blackCat"],
+    //     clean: false,
+    //     info: 'https://gitee.com/huang-ruifang/vuepress-blog',
+    //     messages: {
+    //         welcome: '',
+    //         home: '返回首页',
+    //         theme: '好吧，希望你能喜欢我的其他小伙伴。',
+    //         close: '再见'
+    //     }
+    // }],
     // 复制代码块
     ['@xiaopanda/vuepress-plugin-code-copy', {
         buttonStaticIcon: true,
         buttonIconTitle: '复制',
         buttonAlign: 'top',
         buttonColor: '#ffffff'
-    }
-    ]
+    }],
     // //复制代码vuepress-plugin-nuggets-style-copy
     // ["vuepress-plugin-nuggets-style-copy", {
     //     copyText: "复制代码",
