@@ -80,7 +80,7 @@ const pluginsConfig = [
         zIndex: -1,   // 层级
         img: {
             replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
-            httpUrl: '/vuepress-blog/'     // 绝对路径
+            httpUrl: 'https://huang-ruifang.gitee.io/pic-go/public/vuepress-blog/sakura.png'     // 绝对路径
         }
     }],
     //效果没什么用 npm i vuepress-plugin-dynamic-title -D
