@@ -13,8 +13,11 @@ categories: [VuePress]
 VuePress 是一个基于 Vue 的静态网站生成器，它使用 Vue 的模板语法，支持使用 Vue 组件构建静态页面。
 
 ## 2. 代码实现
-### 2.1. 导航页面 
+
+### 2.1. 导航页面
+
 在 `docs/.vuepress/components` 目录下创建 `Navigation.vue` 文件，代码如下：
+
 ```vue
 
 <template>
@@ -247,7 +250,9 @@ body {
 ```
 
 ### 2.2 导航列表
-在`docs/.vuepress/navList.js`中定义导航列表，如下所示：
+
+在`docs/.vuepress/api/navList.js`中定义导航列表，如下所示：
+
 ```js
 const navList = [
     {
@@ -693,7 +698,11 @@ exports.navList = navList;
 ```
 
 ### 2.3 使用方法
+
+#### 2.3.1 方式一
+
 直接在markdown添加如下代码即可：
+
 ```markdown
 ---
 title: 导航
@@ -705,9 +714,33 @@ sidebar: false
 <Navigate />
 
 ```
+
+#### 2.3.2 方式二
+
+添加layout: Navigate 即可；
+
+```markdown
+---
+title: 导航
+sidebar: false
+layout: Navigate
+pageClass: navigate-page-class
+---
+```
+
 ### 2.4 注意事项
-> VuePress 默认的内容宽度为 740px，想要自定义宽度的话，只需要找到对应宽度的样式，进行覆写就可以实现。
+
+#### 2.4.1 自定义宽度
+
+> 采用方式一时：
+> VuePress 默认的内容宽度为 740px，想要自定义宽度的话，只需要找到对应宽度的样式，进行覆写就可以实现。但会导致其他页面样式问题。
 > 参考：[VuePress自定义宽度](./vuepress-custom-width.md)
 
+#### 2.4.2 使用layout
+
+> 采用方式二时：
+> 使用layout: Navigate 即可。
+
 ## 3. 实现效果
+
 - [自定义导航](https://huang-ruifang.gitee.io/vuepress-blog/navigation/)
