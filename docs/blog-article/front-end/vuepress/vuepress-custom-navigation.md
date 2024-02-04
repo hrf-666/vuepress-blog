@@ -742,5 +742,4 @@ pageClass: navigate-page-class
 > 使用layout: Navigate 即可。
 
 ## 3. 实现效果
-
 - [自定义导航](https://huang-ruifang.gitee.io/vuepress-blog/navigation/)
