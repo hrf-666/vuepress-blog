@@ -16,4 +16,5 @@ sidebar: true
 - [VuePress 右侧目录栏](./vuepress/vuepress-right-sidebar.md)
 - [VuePress 返回上次阅读](./vuepress/vuepress-back-last-read.md)
 - [VuePress 樱花插件](./vuepress/vuepress-sakura-plugin.md)
+- [VuePress 修复全局搜索问题](./vuepress/vuepress-fix-search.md)
 

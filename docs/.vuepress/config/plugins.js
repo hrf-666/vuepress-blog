@@ -13,19 +13,19 @@ const pluginsConfig = [
     //更新时间
     [
         '@vuepress/last-updated',
-        {
-            transformer: (timestamp, lang) => {
-                return new Date(timestamp).toLocaleDateString();
-            }
-        }
+        // {
+        //     transformer: (timestamp, lang) => {
+        //         return new Date(timestamp).toLocaleDateString();
+        //     }
+        // }
     ],
-    //开启seo
-    [
-        'sitemap',
-        {
-            hostname: 'https://huang-ruifang.gitee.io/vuepress-blog/'
-        }
-    ],
+    // //开启seo
+    // [
+    //     'sitemap',
+    //     {
+    //         hostname: 'https://huang-ruifang.gitee.io/vuepress-blog/'
+    //     }
+    // ],
     //图片缩放
     ['@vuepress/medium-zoom'],
     // 进度条
