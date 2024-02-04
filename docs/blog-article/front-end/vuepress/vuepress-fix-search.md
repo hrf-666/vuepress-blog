@@ -1,5 +1,5 @@
 ---
-title: 修复全局搜索问题
+title: VuePress 修复全局搜索问题
 description: 修复全局搜索问题
 date: 2021-06-20T16:51:00+08:00
 tags: ["vuepress", "search"]
