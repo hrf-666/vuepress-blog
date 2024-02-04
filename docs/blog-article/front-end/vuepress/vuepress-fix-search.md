@@ -25,11 +25,9 @@ page.frontmatter.tags.join is not a function
 ```markdown
 ---
 tags:
-
-- 配置
-- 主题
-- 索引
-
+  - 配置
+  - 主题
+  - 索引
 ---
 ```
 
