@@ -11,7 +11,21 @@ const pluginsConfig = [
     //回到顶部
     ['@vuepress/back-to-top'],
     //更新时间
-    ['@vuepress/last-updated'],
+    [
+        '@vuepress/last-updated',
+        {
+            transformer: (timestamp, lang) => {
+                return new Date(timestamp).toLocaleDateString();
+            }
+        }
+    ],
+    //开启seo
+    [
+        'sitemap',
+        {
+            hostname: 'https://huang-ruifang.gitee.io/vuepress-blog/'
+        }
+    ],
     //图片缩放
     ['@vuepress/medium-zoom'],
     // 进度条
@@ -41,7 +55,6 @@ const pluginsConfig = [
             customClass: 'your-customClass',
         }
     ],
-
     [
         'copyright',
         {
