@@ -18,3 +18,4 @@ search: true
 - [vuepress-plugin for mrcode](https://zq99299.github.io/vuepress-plugin/vuepress-plugin-toolbar/)
 - [試毅-思伟_技术笔记](https://zhousiwei.gitee.io/ibooks/opensource/anires.html#%E7%BA%BF%E4%B8%8A%E9%A2%84%E8%A7%88)
 - [lufangzhou](https://zhoufanglu.github.io/vuepressBlog/)
+- [虹墨的博客](https://www.imaegoo.com/)
