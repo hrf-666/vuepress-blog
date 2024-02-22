@@ -1,8 +1,8 @@
 ---
 title: 《甄嬛传》
 date: 2021-04-20 20:50:00
-tags: 小说
-categories: 读书笔记
+tags: [小说]
+categories: [读书笔记]
 description: 《甄嬛传》
 ---
 

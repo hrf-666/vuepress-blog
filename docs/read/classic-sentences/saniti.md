@@ -2,8 +2,8 @@
 title: 《三体》
 author: Rui
 date: 2021-01-20 16:00:00
-categories: 读书笔记
-tags: 读书笔记
+categories: [读书笔记]
+tags: [读书笔记]
 ---
 ## 三体
 
