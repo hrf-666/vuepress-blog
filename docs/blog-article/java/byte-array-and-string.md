@@ -84,3 +84,7 @@ hello world
 
 > 当使用String类的时候，将String作为输入类型
 > 当使用Base64类的时候，使用byte数组作为输入类型
+
+
+## 3. 参考链接
+- [Java - byte[] and String 互相转换](https://www.cnblogs.com/keeplearnning/p/7003415.html)
