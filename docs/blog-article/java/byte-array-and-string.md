@@ -7,6 +7,7 @@ tags: [Java]
 description: Java - byte[] 和 String互相转换
 ---
 
+[[toc]]
 ## 1. byte[] 和 String互相转换
 
 通过用例学习Java中的byte数组和String互相转换，这种转换可能在很多情况需要，比如IO操作，生成加密hash码等等。
