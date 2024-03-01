@@ -84,7 +84,7 @@ public static void main(String[]args){
 
 未去重的年龄:[25,24,25,18]
 
-已去重的年龄:[25,24,18]
+已去重的年龄:[25,24,18]       
 ```
 
 - [原文链接](https://blog.csdn.net/qq_42227281/article/details/102737730)
