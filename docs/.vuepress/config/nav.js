@@ -33,6 +33,13 @@ const navConfig = [
         ]
 
     },
+    // {
+    //     text: 'Languages',
+    //     items: [
+    //         { text: 'Group1', items: [/*  */] },
+    //         { text: 'Group2', items: [/*  */] }
+    //     ]
+    // }
 
 ]
 
