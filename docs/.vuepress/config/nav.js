@@ -3,7 +3,7 @@ const navConfig = [
     // {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
     {text: '程序员导航', link: '/navigation/',},
     {
-        text: '面试',
+        text: '面经',
         link: '/study-notes/'
     },
     {
@@ -19,12 +19,19 @@ const navConfig = [
         link: '/friendly-chain/'
     },
     {
-        text: '阅读',
-        link: '/read/'
-    },
-    {
         text: '其他',
-        link: '/other/'
+        link: '/other/',
+        items: [
+            {
+                text: '阅读',
+                link: '/read/'
+            },
+            {
+                text: '关于',
+                link: '/aboutme/'
+            },
+        ]
+
     },
 
 ]
