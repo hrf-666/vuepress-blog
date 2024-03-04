@@ -9,3 +9,4 @@ tags: [博文]
 
 - [Java JDK下载安装及环境配置超详细图文教程](./software/jdk-install.md)
 - [MAVEN的安装与配置教程](./software/maven-install.md)
+- [IDEA配置Maven（详细版）](./software/idea-maven.md)
