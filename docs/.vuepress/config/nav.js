@@ -19,8 +19,7 @@ const navConfig = [
         link: '/friendly-chain/'
     },
     {
-        text: '其他',
-        link: '/other/',
+        text: '杂记',
         items: [
             {
                 text: '阅读',
@@ -31,7 +30,10 @@ const navConfig = [
                 link: '/aboutme/'
             },
         ]
-
+    },
+    {
+        text: '其他',
+        link: '/other/',
     },
     // {
     //     text: 'Languages',
