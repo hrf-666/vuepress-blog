@@ -9,9 +9,9 @@ const blog_article_sidebarConfig = [
         children: getChildren('./docs','/blog-article/java/')
     },
     {
-        title: 'MySql',   // 必要的
-        path: '/blog-article/mysql/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        children: getChildren('./docs','/blog-article/mysql/')
+        title: '数据库',   // 必要的
+        path: '/blog-article/database/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        children: getChildren('./docs','/blog-article/database/')
     },
     {
         title: 'Python',   // 必要的
