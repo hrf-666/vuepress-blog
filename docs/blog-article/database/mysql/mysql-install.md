@@ -1,7 +1,7 @@
 ---
 title: MySQL安装
 date: 2020-04-14T16:00:00+08:00
-tags: [mysql,]
+tags: [mysql,数据库]
 category: 数据库
 ---
 
