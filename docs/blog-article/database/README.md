@@ -12,3 +12,6 @@ search: true
 
 ## derby
 - [derby数据库基本语法](./derby/derby.md)
+
+## mysql
+- [mysql数据库基本语法](./mysql/mysql.md)
