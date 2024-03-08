@@ -179,8 +179,10 @@ ADD [COLUM] create_definition [FIRSR | AFTER column_name ]    --添加新字段
 | ADD UNIQUE [index_name] (index_col_name,.
 ..)                    --添加唯一索引
 | ALTER
-[COLUMN] col_name {SET DEFAULT literal | DROP DEFAULT} --修改字段名称
-| CHANGE
+[COLUMN] col_name {
+SET DEFAULT literal | DROP DEFAULT} --修改字段名称
+    |
+CHANGE
 [COLUMN] old_col_name create_definition --修改字段类型
 | MODIFY [COLUMN] create_definition --修改子句
 | DROP
@@ -495,7 +497,8 @@ CREATE USER '用户名'@'来源地址' [IDENTIFIED BY [PASSWORD] '密码'];
 '来源地址'：指定新创建的用户可在哪些主机上登录，可使用IP地址、网段、主机名的形式，
 本地用户可用localhost，允许任意主机登录可用通配符%
 '密码'：若使用明文密码，直接输入'密码'，插入到数据库时由Mysql自动加密；
-若使用加密密码，需要先使用SELECT PASSWORD('密码'); 获取密文，再在语句中添加 PASSWORD '密文';
+若使用加密密码，需要先使用SELECT PASSWORD('密码');
+获取密文，再在语句中添加 PASSWORD '密文';
 若省略“IDENTIFIED BY”部分，则用户的密码将为空（不建议使用）
 ----------------------------------------------------------------------
 ```
