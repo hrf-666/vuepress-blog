@@ -1,7 +1,7 @@
 ---
 title: Navicat Premium 16安装教程
 date: 2020-04-14T16:00:00+08:00
-tags: [mysql,数据库]
+tags: [navicat,数据库]
 category: 数据库
 ---
 
