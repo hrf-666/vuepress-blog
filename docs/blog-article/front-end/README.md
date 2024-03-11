@@ -7,6 +7,7 @@ sidebar: true
 - [easyui tree combotree去掉默认图标](./easyui/easyui-tree-combotree.md)
 ## js
 - [js判断数组对象中某一属性是否包含重复的值](./js/js-array-object-contain-duplicate-values.md)
+- [xlsx.full JS上传(导入,导出)Excel 源码](./js/js-xlsx-full.md)
 ## vuepress
 - [VuePress 加载网络图片](./vuepress/vuepress-loads-network-images.md)
 - [VuePress 自动生成侧边栏](./vuepress/vuepress-auto-sidebar.md)

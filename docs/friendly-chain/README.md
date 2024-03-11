@@ -19,5 +19,6 @@ search: true
 - [lufangzhou](https://zhoufanglu.github.io/vuepressBlog/)
 - [虹墨的博客](https://www.imaegoo.com/)
 - [Java2Top](https://www.java2top.cn/)
+- [罗分明网络博客](https://www.luofenming.com/)
 
 [//]: # (- [小浩浩的博客]&#40;https://www.xiaohaohe.cn/&#41;)
