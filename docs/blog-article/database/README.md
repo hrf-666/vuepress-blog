@@ -19,6 +19,7 @@ search: true
 
 ## redis
 - [Window下Redis的安装和部署详细图文教程（Redis的安装和可视化工具的使用）](./redis/redis-install-deployment.md)
+- [Redis 16 个常见使用场景](./redis/redis-16-common-usage-scenarios.md)
 
 ## navicat
 - [navicat安装](./navicat/navicat-install.md)
