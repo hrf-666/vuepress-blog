@@ -16,3 +16,9 @@ search: true
 ## mysql
 - [mysql安装](./mysql/mysql-install.md)
 - [mysql数据库基本语法](./mysql/mysql.md)
+
+## redis
+
+## navicat
+- [navicat安装](./navicat/navicat-install.md)
+
