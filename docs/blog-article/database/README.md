@@ -18,7 +18,9 @@ search: true
 - [mysql数据库基本语法](./mysql/mysql.md)
 
 ## redis
+- [Window下Redis的安装和部署详细图文教程（Redis的安装和可视化工具的使用）](./redis/redis-install-deployment.md)
 
 ## navicat
 - [navicat安装](./navicat/navicat-install.md)
+
 
