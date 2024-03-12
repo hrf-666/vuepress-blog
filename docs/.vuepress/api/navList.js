@@ -199,6 +199,19 @@ const navList = [
         ],
     },
     {
+        title: "链接 | 储备",
+        arr: [
+            {
+                nav: "菜鸟教程",
+                nav_url: "https://www.runoob.com/",
+                nav_img: "",
+                id: "000000001",
+            },
+
+
+        ],
+    },
+    {
         title: "友链 | 储备",
         arr: [
             {
