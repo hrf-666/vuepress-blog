@@ -1,7 +1,7 @@
 const navConfig = [
     {text: '首页', link: '/'},
     // {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
-    {text: '程序员导航', link: '/navigation/',target: '_blank'},
+    {text: '程序员导航', link: '/vuepress-blog/navigation/',target: '_blank'},
     {
         text: '面经',
         link: '/study-notes/'
