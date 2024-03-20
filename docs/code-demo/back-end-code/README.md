@@ -1,9 +1,6 @@
 ---
 title: 后端Demo
-tags:
- - Demo
- - 笔记
-search: true
+tags: [Demo]
 ---
 
 [[TOC]]

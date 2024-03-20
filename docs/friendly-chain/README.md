@@ -3,7 +3,6 @@ title: 友链
 lang: en-US
 sidebar: auto
 tags: [友链]
-search: true
 ---
 
 #  友链

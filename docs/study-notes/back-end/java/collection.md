@@ -3,9 +3,7 @@ title: Java集合
 icon: pen-to-square
 date: 2022-01-09
 sidebar: true
-tags:
-  - 面试
-  - 集合
+tags: [集合]
 ---
 [[toc]]
 ## 引言
