@@ -58,5 +58,22 @@ category: 数据库
 比如从并发会到线程池，从小点往大点
 
 
+# 物美智联
+https://fastbee.cn/
+项目演示
+
+
+
+# 仓库管理系统erp
+
+
+
+
+# 后台管理类项目
+开源地址：https://gitee.com/lab1024/smart-admin
+
+https://xiaonuo.vip/doc?catalogueId=1574674492144766978&menuId=1574684190755540994&lineIndex=9
+
+
 
 
