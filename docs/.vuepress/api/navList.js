@@ -212,6 +212,19 @@ const navList = [
         ],
     },
     {
+        title: "项目 | 储备",
+        arr: [
+            {
+                nav: "FastBee文档",
+                nav_url: "https://fastbee.cn/doc/",
+                nav_img: "https://fastbee.cn/doc/img/favicon.gif",
+                id: "0000000001",
+            },
+
+
+        ],
+    },
+    {
         title: "友链 | 储备",
         arr: [
             {
