@@ -263,6 +263,13 @@ const navList = [
                 nav_img: "https://senior-frontend.pages.dev/logo.png",
                 id: "00000006",
             },
+            {
+                nav: "书栈网",
+                nav_url: "https://www.bookstack.cn/cate",
+                nav_img: "https://static.sitestack.cn/static/images/logo.png",
+                id: "00000007",
+            },
+
 
 
 
