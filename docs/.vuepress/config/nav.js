@@ -3,8 +3,17 @@ const navConfig = [
     // {text: '程序员导航', link: 'https://hrf-666.github.io/navigation', target: '_blank'},
     {text: '程序员导航', link: '/vuepress-blog/navigation/',target: '_blank'},
     {
-        text: '面经',
-        link: '/study-notes/'
+        text: '面经|备考',
+        items: [
+            {
+                text: '面经',
+                link: '/study-notes/'
+            },
+            {
+                text: '备考',
+                link: '/preparation-exams/'
+            },
+        ]
     },
     {
         text: '博文',
