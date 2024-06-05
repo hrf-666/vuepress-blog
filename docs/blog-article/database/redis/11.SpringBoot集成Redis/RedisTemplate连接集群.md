@@ -1,8 +1,13 @@
-# RedisTemplate连接集群
+---
+title: RedisTemplate连接集群
+tags:
+  - redis
+---
+#  RedisTemplate连接集群
 
-- 启动Redis集群6台实例
+启动Redis集群6台实例
 
-- 第一次改写YML
+第一次改写YML
 
   ```yaml
   # ===========================redis集群===========================
@@ -17,11 +22,11 @@
   ```
 
 
-- 直接通过微服务访问Redis集群
+直接通过微服务访问Redis集群
 
   一切正常 （http://localhost:7777/swagger-ui.html）
 
-- $\textcolor{red}{\large 问题来了}$
+$\textcolor{red}{\large 问题来了}$
 
   1. 人为模拟，master-6381机器意外宕机，手动shutdown
 
@@ -33,7 +38,7 @@
 
   5. $\textcolor{green}{\large 微服务客户端再次读写访问试试}$
 
-     - 故障现象
+     故障现象
 
        SpringBoot客户端没有动态感知RedisCluster的最新集群信息
 
@@ -43,10 +48,10 @@
 
        ![](images/6.Java连接Redis经典故障.png)
 
-     - 导致原因
+     导致原因
        SpringBoot 2.X版本，Redis默认的连接池采用Lettuce，当Redis集群节点发生变化后，Letture默认是不会刷新节点拓扑
 
-     - 解决方案
+     解决方案
 
        1. 排除lettuce采用Jedis（不推荐）
 
@@ -60,13 +65,9 @@
 
           解决方法：
 
-          - 调用 RedisClusterClient.reloadPartitions
-          - 后台基于时间间隔的周期刷新
-          - 后台基于持续的 **断开** 和 **移动**、**重定向** 的自适应更新
-
-     - ​
-
-  ​
+          调用 RedisClusterClient.reloadPartitions
+          后台基于时间间隔的周期刷新
+          后台基于持续的 **断开** 和 **移动**、**重定向** 的自适应更新
 
 
 

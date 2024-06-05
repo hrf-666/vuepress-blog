@@ -6,7 +6,7 @@ const markdownConfig = {
     //         // 提供你的选项
     //     }]
     // ]
-    // 图片路径
+    // 图片路径相对路径显示
     extendMarkdown: md => {
         md.use(require("markdown-it-disable-url-encode"));
     }
