@@ -23,4 +23,4 @@ git commit -m '自动部署'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 git push -f git@github.com:hrf-666/vuepress-blog.git master:rui-pages
 
-# cd -
+cd -
