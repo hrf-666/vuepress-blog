@@ -19,7 +19,7 @@ git commit -m '自动部署'
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# 如果发布到 https://<USERNAME>.github.io/<REPO> 发布到rui-pages分支
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 git push -f git@github.com:hrf-666/vuepress-blog.git master:rui-pages
 
