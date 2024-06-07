@@ -1,16 +1,10 @@
 ---
-title: 博文
-tags: [博文]
+title: 系列文章
+tags: [系列文章]
 ---
-[[toc]]
 # 系列文章
 
-- [Java - byte[] 和 String互相转换](./basic/byte-array-and-string.md)
-- [list集合（String字符串）去重的三种方式](./basic/list-string-remove-duplicate.md)
-- [Stream流提取对象集合的id组成一个集合](./basic/stream-extract-id.md)
-## springboot相关
-- [基于SpringBoot IP黑白名单的实现](./springboot/ip-blacklist.md)
-## 软件开发相关
-- [Java JDK下载安装及环境配置超详细图文教程](./software/jdk-install.md)
-- [MAVEN的安装与配置教程](./software/maven-install.md)
-- [IDEA配置Maven（详细版）](./software/idea-maven.md)
+- [软件开发相关](./software/README.md)
+- [java](./basic/README.md)
+- [springboot](./springboot/README.md)
+

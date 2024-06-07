@@ -4,7 +4,7 @@ tags: [后端开发]
 ---
 
 # 后端
-- [java基础知识](./java)
+- [java](./java)
 - [Python](./python)
 
 

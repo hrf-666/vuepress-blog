@@ -1,9 +1,6 @@
 ---
 title: 前端
-tags:
- - 前端开发
- - Html
- - JavaScript
+tags: [前端]
 ---
 
 #  前端
