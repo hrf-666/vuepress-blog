@@ -7,7 +7,7 @@ const path = require('path')
  * 过滤所要导航的文件
  * 文件名 包含.md 但 不包含  README */
 function checkFileType(path) {
-    return path.includes(".md")&&(!path.includes("README"));
+    return path.includes(".md")&&(!path.includes("README"))&&(!path.includes("images"));
 }
 
 /**
