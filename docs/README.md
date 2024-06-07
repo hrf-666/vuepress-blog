@@ -12,8 +12,8 @@ features:
   details: 生活不是等待风暴过去，而是学会在雨中跳舞。即使面对困难，也要保持乐观，因为信念是我们最强大的武器。
 - title: 阅读
   details: 每一次选择，都是对未来的投资。选择坚持，选择努力，选择相信自己，你将收获无法估量的成功。
-footer: MIT Licensed | Copyright © 2023-present Evan You
 ---
+
 ::: slot footer
 MIT Licensed | Copyright © 2023-present [Evan You](https://github.com/hrf-666/vuepress-blog)
 :::
