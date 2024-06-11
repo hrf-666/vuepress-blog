@@ -75,22 +75,24 @@ https://xiaonuo.vip/doc?catalogueId=1574674492144766978&menuId=15746841907555409
 # 物联万物
 https://doc.dc3.site/docs/function/0-directory.html
 
+# 智能家具
+https://mp.weixin.qq.com/s/rEmp1RngZUNtCDFcmonQ5A
+
 项目经历
-一、 物联万物平台
+一、 智能家居平台
 项目周期：9 个月
-开发环境：Maven+Idea+Jdk1.8+Tomcat9.0+Svn+Linux+NGINX
-开发技术：SpringCloud Alibaba+SpringBoot+Spring Security+MyBatis+MySQL+Redis+RabbitMQ+Vue+ElementUI
+开发环境：Maven+Idea+Jdk1.8+Svn+NGINX
+开发技术：SpringBoot+Spring Security+MyBatis+MySQL+Redis+Jwt+Vue+ElementUI
 项目描述：
-物联万物平台是一个的连接设备的一个平台设施，人们通过特定的协议管理物联设备，是一整套物联系统解决方案。
-采用分布式的项目开发模式，将整个项目分为:用户模块开发，设备模块的接入、短信的配置以及通过通过计算进行报表统计等。
+智能家居平台是一个的管理设备的平台设施，人们通过协议管理物联设备，是一整套物联系统解决方案。
+主要包含登录模块:用户模块开发，设备模块的接入、短信的配置以及通过通过计算进行报表统计等。
 职责描述：
 1. 登录模块
 新用户需要先注册，对注册信息进行校验，然后进行激活，激活之后可以登录.
 2. 用户模块
 用户是系统操作者，该功能主要完成系统用户配置。
-3. 订单模块
-基于 RabbitMQ 实现模块之间的解耦 ，采用异步提升吞吐量 ，通过 RabbitMQ的事务消息
-机制实现数据的最终一致性。
+3. 设备接入模块
+
 4. 销售榜单模块
 根据租房列表获取租赁数量，形成年、月租赁榜单
 5. 负责统筹项目开发进度，负责和产品测试、运维对接需求，按时按量保证项
@@ -99,7 +101,7 @@ https://doc.dc3.site/docs/function/0-directory.html
 二、 交换机管理系统
 项目周期：8个月
 开发环境：Maven+Idea+Jdk1.8+Svn
-开发技术：SpringBoot+MyBatis+MySQL+Redis+Vue+ElementUI+Echarts+Twaver
+开发技术：SpringBoot+MyBatis+Netty+MySQL+Redis+Vue+ElementUI+Echarts+Twaver
 项目描述：
 交换机管理系统主要是为了向客户管理和配置交换机的平台，它为客户提
 供了提供了各种数据信息。该平台减少了人力资源的浪费，能更好的排查问题。
