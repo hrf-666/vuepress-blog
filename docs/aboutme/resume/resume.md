@@ -65,9 +65,8 @@ https://fastbee.cn/
 
 
 # 仓库管理系统erp
-
-
-## 仓库管理系统
+华夏erp
+https://mp.weixin.qq.com/s/mPrAbzgEuvPTqAEwrSk1SA
 
 ## 谷粒商城
 
