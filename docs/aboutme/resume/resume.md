@@ -99,10 +99,10 @@ https://mp.weixin.qq.com/s/rEmp1RngZUNtCDFcmonQ5A
 4. 熟悉SpringBoot 框架的使用，自动装配等 
 5. 熟悉微服务架构，如:SpringCloud Alibaba，熟悉SpringCloud常用组件，如 Nacos、Feign、Sentinel 等 
 6. 熟悉Zookeeper的使用，了解Zookeeper的作用以及Zookeeper分布式锁的实现 
-7. 熟悉RabbitMQ 消息中间件，了解 RabbitMQ 的通信方式和使用场景，如怎样保证消息的高可靠、不重复等 
+7. 熟悉RabbitMQ 消息中间件，了解RabbitMQ的通信方式和使用场景，如怎样保证消息的高可靠、不重复等 
 8. 熟悉Nginx的使用，如:Nginx的负载均衡策略、反向代理以及高性能的实现 
 9. 熟悉关系型数据库，如 MySQL，对 SQL 优化有一定实战经验 
-10. 熟悉Redis非关系型数据库的使用，熟悉 Redis 的持久化策略、淘汰策略、数据结构、集群模式，以及缓存穿透、雪崩等问题的解决方案，并使用 Redis 解决高并发和高可靠等问题 
+10. 熟悉Redis非关系型数据库的使用，熟悉Redis的持久化策略、淘汰策略、数据结构、集群模式，以及缓存穿透、雪崩等问题的解决方案，并使用Redis解决高并发和高可靠等问题 
 11. 熟悉常用的设计模式，如单例模式、工厂模式、代理模式
 12. 熟悉进程、线程、线程池的工作原理 
 13. 熟悉Html5、Css3、JavaScript,Vue2等前端技术，了解Ajax、Layui、Vue等Web前端开发框架的使用 
