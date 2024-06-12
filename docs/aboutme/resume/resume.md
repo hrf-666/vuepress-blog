@@ -77,14 +77,49 @@ https://doc.dc3.site/docs/function/0-directory.html
 
 # 智能家具
 https://mp.weixin.qq.com/s/rEmp1RngZUNtCDFcmonQ5A
+姓名：
+性别：女
+工作年限：3
+求职意向：Java开发
+邮箱：huangruifang0529@163.com
+电话：15518816220
+
+
+教育背景
+2018.9-2022.7  安阳师范学院  软件工程
+
+个人技能
+1. 具备扎实的编程基础，熟悉Java编程、面向对象编程思想，严格遵循阿里巴巴Java代码规范标准 
+2. 掌握存储，比如数组、集合 
+3. 掌握Spring、SpringMVC、MyBatis框架的使用，理解IOC、AOP原理 
+4. 熟悉SpringBoot 框架的使用，自动装配等 
+5. 熟悉微服务架构，如:SpringCloud Alibaba，熟悉SpringCloud常用组件，如 Nacos、Feign、Sentinel 等 
+6. 熟悉Zookeeper的使用，了解Zookeeper的作用以及Zookeeper分布式锁的实现 
+7. 熟悉RabbitMQ 消息中间件，了解 RabbitMQ 的通信方式和使用场景，如怎样保证消息的高可靠、不重复等 
+8. 熟悉Nginx的使用，如:Nginx的负载均衡策略、反向代理以及高性能的实现 
+9. 熟悉关系型数据库，如 MySQL，对 SQL 优化有一定实战经验 
+10. 熟悉Redis非关系型数据库的使用，熟悉 Redis 的持久化策略、淘汰策略、数据结构、集群模式，以及缓存穿透、雪崩等问题的解决方案，并使用 Redis 解决高并发和高可靠等问题 
+11. 熟悉常用的设计模式，如单例模式、工厂模式、代理模式
+12. 熟悉进程、线程、线程池的工作原理 
+13. 熟悉Html5、Css3、JavaScript,Vue2等前端技术，了解Ajax、Layui、Vue等Web前端开发框架的使用 
+14. 了解版本控制器，如Git，Svn 
+15. 了解 Linux 基本命令
+
+工作经历
+2023.2-至今 
+杭州奥博瑞光通讯有限公司
+工作描述：全栈开发
+
+
+2021.12-2022.12 
+杭州初灵信息技术股份有限公司
+工作描述：Java开发
 
 项目经历
-
-
 一、 交换机管理系统
 项目周期：8个月
 开发环境：Maven+Idea+Jdk1.8+Svn
-开发技术：SpringBoot+MyBatis+Netty+MySQL+Vue+ElementUI+Echarts+Twaver
+开发技术：SpringBoot+MyBatis+Netty+MySQL+Echarts+Jquery+EasyUI+Twaver
 项目描述：
 交换机管理系统主要是为了向客户管理和配置交换机的平台，它为客户提
 供了各种数据信息。该平台减少了人力资源的浪费，能更好的排查问题。
@@ -101,7 +136,7 @@ https://mp.weixin.qq.com/s/rEmp1RngZUNtCDFcmonQ5A
 二、 智能仓管（https://gitee.com/jishenghua/JSH_ERP?_from=gitee_search） 进销存管理
 项目周期：8 个月
 开发环境：Maven+Idea+Jdk1.8+Svn
-开发技术：SpringBoot+MyBatis+MySQL+Swagger+ECharts+Jquery+EasyUI+Nginx
+开发技术：SpringBoot+MyBatis+MySQL+Swagger+ECharts+Vue+ElementUI+Nginx
 项目描述：
 仓管平台基于SpringBoot框架，目前项目存在进销存+财务+生产功能。
 主要模块有零售管理、采购管理、销售管理、仓库管理、财务管理、报表查询、系统管理等。
@@ -130,6 +165,19 @@ https://mp.weixin.qq.com/s/rEmp1RngZUNtCDFcmonQ5A
 2. 工单模块的开发:其中主要包括创建工单、使用定时任务自动方式创建补货和运维工单、指定运营人员规则、以及用户在接收到工单后续可以取消工单和接受工单等。
 4. 订单模块的开发:其主要包括用户下单之后，订单的创建，扣减库存，出货，以及出货失败之后事务回滚等。
 5. 负责统筹项目开发进度，负责和产品测试、运维对接需求，按时按量保证项目上线，负责项目的架构设计和性能调优
+
+个人荣誉
+1. CET-4
+2. 2024 年获得了计算机技术与软件专业资格证书-中级软件设计师
+
+
+
+
+
+
+
+
+
 
 
 一、 英达民宿
