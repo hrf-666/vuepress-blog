@@ -20,5 +20,6 @@ tags: [友链]
 - [Java2Top](https://www.java2top.cn/)
 - [罗分明网络博客](https://www.luofenming.com/)
 - [鱼皮的导航学习](https://yuyuanweb.feishu.cn/wiki/JyjnwBfv0iqtBLk1N10c9eI0nmg)
+- [javaguide](https://javaguide.cn/open-source-project/)
 
 [//]: # (- [小浩浩的博客]&#40;https://www.xiaohaohe.cn/&#41;)
