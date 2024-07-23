@@ -1,6 +1,5 @@
 ---
 title: IDEA配置Maven（详细版）
-date: 2019-09-20 16:00:00
 tags: [IDEA, Maven]
 categories: [IDEA]
 description: IDEA配置Maven（详细版）

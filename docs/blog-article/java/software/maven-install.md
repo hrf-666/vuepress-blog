@@ -2,7 +2,6 @@
 title: MAVEN的安装与配置教程
 description: MAVEN的安装与配置教程
 tags: [maven]
-date: 2020-04-20
 ---
 [[toc]]
 # MAVEN的安装与配置教程

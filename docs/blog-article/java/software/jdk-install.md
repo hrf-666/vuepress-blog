@@ -2,7 +2,6 @@
 title: Java JDK下载安装及环境配置超详细图文教程
 description: Java JDK下载安装及环境配置超详细图文教程
 tags: [Java]
-date: 2020-04-20
 ---
 
 [[toc]]

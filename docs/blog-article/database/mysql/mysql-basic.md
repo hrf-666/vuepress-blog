@@ -1,6 +1,6 @@
-    ---
-title: MySQL的基本语法
-tags: [mysql, sql]
+---
+title: MySQL的基本用法
+tags: [mysql,数据库]
 ---
 
 [[toc]]
