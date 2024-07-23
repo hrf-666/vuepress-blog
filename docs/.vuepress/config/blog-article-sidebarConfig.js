@@ -63,7 +63,20 @@ const blog_article_sidebarConfig = [
     {
         title: '前端',   // 必要的
         // path: '/blog-article/front-end/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        children: getChildren('./docs','/blog-article/front-end/')
+        children: [
+            {
+                title: 'js',   // 必要的
+                children: getChildren('./docs','/blog-article/front-end/js/')
+            },
+            {
+                title: 'easyui',   // 必要的
+                children: getChildren('./docs','/blog-article/front-end/easyui/')
+            },
+            {
+                title: 'vuepress',   // 必要的
+                children: getChildren('./docs','/blog-article/front-end/vuepress/')
+            }
+        ]
     },
     {
         title: '图床',   // 必要的
