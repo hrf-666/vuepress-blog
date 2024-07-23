@@ -7,7 +7,7 @@ const path = require('path')
  * 过滤所要导航的文件
  * 文件名 包含.md 但 不包含  README */
 function checkFileType(path) {
-    return path.includes(".md")&&(!path.includes("README"))&&(!path.includes("images"));
+    return path.includes(".md")&&(!path.includes("README"))&&(!path.includes("jpg"))&&(!path.includes("png"))
 }
 
 /**
@@ -53,7 +53,10 @@ function getGroupChildren(path,ele,root) {
             group.sidebarDepth = 2;
             getGroupChildren(path + "/" + ele, item, children);
             group.children=children;
-            root.push(group);
+            // 把images的目录过滤掉
+            if (group.title != "images"){
+                root.push(group);
+            }
         } else {
             if (checkFileType(item)) {
                 root.push(getPath(path + "/" + ele, item));
