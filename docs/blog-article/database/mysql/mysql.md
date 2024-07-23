@@ -1,8 +1,6 @@
----
+    ---
 title: MySQL的基本语法
-date: 2020-04-14T16:00:00+08:00
 tags: [mysql, sql]
-categories: [mysql]
 ---
 
 [[toc]]
