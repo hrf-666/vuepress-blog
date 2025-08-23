@@ -7,7 +7,8 @@ const navConfig = [
         items: [
             {
                 text: '面经',
-                link: '/study-notes/'
+                link: '/study-notes/',
+
             },
             {
                 text: '备考',
@@ -17,7 +18,8 @@ const navConfig = [
     },
     {
         text: '博文',
-        link: '/blog-article/'
+        link: '/blog-article/',
+
     },
     {
         text: '代码Demo',

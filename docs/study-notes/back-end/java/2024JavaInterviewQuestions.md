@@ -1,11 +1,12 @@
 ---
 title: 2024版Java面试真题
 tags: [2024版Java面试真题]
-sidebar: true
 ---
+[[toc]]
+
 # 2024版Java面试真题
 
-> > == 和 equals 有什么区别？
+### == 和 equals 有什么区别？
 
 == 对于基本数据类型来说，是用于比较 “值”是否相等的；而对于引用类型来说，是用于比较引用地址是否相同的；而 equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方法，把它变成了值比较。
 
@@ -52,7 +53,7 @@ public boolean equals(Object anObject) {
 
 
 
-> String 属于基本数据类型吗？
+### String 属于基本数据类型吗？
 
 String 不属于基础类型，在 Java 中，一共有 8 种基本类型（primitive type），其中有 4 种整型、2 种浮点类型、1 种用于表示 Unicode 编码的字符类型 char 和 1 种用于表示真假值的 boolean 类型。
 
@@ -67,7 +68,7 @@ String 不属于基础类型，在 Java 中，一共有 8 种基本类型（prim
 
 
 
-> 为什么使用 final 修饰 String？
+### 为什么使用 final 修饰 String？
 
 使用 final 修饰 String 的第一个好处是安全，第二个好处是高效。
 
@@ -77,7 +78,7 @@ James Gosling 还说，迫使 String 类设计成不可变的另一个原因是�
 
 
 
-> String、StringBuilder 和 StringBuffer 有什么区别？
+### String、StringBuilder 和 StringBuffer 有什么区别？
 
 因为 String 类型是不可变的，所以在字符串拼接的时候如果使用 String 的话性能会很低，因此我们就需要使用另一个数据类型 StringBuffer，它提供了 append 和 insert 方法可用于字符串的拼接，它使用 synchronized 来保证线程安全，如下源码所示：
 
@@ -103,7 +104,7 @@ public synchronized StringBuffer append(String str) {
 
 
 
-> 为什么重写 equals 时，必须重写 hashCode？
+### 为什么重写 equals 时，必须重写 hashCode？
 
 equals 和 hashCode  两个方法是用来协同判断两个对象是否相等的，采用这种方式的原因是可以提高程序插入和查询的速度，如果在重写 equals 时，不重写 hashCode，就会导致在某些场景下，例如将两个相等的自定义对象存储在 Set 集合时，就会出现程序执行的异常，为了保证程序的正常执行，所以我们就需要在重写 equals 时，也一并重写 hashCode 方法才行。
 
@@ -115,7 +116,7 @@ equals 和 hashCode  两个方法是用来协同判断两个对象是否相等�
 
 
 
-> int 和 Integer 有什么区别？
+### int 和 Integer 有什么区别？
 
 int 和 Integer的区别主要体现在以下几个方面：
 
@@ -127,44 +128,44 @@ int 和 Integer的区别主要体现在以下几个方面：
 
 
 
-> Integer 有什么优点？
+### Integer 有什么优点？
 
 包装类 Integer 的优点是解决了基本数据类型无法做到的事情泛型类型参数、序列化、类型转换、高频区间数据缓存等问题。
 
 
 
-> Integer 可以使用 == 进行比较吗？为什么？
+### Integer 可以使用 == 进行比较吗？为什么？
 
 Integer 不能使用 == 比较，因为 Integer 本身是对象，而 == 比较的是对象地址，所以不能使用== 比较。
 
 
 
-> final、finally 和 finalize 有什么区别？
+### final、finally 和 finalize 有什么区别？
 
 final、finally 和 finalize 从英文字面角度来看，看似很像，实则 3 者在 Java 中没任何关系。final 是用来修饰类、方法、变量和参数的关键字，被 final 修饰的对象不允许修改或替换其原始值或定义；finally 是 Java 中保证重点代码一定要被执行的一种机制；finalize 是 Object 类中的一个基础方法，它的设计目的是保证对象在被垃圾收集前完成特定资源的回收的，但其执行“不稳定”，且有一定的性能问题，已经在 JDK 9 中被设置为弃用的方法了。
 
 
 
-> 普通类和抽象类有哪些区别？
+### 普通类和抽象类有哪些区别？
 
 1. 普通类不能包含抽象方法，抽象类可以包含抽象方法。
 2. 抽象类不能直接实例化，普通类可以直接实例化。
 
 
 
-> 抽象类必须要有抽象方法吗？
+### 抽象类必须要有抽象方法吗？
 
 不需要，抽象类不一定非要有抽象方法。
 
 
 
-> 抽象类能使用 final 修饰吗？
+### 抽象类能使用 final 修饰吗？
 
 不能，定义抽象类就是让其他类继承的，如果定义为 final 该类就不能被继承，这样彼此就会产生矛盾，所以 final 不能修饰抽象类。
 
 
 
-> 抽象类和接口有什么区别？
+### 抽象类和接口有什么区别？
 
 接口和抽象类都是用来定义对象的公共行为的，但二者有以下 7 点不同：
 
@@ -178,7 +179,7 @@ final、finally 和 finalize 从英文字面角度来看，看似很像，实则
 
 
 
-> Java 中 this 和 super 有什么区别？
+### Java 中 this 和 super 有什么区别？
 
 this 和 super 都是 Java 中的关键字，都起指代作用，当显式使用它们时，都需要将它们放在方法的首行（否则编译器会报错）。this 表示当前对象，super 用来指代父类对象，它们有四点不同：
 
@@ -189,7 +190,7 @@ this 和 super 都是 Java 中的关键字，都起指代作用，当显式使�
 
 
 
-> 为什么返回类型不算方法重载？
+### 为什么返回类型不算方法重载？
 
 因为不同的返回值类型，JVM 没办法分辨到底要调用哪个方法，JVM 调用方法是通过方法签名来判断到底要调用哪个方法的，而方法签名 = 方法名称 + 参数类型 + 参数个数组成的一个唯一值，这个唯一值就是方法签名。
 
@@ -197,7 +198,7 @@ this 和 super 都是 Java 中的关键字，都起指代作用，当显式使�
 
 
 
-> 方法重写时需要注意什么问题？
+### 方法重写时需要注意什么问题？
 
 Java 中的方法重写（Override）是在子类重新定义父类已有方法的过程，它是面向对象编程中多态的具体表现。我们可以通过 @Override 关键字重写父类中的某个方法，但在重写的过程中需要注意以下 5 个问题：
 
@@ -209,7 +210,7 @@ Java 中的方法重写（Override）是在子类重新定义父类已有方法�
 
 
 
-> 深克隆和浅克隆有什么区别？
+### 深克隆和浅克隆有什么区别？
 
 深克隆（Deep Clone）是将原型对象中的所有类型，无论是值类型还是引用类型，都复制一份给克隆对象，也就是说深克隆会把原型对象和原型对象所引用的对象，都复制一份给克隆对象。
 
@@ -219,7 +220,7 @@ Java 中的方法重写（Override）是在子类重新定义父类已有方法�
 
 
 
-> 如何实现深克隆？
+### 如何实现深克隆？
 
 深克隆的实现方式有很多种，大体可以分为以下几类：
 
@@ -432,7 +433,7 @@ public class ThirdExample {
 
     static class StreamClone {
 
-        public static <T extends Serializable> T clone(People obj) {
+        public static <T extends Serializable### T clone(People obj) {
             T cloneObj = null;
             try {
                 // 写入字节流
@@ -522,7 +523,7 @@ public class ThirdExample {
 
 
 
-> 什么是动态代理？
+### 什么是动态代理？
 
 动态代理是在程序运行期，动态的创建目标对象的代理对象，并对目标对象中的方法进行功能性增强的一种技术。
 
@@ -537,7 +538,7 @@ public class ThirdExample {
 
 
 
-> 动态代理和静态代理有什么区别？
+### 动态代理和静态代理有什么区别？
 
 静态代理其实就是事先写好代理类，可以手工编写也可以使用工具生成，但它的缺点是每个业务类都要对应一个代理类，特别不灵活也不方便。
 
@@ -547,13 +548,13 @@ public class ThirdExample {
 
 
 
-> 如何实现动态代理？
+### 如何实现动态代理？
 
 在 Java 中，实现动态代理的常用方式是 JDK Proxy 和 CGLib。
 
 
 
-> JDK Proxy 和 CGLib 有什么区别？
+### JDK Proxy 和 CGLib 有什么区别？
 
 JDK Proxy 和 CGLib 的区别主要体现在以下几个方面：
 
@@ -567,13 +568,13 @@ JDK Proxy 和 CGLib 的区别主要体现在以下几个方面：
 
 
 
-> 动态代理的底层是如何实现的？
+### 动态代理的底层是如何实现的？
 
 不同的动态代理的底层实现是不同的，比如 JDK Proxy 底层是通过反射技术实现的，而 CGLib 是基于 ASM，一个 Java 字节码操作框架实现的。
 
 
 
-> 说一下反射机制？
+### 说一下反射机制？
 
 Java 反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为 Java 语言的反射机制。简单来说，反射机制指的是程序在运行时能够获取自身的信息。在 Java 中，只要给定类的名字，就可以通过反射机制来获得类的所有信息。
 
@@ -594,15 +595,15 @@ Java 反射机制主要提供了以下功能，这些功能都位于 java.lang.r
 例如，Spring 可以通过配置来加载不同的类，调用不同的方法，代码如下所示：
 
 ```xml
-<bean id="person" class="com.spring.beans.Person" init-method="initPerson">
-</bean>
+<bean id="person" class="com.spring.beans.Person" init-method="initPerson"###
+</bean###
 ```
 
 例如，MyBatis 在 Mapper 使用外部类的 Sql 构建查询时，代码如下所示：
 
 ```java
 @SelectProvider(type = PersonSql.class, method = "getListSql")
-List<Person> getList();
+List<Person### getList();
 class PersonSql {
     public String getListSql() {
         String sql = new SQL() {{
@@ -626,7 +627,7 @@ Connection connection = DriverManager.getConnection(url, username, password);
 
 
 
-> 如何使用反射？
+### 如何使用反射？
 
 在 Java 中，反射获取调用类可以通过 Class.forName()，反射获取类实例要通过 newInstance()，相当于 new 一个新对象，反射获取方法要通过 getMethod()，获取到类方法之后使用 invoke() 对类方法进行调用。如果是类方法为私有方法的话，则需要通过 setAccessible(true) 来修改方法的访问限制，以上的这些操作就是反射的基本使用，具体调用如下。
 
@@ -661,7 +662,7 @@ method3.invoke(object);
 
 
 
-> 反射有什么优缺点？
+### 反射有什么优缺点？
 
 优点：
 
@@ -676,7 +677,7 @@ method3.invoke(object);
 
 
 
-> BIO、NIO 和 AIO 有什么区别？
+### BIO、NIO 和 AIO 有什么区别？
 
 它们三者都是用来实现 IO（Input/Output）操作的，它们的区别如下。
 
@@ -688,7 +689,7 @@ method3.invoke(object);
 
 
 
-> ArrayList 和 LinkedList 有什么区别？
+### ArrayList 和 LinkedList 有什么区别？
 
 它们的区别有以下几个：
 
@@ -700,7 +701,7 @@ method3.invoke(object);
 
 
 
-> Vector 和 ArrayList 有什么区别？
+### Vector 和 ArrayList 有什么区别？
 
 它们的区别有以下几个：
 
@@ -710,7 +711,7 @@ method3.invoke(object);
 
 
 
-> Array 和 ArrayList 一样吗？
+### Array 和 ArrayList 一样吗？
 
 二者是不同的，Array 是数组，ArrayList 是集合，它们的区别有以下几个：
 
@@ -720,14 +721,14 @@ method3.invoke(object);
 
 
 
-> 如何实现数组和 List 转换？
+### 如何实现数组和 List 转换？
 
 1. 数组转 List：使用 Arrays.asList(array) 进行转换。
 2. List 转数组：使用 List 自带的 toArray() 方法。
 
 
 
-> Collection 和 Collections 有什么区别？
+### Collection 和 Collections 有什么区别？
 
 Collection 和 Collections 的区别如下：
 
@@ -736,7 +737,7 @@ Collection 和 Collections 的区别如下：
 
 
 
-> Comparable 和 Comparator 有什么区别？
+### Comparable 和 Comparator 有什么区别？
 
 Comparable 和 Comparator 都是用来实现元素排序的，它们二者的区别如下：
 
@@ -747,7 +748,7 @@ Comparable 和 Comparator 都是用来实现元素排序的，它们二者的区
 
 
 
-> HashSet 如何保证数据不可重复？
+### HashSet 如何保证数据不可重复？
 
 HashSet 保证数据不可重复的原因和 HashSet 添加数据的流程有关。
 
@@ -757,7 +758,7 @@ HashSet 保证数据不可重复的原因和 HashSet 添加数据的流程有关
 
 
 
-> HashMap 和 Hashtable 有什么区别？
+### HashMap 和 Hashtable 有什么区别？
 
 它们的区别体现在以下几个方面：
 
@@ -767,7 +768,7 @@ HashSet 保证数据不可重复的原因和 HashSet 添加数据的流程有关
 
 
 
-> HashMap 底层是如何实现的？
+### HashMap 底层是如何实现的？
 
 HashMap 在 JDK 1.7 和 JDK 1.8 的底层实现是不一样的。
 
@@ -775,25 +776,25 @@ HashMap 在 JDK 1.7 和 JDK 1.8 的底层实现是不一样的。
 
 
 
-> 说一下 HashMap 新增流程？
+### 说一下 HashMap 新增流程？
 
 简单来说 HashMap 的元素添加流程是，先将 key 值进行 hash 得到哈希值，根据哈希值得到元素位置，判断元素位置是否为空，如果为空直接插入，不为空判断是否为红黑树，如果是红黑树则直接插入，否则判断链表是否大于 8，且数组长度大于 64，如果满足这两个条件则把链表转成红黑树，然后插入元素，如果不满足这两个条件中的任意一个，则遍历链表进行插入。
 
 
 
-> 为什么链表要升级为红黑树？
+### 为什么链表要升级为红黑树？
 
 在 JDK 1.8 以上的版本中，当链表长度达到 8，并且数组长度大于等于 64 时，链表会转换为红黑树存储。因为链表超过一定长度之后查询效率就会很低，它的时间复杂度是 O(n)，而红黑树的时间复杂度是 O(logn)，因此引入红黑树可以加快 HashMap 在数据量比较大的情况下的查询效率。
 
 
 
-> 什么情况红黑树会退化为链表？
+### 什么情况红黑树会退化为链表？
 
 当 TreeNode 长度小于 6 时，会退化为链表。
 
 
 
-> 为什么 HashMap 要使用红黑树？
+### 为什么 HashMap 要使用红黑树？
 
 主要原因有以下几个：
 
@@ -805,7 +806,7 @@ HashMap 在 JDK 1.7 和 JDK 1.8 的底层实现是不一样的。
 
 
 
-> HashMap 重要的参数有哪些？
+### HashMap 重要的参数有哪些？
 
 HashMap 有两个重要的参数：容量（Capacity）和加载因子（LoadFactor）。
 
@@ -814,7 +815,7 @@ HashMap 有两个重要的参数：容量（Capacity）和加载因子（LoadFac
 
 
 
-> 为什么加载因子是 0.75？
+### 为什么加载因子是 0.75？
 
 这其实是出于容量和性能之间平衡的结果：
 
@@ -825,19 +826,19 @@ HashMap 有两个重要的参数：容量（Capacity）和加载因子（LoadFac
 
 
 
-> HashMap 如何解决哈希冲突？
+### HashMap 如何解决哈希冲突？
 
 HashMap 在 JDK 1.8 版本中是通过链式寻址法，以及红黑树来解决 Hash 冲突的问题。其中红黑树是为了优化 Hash 表的链表过长导致时间复杂度增加的问题，当链表长度大于等于 8，并且数组的容量大于 64 的时候，再向链表添加元素，就会触发链表向红黑树的一个转化。
 
 
 
-> ConcurrentHashMap 如何保证线程安全？
+### ConcurrentHashMap 如何保证线程安全？
 
 ConcurrentHashMap 在 JDK 1.7 时是通过分段锁来保证线程安全的，而在 JDK 1.8 时是在头节点加锁，通过CAS + volatile 或 synchronized 的方式来保证线程安全的。
 
 
 
-> 进程和线程有什么区别？
+### 进程和线程有什么区别？
 
 进程（Process）是操作系统分配资源的基本单位，一个进程拥有的资源有自己的堆、栈、虚存空间（页表）、文件描述符等信息。
 
@@ -879,7 +880,7 @@ ConcurrentHashMap 在 JDK 1.7 时是通过分段锁来保证线程安全的，�
 
 
 
-> 多线程有什么优缺点？
+### 多线程有什么优缺点？
 
 多线程的优点是可以提高程序的执行性能。例如，有个 90 平方的房子，一个人打扫需要花费 30 分钟，三个人打扫就只需要 10 分钟，这三个人就是程序中的“多线程”。
 
@@ -887,7 +888,7 @@ ConcurrentHashMap 在 JDK 1.7 时是通过分段锁来保证线程安全的，�
 
 
 
-> 线程的创建方式有哪些？
+### 线程的创建方式有哪些？
 
 线程的创建，分为以下三种方式：
 
@@ -939,7 +940,7 @@ class ThreadTest {
     public static void main(String[] args) throws Exception {
         MyCallable callable = new MyCallable();
         // 定义返回结果
-        FutureTask<String> result = new FutureTask(callable);
+        FutureTask<String### result = new FutureTask(callable);
         // 执行程序
         new Thread(result).start();
         // 输出返回结果
@@ -958,17 +959,17 @@ class MyCallable implements Callable {
 
 
 
-> 如何简单的使用线程？
+### 如何简单的使用线程？
 
 JDK 8 之后可以使用 Lambda 表达式很方便地创建线程，请参考以下代码：
 
 ```java
-new Thread(() -> System.out.println("Lambda Of Thread.")).start();
+new Thread(() -### System.out.println("Lambda Of Thread.")).start();
 ```
 
 
 
-> 用户线程和守护线程有什么区别？
+### 用户线程和守护线程有什么区别？
 
 在 Java 语言中，线程分为两类：用户线程和守护线程，默认情况下我们创建的线程或线程池都是用户线程，所以用户线程也被称之为普通线程。
 
@@ -982,7 +983,7 @@ new Thread(() -> System.out.println("Lambda Of Thread.")).start();
 
 
 
-> 线程常用的方法有哪些？
+### 线程常用的方法有哪些？
 
 线程常用的方法有以下几个：
 
@@ -994,7 +995,7 @@ new Thread(() -> System.out.println("Lambda Of Thread.")).start();
 
 
 
-> start 和 run 方法有什么区别？
+### start 和 run 方法有什么区别？
 
 简单来说，run 方法是对象的普通方法，而 start 方法是开启新线程的方法。它们的区别体现在以下几点：
 
@@ -1006,7 +1007,7 @@ start 方法之所以不能被重复调用的原因是，线程的状态是不�
 
 
 
-> wait 方法和 sleep 方法有什么区别？
+### wait 方法和 sleep 方法有什么区别？
 
 sleep 和 wait 方法都可以让线程进入休眠状态，但二者是完全不同的，它们的区别主要体现在以下几点。
 
@@ -1026,7 +1027,7 @@ wait 方法执行时会主动的释放锁，而 sleep 方法则不会释放锁�
 
 
 
-> 说一下线程的生命周期？
+### 说一下线程的生命周期？
 
 线程的生命周期指的是线程从创建到销毁的整个过程，通常情况下线程的生命周期有以下 5 种：
 
@@ -1038,7 +1039,7 @@ wait 方法执行时会主动的释放锁，而 sleep 方法则不会释放锁�
 
 
 
-> 怎么终止线程？
+### 怎么终止线程？
 
 在 Java 中终止线程的实现方法有以下 2 种：
 
@@ -1047,7 +1048,7 @@ wait 方法执行时会主动的释放锁，而 sleep 方法则不会释放锁�
 
 
 
-> 线程和线程池有什么区别？
+### 线程和线程池有什么区别？
 
 线程池（Thread Pool）：把一个或多个线程通过统一的方式进行调度和重复使用的技术，避免了因为线程过多而带来使用上的开销。
 
@@ -1059,7 +1060,7 @@ wait 方法执行时会主动的释放锁，而 sleep 方法则不会释放锁�
 
 
 
-> 如何创建线程池？
+### 如何创建线程池？
 
 线程池的创建可以分为以下两类：
 
@@ -1078,7 +1079,7 @@ wait 方法执行时会主动的释放锁，而 sleep 方法则不会释放锁�
 
 
 
-> 推荐使用哪种方式来创建线程池？
+### 推荐使用哪种方式来创建线程池？
 
 推荐使用 ThreadPoolExecutor 的方式来创建线程池，这样的处理方式让写的读者更加明确线程池的运行规则，规避资源耗尽的风险。
 
@@ -1089,7 +1090,7 @@ Executors 创建线程池的弊端如下：
 
 
 
-> 说一下 ThreadPoolExecutor 的参数含义？
+### 说一下 ThreadPoolExecutor 的参数含义？
 
 ThreadPoolExecutor 最多支持 7 个参数的设置，如下代码所示：
 
@@ -1098,7 +1099,7 @@ public ThreadPoolExecutor(int corePoolSize,
                           int maximumPoolSize,
                           long keepAliveTime,
                           TimeUnit unit,
-                          BlockingQueue<Runnable> workQueue,
+                          BlockingQueue<Runnable### workQueue,
                           ThreadFactory threadFactory,
                           RejectedExecutionHandler handler) {
     if (corePoolSize < 0 ||
@@ -1133,13 +1134,13 @@ public ThreadPoolExecutor(int corePoolSize,
 
 
 
-> 说一下线程池的执行流程？
+### 说一下线程池的执行流程？
 
 线程池的执行流程是：先判断当前线程数是否大于核心线程数？如果结果为 false，则新建线程并执行任务；如果结果为 true，则判断任务队列是否已满？如果结果为 false，则把任务添加到任务队列中等待线程执行，否则则判断当前线程数量是否超过最大线程数？如果结果为 false，则新建线程执行此任务，否则将执行线程池的拒绝策略。
 
 
 
-> 线程池的拒绝策略都有哪些
+### 线程池的拒绝策略都有哪些
 
 当任务过多且线程池的任务队列已满时，此时就会执行线程池的拒绝策略，线程池的拒绝策略默认有以下 4 种：
 
@@ -1152,7 +1153,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
 
 
-> 如何实现自定义拒绝策略？
+### 如何实现自定义拒绝策略？
 
 除了 JDK 提供的四种拒绝策略之外，我们还可以实现通过 new RejectedExecutionHandler，并重写 rejectedExecution 方法来实现自定义拒绝策略，实现代码如下：
 
@@ -1167,19 +1168,19 @@ new RejectedExecutionHandler(){
 
 
 
-> 线程池中 shutdownNow() 和 shutdown() 有什么区别？
+### 线程池中 shutdownNow() 和 shutdown() 有什么区别？
 
 shutdownNow() 和 shutdown() 都是用来终止线程池的，它们的区别是，使用 shutdown() 程序不会报错，也不会立即终止线程，它会等待线程池中的缓存任务执行完之后再退出，执行了 shutdown() 之后就不能给线程池添加新任务了；shutdownNow() 会试图立马停止任务，如果线程池中还有缓存任务正在执行，则会抛出 java.lang.InterruptedException: sleep interrupted  异常。
 
 
 
-> 多线程存在什么问题？
+### 多线程存在什么问题？
 
 多线程的优点可以同时执行多个任务，而缺点是多线程存在线程安全问题，也就是线程的执行不符合预期结果的问题。
 
 
 
-> 为什么会有线程安全问题？
+### 为什么会有线程安全问题？
 
 导致线程安全问题的因素有以下 5 个：
 
@@ -1187,11 +1188,11 @@ shutdownNow() 和 shutdown() 都是用来终止线程池的，它们的区别是
 2. 多线程同时修改同一个变量；
 3. 非原子性操作：原子性操作是指操作不能再被分割就叫原子性操作，而导致线程安全性问题的一大因素就是非原子性操作；
 4. 内存可见性：多个线程同时操作统一变量，但因为某些原因导致变量已经被一个线程修改，但另一个线程不可见，从而导致了线程安全性问题；
-5. 指令重排序：指令重排序是指 Java 程序为了提高程序的执行速度，所以会对一下操作进行合并和优化的操作，比如某些操作本来的顺序是 A -> B -> C，但被指令重排序之后就变成了 A -> C -> B，但这样重排之后就会导致程序的执行结果和预期的结果不相符的问题。
+5. 指令重排序：指令重排序是指 Java 程序为了提高程序的执行速度，所以会对一下操作进行合并和优化的操作，比如某些操作本来的顺序是 A -### B -### C，但被指令重排序之后就变成了 A -### C -### B，但这样重排之后就会导致程序的执行结果和预期的结果不相符的问题。
 
 
 
-> 如何解决线程安全问题？
+### 如何解决线程安全问题？
 
 在 Java 中，解决线程安全问题有以下 3 种手段：
 
@@ -1209,7 +1210,7 @@ shutdownNow() 和 shutdown() 都是用来终止线程池的，它们的区别是
 
 
 
-> synchronized 有几种用法？
+### synchronized 有几种用法？
 
 synchronized 常见用法有 3 种：
 
@@ -1219,13 +1220,13 @@ synchronized 常见用法有 3 种：
 
 
 
-> synchronized 修饰静态方法和普通方法有什么区别吗？
+### synchronized 修饰静态方法和普通方法有什么区别吗？
 
 synchronized 修饰普通方法和静态方法看似相同，但二者完全不同，对于静态方法来说 synchronized 加锁是全局的，也就是整个程序运行期间，所有调用这个静态方法的对象都是互斥的，而普通方法是针对对象级别的，不同的对象对应着不同的锁。
 
 
 
-> JVM 和 JDK、JRE 有什么区别？
+### JVM 和 JDK、JRE 有什么区别？
 
 它们的定义和作用是不同的
 
@@ -1241,7 +1242,7 @@ synchronized 修饰普通方法和静态方法看似相同，但二者完全不�
 
 
 
-> JVM 是如何工作的？
+### JVM 是如何工作的？
 
 JVM 整体的大概执行流程是这样的：程序在执行之前先要把java代码转换成字节码（class文件），JVM 首先需要把字节码通过一定的方式类加载器（ClassLoader）把文件加载到内存中运行时数据区（Runtime Data Area），而字节码文件是 JVM 的一套指令集规范，并不能直接交个底层操作系统去执行，因此需要特定的命令解析器，执行引擎（Execution Engine）将字节码翻译成底层系统指令再交由CPU去执行，而这个过程中需要调用其他语言的接口，本地库接口（Native Interface）来实现整个程序的功能。
 
@@ -1254,7 +1255,7 @@ JVM 整体的大概执行流程是这样的：程序在执行之前先要把java
 
 
 
-> 说一下类加载机制？
+### 说一下类加载机制？
 
 类加载总共有 5 个步骤，可以分为 3 大步：
 
@@ -1308,13 +1309,13 @@ public static int value = 123;
 
 
 
-> 什么是双亲委派模型？
+### 什么是双亲委派模型？
 
 双亲委派模型指的是：当一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把这个请求委派给父类加载器去完成，每一个层次的类加载器都是如此，因此所有的加载请求最 终都应该传送到最顶层的启动类加载器中，只有当父加载器反馈自己无 法完成这个加载请求（它的搜索范围中没有找到所需的类）时，子加载器才会尝试自己去完成加载。
 
 
 
-> 说一下 JVM 的内存布局？
+### 说一下 JVM 的内存布局？
 
 通常所说的 JVM 内存布局，一般指的是 JVM 运行时数据区（Runtime Data Area），也就是当字节码被类加载器加载之后的执行区域划分。
 
@@ -1328,7 +1329,7 @@ public static int value = 123;
 
 
 
-> 程序计数器有什么特点？
+### 程序计数器有什么特点？
 
 程序计数器有以下 4 个特点：
 
@@ -1339,7 +1340,7 @@ public static int value = 123;
 
 
 
-> Java 虚拟机栈的作用是什么？
+### Java 虚拟机栈的作用是什么？
 
 Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结果，并参与方法的调用和返回，这些内容指导者 Java 程序的运行。
 
@@ -1347,13 +1348,13 @@ Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结
 
 
 
-> 什么情况下会出现栈溢出？
+### 什么情况下会出现栈溢出？
 
 导致栈（Java 虚拟机栈）溢出最常见的情况就是死循环和无限递归，方法自己调自己，这样 Java 虚拟机栈就会只入栈不出栈，当到达 Java 虚拟机栈的最大数之后就会出现 StackOverflowError 异常。
 
 
 
-> 堆和栈有什么区别？
+### 堆和栈有什么区别？
 
 堆是 Java 虚拟机的主要存储单位，Java 中所有的对象和数组都是保存在此区域的；而栈是 Java 虚拟机的运行单位。
 
@@ -1361,7 +1362,7 @@ Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结
 
 
 
-> 堆有什么特点？
+### 堆有什么特点？
 
 堆的特点如下：
 
@@ -1372,7 +1373,7 @@ Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结
 
 
 
-> 内存溢出和内存泄漏有什么区别？
+### 内存溢出和内存泄漏有什么区别？
 
 内存泄漏和内存溢出是两个问题，他们是完全不同的，先来看一下二者的定义：
 
@@ -1383,13 +1384,13 @@ Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结
 
 
 
-> 方法区中存储了什么内容？
+### 方法区中存储了什么内容？
 
 方法区中存储了虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据的。
 
 
 
-> 方法区和永久代是一个东西吗？
+### 方法区和永久代是一个东西吗？
 
 不是一个东西，在《Java虚拟机规范中》把此区域称之为“方法区”，而在 HotSpot 虚拟机的实现中，在 JDK 7 时此区域叫做永久代（PermGen），JDK 8 中叫做元空间（Metaspace）。
 
@@ -1397,7 +1398,7 @@ Java 虚拟机栈保存了：方法的局部变量、方法执行中的部分结
 
 
 
-> JDK 1.8 元空间有什么变化？
+### JDK 1.8 元空间有什么变化？
 
 JDK 1.8 之后，HotSpot 虚拟机开始使用元空间（Meta Space）来实现方法区了，JDK 1.8 元空间的主要变化有两个：
 
@@ -1406,13 +1407,13 @@ JDK 1.8 之后，HotSpot 虚拟机开始使用元空间（Meta Space）来实现
 
 
 
-> 为什么要使用元空间替代永久代？
+### 为什么要使用元空间替代永久代？
 
 之所以要取消“永久代”是因为 Java 官方收购了 JRockit，之后在将 JRockit 和 HotSpot 进行整合时，因为 JRockit 中没有“永久代”，所以把永久代给移除了。
 
 
 
-> 如何判断对象的是否需要被回收？
+### 如何判断对象的是否需要被回收？
 
 我们只需要判断不可用对象，然后在垃圾回收时，将不可用对象回收即可。
 
@@ -1437,7 +1438,7 @@ JDK 1.8 之后，HotSpot 虚拟机开始使用元空间（Meta Space）来实现
 
 
 
-> 说一下常用的垃圾回收算法？
+### 说一下常用的垃圾回收算法？
 
 常见垃圾回收算法有：
 
@@ -1448,7 +1449,7 @@ JDK 1.8 之后，HotSpot 虚拟机开始使用元空间（Meta Space）来实现
 
 
 
-> 标记-清除算法、标记-整理和复制算法有什么特点？
+### 标记-清除算法、标记-整理和复制算法有什么特点？
 
 标记-清除算法、标记-整理和复制算法有以下几个不足：
 
@@ -1458,7 +1459,7 @@ JDK 1.8 之后，HotSpot 虚拟机开始使用元空间（Meta Space）来实现
 
 
 
-> MySQL 是如何运行的？
+### MySQL 是如何运行的？
 
 MySQL 执行流程要经历的步骤有：
 
@@ -1502,7 +1503,7 @@ mysql  -h  主机名(IP)  -u  用户名 -P 端口 -p
 
 
 
-> 关系型和非关系型数据库的区别？
+### 关系型和非关系型数据库的区别？
 
 关系型数据库的优点：
 
@@ -1526,7 +1527,7 @@ mysql  -h  主机名(IP)  -u  用户名 -P 端口 -p
 
 
 
-> 说一下数据库的三范式？
+### 说一下数据库的三范式？
 
 数据库的三范式主要是为了保证数据库表和字段设计的合理性和规范性的，它的内容如下：
 
@@ -1540,7 +1541,7 @@ mysql  -h  主机名(IP)  -u  用户名 -P 端口 -p
 
 
 
-> MySQL 常用引擎有哪些？
+### MySQL 常用引擎有哪些？
 
 MySQL 最常用的存储引擎有以下 3 种：
 
@@ -1552,7 +1553,7 @@ MySQL 最常用的存储引擎有以下 3 种：
 
 
 
-> InnoDB 和 MyISAM 有什么区别？
+### InnoDB 和 MyISAM 有什么区别？
 
 InnoDB 和 MyISAM 最大的区别是 InnoDB 支持事务，而 MyISAM 不支持事务，它们其他主要区别如下：
 
@@ -1570,7 +1571,7 @@ InnoDB 和 MyISAM 最大的区别是 InnoDB 支持事务，而 MyISAM 不支持�
 
 
 
-> MySQL 有哪些索引类型？
+### MySQL 有哪些索引类型？
 
 MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
@@ -1592,7 +1593,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 聚簇索引和非聚簇索引有什么区别？
+### 聚簇索引和非聚簇索引有什么区别？
 
 聚簇索引和非聚簇索引都是 InnoDB 中的两种索引类型，它们的区别如下。
 
@@ -1618,7 +1619,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 聚簇索引等于主键索引吗？
+### 聚簇索引等于主键索引吗？
 
 聚簇索引不等于主键索引。
 
@@ -1632,7 +1633,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 唯一索引和普通索引哪个性能更好？
+### 唯一索引和普通索引哪个性能更好？
 
 唯一索引和普通索引的性能对比分为以下两种情况：
 
@@ -1642,7 +1643,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 临时表是内存表吗？
+### 临时表是内存表吗？
 
 临时表和内存表是不同的。
 
@@ -1652,7 +1653,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 说一下事务的特性？
+### 说一下事务的特性？
 
 事务是一系列的数据库操作，是数据库应用的基本单位。
 
@@ -1668,7 +1669,7 @@ MySQL 的索引有两种分类方式：逻辑分类和物理分类。
 
 
 
-> 事务有哪些隔离级别？
+### 事务有哪些隔离级别？
 
 MySQL 中有四种事务隔离级别，分别是：
 
@@ -1682,25 +1683,25 @@ MySQL 中有四种事务隔离级别，分别是：
 
 
 
-> 什么是脏读？
+### 什么是脏读？
 
 脏读是指一个事务读取到了另一个事务为提交保存的数据，之后此事务进行了回滚操作，从而导致第一个事务读取了一个不存在的脏数据。
 
 
 
-> 什么是不可重复读？
+### 什么是不可重复读？
 
 在同一个事务中，同一个查询在不同的时间得到了不同的结果。例如事务在 T1 读取到了某一行数据，在 T2 时间重新读取这一行时候，这一行的数据已经发生修改，所以再次读取时得到了一个和 T1 查询时不同的结果。
 
 
 
-> 什么是幻读？
+### 什么是幻读？
 
 同一个查询在不同时间得到了不同的结果，这就是事务中的幻读问题。例如，一个 SELECT 被执行了两次，但是第二次返回了第一次没有返回的一行，那么这一行就是一个“幻像”行。  
 
 
 
-> 不可重复读和幻读有什么区别？
+### 不可重复读和幻读有什么区别？
 
 二者的区别如下：
 
@@ -1710,13 +1711,13 @@ MySQL 中有四种事务隔离级别，分别是：
 
 
 
-> MySQL 事务实现原理是什么？
+### MySQL 事务实现原理是什么？
 
 以 InnoDB 的事务为例，InnoDB 可以通过多版本并发控制（MVCC，Multiversion Concurrency Control ）解决不可重复读问题，加上间隙锁（也就是并发控制）解决幻读问题。因此 InnoDB 的 RR 隔离级别其实实现了串行化级别的效果，而且保留了比较好的并发性能。事务的隔离性是通过锁实现，而事务的原子性、一致性和持久性则是通过事务日志实现。 
 
 
 
-> MySQL 如何保证数据不丢失？
+### MySQL 如何保证数据不丢失？
 
 MySQL 是通过日志，也就是 redolog 和 binlog 来保证数据不丢失的。
 
@@ -1726,7 +1727,7 @@ MySQL 是通过日志，也就是 redolog 和 binlog 来保证数据不丢失的
 
 
 
-> redo log 和 binlog 区别？
+### redo log 和 binlog 区别？
 
 redo log（重做日志）和 binlog（归档日志）都是 MySQL 的重要的日志，它们的区别如下：
 
@@ -1740,7 +1741,7 @@ redo log（重做日志）和 binlog（归档日志）都是 MySQL 的重要的�
 
 
 
-> 为什么需要 redo log？
+### 为什么需要 redo log？
 
 1、redo log 主要用于 MySQL 异常重启后的一种数据恢复手段，确保了数据的一致性；
 
@@ -1748,7 +1749,7 @@ redo log（重做日志）和 binlog（归档日志）都是 MySQL 的重要的�
 
 
 
-> binlog 可以替代 redo log 吗？
+### binlog 可以替代 redo log 吗？
 
 不行。
 
@@ -1770,19 +1771,19 @@ redo log（重做日志）和 binlog（归档日志）都是 MySQL 的重要的�
 
 
 
-> MySQL 中有哪些锁？
+### MySQL 中有哪些锁？
 
 MySQL 提供了：全局锁、行级锁、表级锁。其中 InnoDB 支持表级锁和行级锁，MyISAM 只支持表级锁。
 
 
 
-> MySQL 会导致死锁吗？
+### MySQL 会导致死锁吗？
 
 会，比如将投资的钱拆封几份借给借款人，这时处理业务逻辑就要把若干个借款人一起锁住，它的执行 SQL 是：select * from xxx where id in (xx,xx,xx) for update；
 
 
 
-> 如何解决 MySQL 死锁？
+### 如何解决 MySQL 死锁？
 
 对待死锁常见的两种策略：
 
@@ -1792,13 +1793,13 @@ MySQL 提供了：全局锁、行级锁、表级锁。其中 InnoDB 支持表级
 
 
 
-> 如何查看死锁？
+### 如何查看死锁？
 
 使用命令 `show engine innodb status`  查看最近的一次死锁；
 
 
 
-> 如何避免死锁？
+### 如何避免死锁？
 
 避免死锁的常见方案有：
 
@@ -1814,13 +1815,13 @@ MySQL 提供了：全局锁、行级锁、表级锁。其中 InnoDB 支持表级
 
 
 
-> InnoDB 默认是如何处理死锁的？
+### InnoDB 默认是如何处理死锁的？
 
 InnoDB 默认是使用设置死锁时间来让死锁超时的策略，默认 innodb_lock_wait_timeout 设置的时长是 50s。
 
 
 
-> 如何实现表锁？
+### 如何实现表锁？
 
 MySQL 里标记锁有两种：表级锁、元数据锁（meta data lock）简称 MDL。表锁的语法是 lock tables t read/write。
 
@@ -1840,7 +1841,7 @@ MDL 会直到事务提交才会释放，在做表结构变更的时候，一定�
 
 
 
-> InnoDB 如何实现行锁？
+### InnoDB 如何实现行锁？
 
 行级锁是 MySQL 中粒度最小的一种锁，他能大大减少数据库操作的冲突。
 
@@ -1852,15 +1853,15 @@ INNODB 的行级锁有共享锁（S LOCK）和排他锁（X LOCK）两种。共�
 
 
 
-> 什么是慢查询？
+### 什么是慢查询？
 
 慢查询是 MySQL 中提供的一种慢查询日志，它用来记录在 MySQL 中响应时间超过阀值的语句，具体指运行时间超过 long_query_time 值的 SQL，则会被记录到慢查询日志中。long_query_time 的默认值为 10，意思是运行 10S 以上的语句。默认情况下，MySQL 数据库并不启动慢查询日志，需要我们手动来设置这个参数，如果不是调优需要的话，一般不建议启动该参数，因为开启慢查询日志会给 MySQL 服务器带来一定的性能影响。慢查询日志支持将日志记录写入文件，也支持将日志记录写入数据库表。
 
-使用 `mysql> show variables like '%slow_query_log%';`  来查询慢查询日志是否开启。
+使用 `mysql### show variables like '%slow_query_log%';`  来查询慢查询日志是否开启。
 
 
 
-> MySQL 优化手段有哪些？
+### MySQL 优化手段有哪些？
 
 MySQL 的常见的优化手段有以下五种：
 
@@ -1892,7 +1893,7 @@ MySQL 的常见的优化手段有以下五种：
 
 9、使用同类型比较，比如 '123' 和 '123'、123 和 123
 
-10、尽量避免在 where 子句中使用 != 或者 <> 操作符，查询引用会放弃索引而进行全表扫描
+10、尽量避免在 where 子句中使用 != 或者 <### 操作符，查询引用会放弃索引而进行全表扫描
 
 11、列表数据使用分页查询，每页数据量不要太大
 
@@ -1946,7 +1947,7 @@ MySQL 的常见的优化手段有以下五种：
 
 
 
-> MySQL 常见读写分离方案有哪些？
+### MySQL 常见读写分离方案有哪些？
 
 MySQL 常见的读写分离方案，可以从应用层解决或使用中间件来解决。
 
@@ -1968,7 +1969,7 @@ MySQL 常见的读写分离方案，可以从应用层解决或使用中间件�
 
 
 
-> 表的优化策略有哪些？
+### 表的优化策略有哪些？
 
 常见的大表优化策略如下：
 
@@ -1980,7 +1981,7 @@ MySQL 常见的读写分离方案，可以从应用层解决或使用中间件�
 
 
 
-> 数据被误删了怎么恢复？
+### 数据被误删了怎么恢复？
 
 如果发生了数据删除的操作，它对应的场景和恢复方案如下：
 
@@ -1992,11 +1993,11 @@ MySQL 常见的读写分离方案，可以从应用层解决或使用中间件�
 
 
 
-> drop、truncate 和 delete 有什么区别？
+### drop、truncate 和 delete 有什么区别？
 
 truncate、drop 和 delete 的区别主要有以下 6 点：
 
-1、执行速度：drop > truncate > detele；
+1、执行速度：drop ### truncate ### detele；
 
 2、delete 和 truncate 只删除表数据，而 drop 会删除表数据和表结构以及表的索引、约束和触发器；
 
@@ -2010,7 +2011,7 @@ truncate、drop 和 delete 的区别主要有以下 6 点：
 
 
 
-> 如何防止数据被误删？
+### 如何防止数据被误删？
 
 防止误删，最有效的方法是做好预防，预防的话大概是通过这几个点：
 
@@ -2032,7 +2033,7 @@ truncate、drop 和 delete 的区别主要有以下 6 点：
 
 
 
-> MyBatis 有什么优缺点？
+### MyBatis 有什么优缺点？
 
 MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 去除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 
@@ -2053,7 +2054,7 @@ MyBatis 优缺点如下：
 
 
 
-> 说说 MyBatis 执行流程？
+### 说说 MyBatis 执行流程？
 
 MyBatis 执行流程如下：
 
@@ -2065,7 +2066,7 @@ MyBatis 执行流程如下：
 
 
 
-> MyBatis 和 Hibernate 有什么不同？
+### MyBatis 和 Hibernate 有什么不同？
 
 MyBatis 和 Hibernate 都是非常优秀的 ORM 框架，它们的区别如下：
 
@@ -2076,7 +2077,7 @@ MyBatis 和 Hibernate 都是非常优秀的 ORM 框架，它们的区别如下�
 
 
 
-> ${} 和 #{} 有什么区别？
+### ${} 和 #{} 有什么区别？
 
 ${} 和 #{} 都是 MyBatis 中用来替换参数的。
 
@@ -2090,47 +2091,47 @@ ${} 是 Properties 文件中的变量占位符，它可以用于标签属性值�
 
 
 
-> 什么是 SQL 注入？
+### 什么是 SQL 注入？
 
 SQL 注入即是指应用程序对用户输入数据的合法性没有判断或过滤不严，攻击者可以在应用程序中事先定义好的查询语句的结尾上添加额外的 SQL 语句，在管理员不知情的情况下实现非法操作，以此来实现欺骗数据库服务器执行非授权的任意查询，从而进一步得到相应的数据信息。
 
 
 
-> 如何解决实体类属性和表中字段不一致的问题？
+### 如何解决实体类属性和表中字段不一致的问题？
 
 实体类属性名和表中字段名不一致可以使用以下方式解决：
 
 1. 指定别名：在 SQL 中指定别名，别名等于实体类中的属性名即可；
-2. 结果字典映射：使用 <resultMap> 来映射字段名和实体类属性名的一一对应关系。
+2. 结果字典映射：使用 <resultMap### 来映射字段名和实体类属性名的一一对应关系。
 
 具体实现如下。
 
 **① 指定别名**
 
 ```xml
-<select id="getUser" resultetype="com.demo.model.userinfo">
+<select id="getUser" resultetype="com.demo.model.userinfo"###
   select id,username as name from userinfo 
-</select>
+</select###
 ```
 
 **② 结果字典映射**
 
 ```xml
-<select id="getUser" resultMap="userMap">
+<select id="getUser" resultMap="userMap"###
     select * from userinfo
-</select>
+</select###
 
-<resultMap id="userMap" type="com.demo.model.userinfo">
-    <!– 用id属性来映射主键字段 –>
-    <id property="id" column="user_id">
-    <!–- 用result属性来映射非主键字段，property为实体类属性名，column为数据表中的属性 -–>
-    <result property="name" column="username" />
-</reslutMap>
+<resultMap id="userMap" type="com.demo.model.userinfo"###
+    <!– 用id属性来映射主键字段 –###
+    <id property="id" column="user_id"###
+    <!–- 用result属性来映射非主键字段，property为实体类属性名，column为数据表中的属性 -–###
+    <result property="name" column="username" /###
+</reslutMap###
 ```
 
 
 
-> MyBatis 中如何实现分页？
+### MyBatis 中如何实现分页？
 
 MyBatis 常见的分页方式有以下两种：
 
@@ -2139,7 +2140,7 @@ MyBatis 常见的分页方式有以下两种：
 
 
 
-> RowBounds 是一次性查询全部结果吗？
+### RowBounds 是一次性查询全部结果吗？
 
 RowBounds 表面是在“所有”数据中检索数据，其实并非是一次性查询出所有数据。因为 MyBatis 是对 JDBC 的封装，在 JDBC 驱动中有一个 Fetch Size 的配置，它规定了每次最多从数据库查询多少条数据，假如你要查询更多数据，它会在执行 next() 的时候，去查询更多的数据。
 
@@ -2147,39 +2148,39 @@ RowBounds 表面是在“所有”数据中检索数据，其实并非是一次�
 
 
 
-> HashMap 和 Hashtable 可以作为查询结果吗？
+### HashMap 和 Hashtable 可以作为查询结果吗？
 
 HashMap 和 Hashtable 不能直接作为查询结果，因为使用 HashMap 或 Hashtable 作为查询结果集直接输出，会导致值类型不可控，给调用人员造成困扰，给系统带来更多不稳定的因素。
 
 
 
-> 说一说动态 SQL？
+### 说一说动态 SQL？
 
 动态 SQL 是指可以根据不同的参数信息来动态拼接的不确定的 SQL 叫做动态 SQL，MyBatis 动态 SQL 的主要元素有：if、choose/when/otherwise、trim、where、set、foreach 等。
 
 以 if 标签的使用为例：
 
 ```xml
-<select id="findUser" parameterType="com.interview.entity.User" resultType="com.interview.entity.User">
+<select id="findUser" parameterType="com.interview.entity.User" resultType="com.interview.entity.User"###
       select * from t_user where
 
-      <if test="id!=null">
+      <if test="id!=null"###
         id = #{id}
-      </if>
+      </if###
 
-      <if test="username!=null">
+      <if test="username!=null"###
         and username = #{username}
-      </if>
+      </if###
 
-      <if test="password!=null">
+      <if test="password!=null"###
         and password = #{password}
-      </if>
-</select>
+      </if###
+</select###
 ```
 
 
 
-> 说一说 MyBatis 工作原理？
+### 说一说 MyBatis 工作原理？
 
 MyBatis 工作原理如下：
 
@@ -2194,28 +2195,28 @@ MyBatis 工作原理如下：
 
 
 
-> 说一下 MyBatis 延迟加载机制？
+### 说一下 MyBatis 延迟加载机制？
 
 MyBatis 中的延迟加载，也称为懒加载，是指在进行表的关联查询时，按照设置延迟规则推迟对关联对象的 select 查询。例如在进行一对多查询的时候，只查询出一方，当程序中需要多方的数据时，mybatis 再发出 sql 语句进行查询，这样子延迟加载就可以的减少数据库压力。MyBatis 的延迟加载只是对关联对象的查询有迟延设置，对于主加载对象都是直接执行查询语句的。
 
 
 
-> 如何设置 MyBatis 延迟加载？
+### 如何设置 MyBatis 延迟加载？
 
 在 mybatis-config.xml 设置即可打开延迟缓存功能，配置文件如下：
 
 ```xml
-<configuration>
-    <settings>
-        <!-- 开启延迟加载 -->
-        <setting name="lazyLoadingEnabled" value="true"/>
-    </settings>
-</configuration>
+<configuration###
+    <settings###
+        <!-- 开启延迟加载 --###
+        <setting name="lazyLoadingEnabled" value="true"/###
+    </settings###
+</configuration###
 ```
 
 
 
-> 说一下 MyBatis 的缓存机制？
+### 说一下 MyBatis 的缓存机制？
 
 MyBatis 中有两级缓存，具体缓存如下：
 
@@ -2225,17 +2226,17 @@ MyBatis 中有两级缓存，具体缓存如下：
 手动开启二级缓存，配置如下：
 
 ```xml
-<configuration>
-    <settings>
-        <!-- 开启二级缓存 -->
-        <setting name="cacheEnabled" value="true"/>
-    </settings>
-</configuration>
+<configuration###
+    <settings###
+        <!-- 开启二级缓存 --###
+        <setting name="cacheEnabled" value="true"/###
+    </settings###
+</configuration###
 ```
 
 
 
-> MyBatis 中有哪些设计模式？
+### MyBatis 中有哪些设计模式？
 
 MyBatis 源码中的几个主要设计模式，即工厂模式、建造者模式、单例模式、适配器模式、代理模式、模板方法模式等，具体内容如下。
 
@@ -2315,7 +2316,7 @@ Cache 除了有数据存储和缓存的基本功能外（由 PerpetualCache 永�
 
 
 
-> 介绍一下 Spring
+### 介绍一下 Spring
 
 Spring 是一款顶级开源框架，它是包含了众多工具方法的 IoC 容器。
 
@@ -2323,7 +2324,7 @@ Spring 包含了很多模块，比如 spring-core、spring-beans、spring-aop、
 
 
 
-> Spring 有什么优点
+### Spring 有什么优点
 
 Spring 优点如下：
 
@@ -2335,7 +2336,7 @@ Spring 优点如下：
 
 
 
-> 什么是 IoC？
+### 什么是 IoC？
 
 IoC 是 Inversion of Control 的缩写，翻译成中文是“控制反转”的意思，它不是一个具体的技术，而是一个实现对象解耦的思想。
 
@@ -2343,7 +2344,7 @@ IoC 是 Inversion of Control 的缩写，翻译成中文是“控制反转”的
 
 
 
-> IoC 有什么优点？
+### IoC 有什么优点？
 
 IoC 的优点有以下几个：
 
@@ -2356,7 +2357,7 @@ IoC 的优点有以下几个：
 
 
 
-> IoC 是如何实现解耦的？
+### IoC 是如何实现解耦的？
 
 举个例子，比如 A 对象中需要依赖 B 对象，需要调用  B 中的某个方法，我们通常的实现方法是这样的：
 
@@ -2428,7 +2429,7 @@ class B {
 
 
 
-> 什么是 DI？
+### 什么是 DI？
 
 DI 是 Dependency Injection 的缩写，翻译成中文是“依赖注入”的意思。依赖注入不是一种设计实现，而是一种具体的技术，它是在 IoC 容器运行期间，动态地将某个依赖对象注入到当前对象的技术就叫做 DI（依赖注入）。
 
@@ -2436,25 +2437,25 @@ DI 是 Dependency Injection 的缩写，翻译成中文是“依赖注入”的�
 
 
 
-> IoC 和 DI 有什么区别？
+### IoC 和 DI 有什么区别？
 
 IoC 和 DI 虽然定义不同，但它们所做的事情都是一样的，都是用来实现对象解耦的，而二者又有所不同：IoC 是一种设计思想，而 DI 是一种具体的实现技术。
 
 
 
-> 除了 IoC 和 DI，Spring 还有什么重要的功能？
+### 除了 IoC 和 DI，Spring 还有什么重要的功能？
 
 除了 IoC 和 DI，AOP 也是 Spring 中的重要功能。
 
 
 
-> 说一下 AOP？
+### 说一下 AOP？
 
 AOP（Aspect-OrientedProgramming，面向切面编程）可以说是 OOP（Object-Oriented Programing，面向对象编程）的补充和完善，OOP 引入封装、继承和多态性等概念来建立一种公共对象处理的能力，当我们需要处理公共行为的时候，OOP 就会显得无能为力，而 AOP 的出现正好解决了这个问题。比如统一的日志处理模块、授权验证模块等都可以使用 AOP 很轻松的处理。
 
 
 
-> AOP 有什么优点？常见使用场景有哪些？
+### AOP 有什么优点？常见使用场景有哪些？
 
 **AOP 优点：**
 
@@ -2473,7 +2474,7 @@ AOP（Aspect-OrientedProgramming，面向切面编程）可以说是 OOP（Objec
 
 
 
-> AOP 是如何组成的？
+### AOP 是如何组成的？
 
 AOP 是由：切面（Aspect）、切点（Pointcut）、连接点（Join Point）和通知（Advice）组成的，它们的具体含义如下。
 
@@ -2505,7 +2506,7 @@ AOP 是由：切面（Aspect）、切点（Pointcut）、连接点（Join Point�
 
 
 
-> Spring AOP 有几种通知（Advice）？
+### Spring AOP 有几种通知（Advice）？
 
 Spring AOP 中有 5 种通知类型：
 
@@ -2517,7 +2518,7 @@ Spring AOP 中有 5 种通知类型：
 
 
 
-> 如何实现 Spring AOP？
+### 如何实现 Spring AOP？
 
 Spring AOP 功能的实现，分为以下 4 步：
 
@@ -2533,11 +2534,11 @@ Spring AOP 功能的实现，分为以下 4 步：
 如果是 Maven 类型的（Spring Boot）项目，在 pom.xml 中添加如下信息：
 
 ```xml
-<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
-<dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop --###
+<dependency###
+      <groupId###org.springframework.boot</groupId###
+      <artifactId###spring-boot-starter-aop</artifactId###
+</dependency###
 ```
 
 **② 添加切面**
@@ -2633,7 +2634,7 @@ public class UserAspect {
 
 
 
-> 说一下 Spring AOP 实现原理？
+### 说一下 Spring AOP 实现原理？
 
 Spring AOP 是构建在动态代理的基础上实现的，如果我们为 Spring 的某个 bean 配置了切面，那么 Spring 在创建这个 bean 的时候，实际上创建的是这个 bean 的一个代理对象，我们后续对 bean 中方法的调用，实际上调用的是代理类重写的代理方法。
 
@@ -2641,7 +2642,7 @@ Spring AOP 支持两种动态代理：JDK Proxy 和 CGLIB 动态代理。默认�
 
 
 
-> 如何将 Bean 存储到 Spring？
+### 如何将 Bean 存储到 Spring？
 
 将 Bean 存储到 Spring 中有两种方式：
 
@@ -2650,14 +2651,14 @@ Spring AOP 支持两种动态代理：JDK Proxy 和 CGLIB 动态代理。默认�
 
 **① xml 方式注入 Bean**
 
-在 Spring 的配置文件中，插入 <bean> 标签，如下所示：
+在 Spring 的配置文件中，插入 <bean### 标签，如下所示：
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?###
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="user" class="com.demo.User"></bean>
-</beans>
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"###
+    <bean id="user" class="com.demo.User"###</bean###
+</beans###
 ```
 
 其中：id 为 bean 的标识（名称），读取时使用，class 为 bean 的完整包名 + 类名。
@@ -2697,7 +2698,7 @@ public class UserBeans {
 
 
 
-> 说一下 Bean 的命名规则？
+### 说一下 Bean 的命名规则？
 
 使用注解注入 Bean 时，它的命名规则分为以下两种情况：
 
@@ -2706,7 +2707,7 @@ public class UserBeans {
 
 
 
-> @Bean 名称冲突该如何处理？
+### @Bean 名称冲突该如何处理？
 
 默认情况下 @Bean 的名称为方法名，但如果方法名重复的话，就会导致读取 Bean 时，只能读取到某一个对象，这个时候想要读取到另一个对象时，就要显示的指定 Bean 名称了，Bean 名称的设置如下：
 
@@ -2727,7 +2728,7 @@ public class UserBeans {
 
 
 
-> 获取 Spring 容器有几种方法？
+### 获取 Spring 容器有几种方法？
 
 获取 Spring 容器有两种常用的方法：
 
@@ -2746,7 +2747,7 @@ BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring-confi
 
 
 
-> ApplicationContext 和 BeanFactory 有什么区别？
+### ApplicationContext 和 BeanFactory 有什么区别？
 
 它们都可以用来获取 Spring 容器，它们的区别如下：
 
@@ -2755,7 +2756,7 @@ BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring-confi
 
 
 
-> Bean 注入有几种方式？
+### Bean 注入有几种方式？
 
 Spring 中对象注入的方法有 3 种：
 
@@ -2888,7 +2889,7 @@ public class UserController {
 
 
 
-> 属性注入有什么缺点？
+### 属性注入有什么缺点？
 
 属性注入的缺点主要包含以下 3 个：
 
@@ -2916,7 +2917,7 @@ public class UserController {
 
 
 
-> Setter 注入有什么缺点？
+### Setter 注入有什么缺点？
 
 它的缺点主要体现在以下 2 点：
 
@@ -2933,7 +2934,7 @@ Setter 注入提供了 setXXX 的方法，意味着你可以在任何时候、�
 
 
 
-> 推荐使用哪种注入方式？
+### 推荐使用哪种注入方式？
 
 **参考答案**：Spring 官方推荐使用构造方法注入，原因如下：
 
@@ -2943,7 +2944,7 @@ Setter 注入提供了 setXXX 的方法，意味着你可以在任何时候、�
 
 
 
-> @Autowired 和 @Resource 有什么区别？
+### @Autowired 和 @Resource 有什么区别？
 
 @Autowired 和 @Resource 都是用来实现依赖注入的注解（在 Spring/Spring Boot 项目中），但二者却有着 5 点不同：
 
@@ -2955,7 +2956,7 @@ Setter 注入提供了 setXXX 的方法，意味着你可以在任何时候、�
 
 
 
-> Bean 有几种作用域？
+### Bean 有几种作用域？
 
 Bean 的作用域是指 Bean 在 Spring 整个框架中的某种行为模式。比如 singleton 单例作用域，就表示 Bean 在整个 Spring 中只有一份，它是全局共享的，当有人修改了这个值之后，那么另一个人读取到的就是被修改后的值。
 
@@ -3003,7 +3004,7 @@ Bean 的作用域是指 Bean 在 Spring 整个框架中的某种行为模式。�
 
 
 
-> 如何设置 Bean 作用域？
+### 如何设置 Bean 作用域？
 
 可以通过 @Scope  注解来设置 Bean 的作用域，它的设置方式有以下两种：
 
@@ -3012,7 +3013,7 @@ Bean 的作用域是指 Bean 在 Spring 整个框架中的某种行为模式。�
 
 
 
-> 说一下 Bean 的生命周期？
+### 说一下 Bean 的生命周期？
 
 Spring 中 Bean 的生命周期是指：Bean 在 Spring（IoC）中从创建到销毁的整个过程。
 
@@ -3032,7 +3033,7 @@ Spring 中 Bean 的生命周期主要包含以下 5 部分：
 
 
 
-> Spring 使用了哪些设计模式？
+### Spring 使用了哪些设计模式？
 
 Spring 框架使用的设计模式如下：
 
@@ -3045,7 +3046,7 @@ Spring 框架使用的设计模式如下：
 
 
 
-> Spring MVC 和 Spring 有什么区别？
+### Spring MVC 和 Spring 有什么区别？
 
 Spring MVC 的正式名称“Spring Web MVC”来自其源模块的名称(Spring-webmvc)，但它通常被称为“Spring MVC”。Spring MVC 是基于 Servlet API 构建的原始 Web 框架。而 Spring 是 Spring Framework 简称。
 
@@ -3053,7 +3054,7 @@ Spring MVC 的正式名称“Spring Web MVC”来自其源模块的名称(Spring
 
 
 
-> MVC 有什么优点？
+### MVC 有什么优点？
 
 MVC 是 Model View Controller 的缩写，它是软件工程中的一种软件架构模式，它把软件系统分为模型、视图和控制器三个基本部分：
 
@@ -3068,7 +3069,7 @@ MVC 的优点是：
 
 
 
-> 说一下 Spring MVC 执行流程？
+### 说一下 Spring MVC 执行流程？
 
 SpringMVC 的执行流程如下：
 
@@ -3085,7 +3086,7 @@ SpringMVC 的执行流程如下：
 
 
 
-> Spring MVC 重要组件有哪些？
+### Spring MVC 重要组件有哪些？
 
 Spring MVC 涉及到的组件有 DispatcherServlet（前端控制器）、HandlerMapping（处理器映射器）、HandlerAdapter（处理器适配器）、Handler（处理器）、ViewResolver（视图解析器）和 View（视图）。下面对各个组件的功能说明如下。
 
@@ -3117,7 +3118,7 @@ View 是视图，其本身是一个接口，实现类支持不同的 View 类型
 
 
 
-> 如何进行路由注册？
+### 如何进行路由注册？
 
 在 Spring MVC 通常会使用注解的方式来实现路由注册，常见的路由注册注解有：
 
@@ -3127,13 +3128,13 @@ View 是视图，其本身是一个接口，实现类支持不同的 View 类型
 
 
 
-> 怎么接收 JSON 格式参数？
+### 怎么接收 JSON 格式参数？
 
 后端要使用 @RequestBody 来接收前端 JSON 格式的参数。
 
 
 
-> 如何从 URL 中获取参数？
+### 如何从 URL 中获取参数？
 
 可以使用注解 @PathVariable 注解从 URL 中获取参数，如下代码所示：
 
@@ -3148,7 +3149,7 @@ public Object login(@PathVariable String name, @PathVariable String password) {
 
 
 
-> 如何获取并保存前端上传的文件？
+### 如何获取并保存前端上传的文件？
 
 后端使用 @RequestPart 加 MultipartFile 来获取前端上传的参数，之后再使用 MultipartFile 提供的 transferTo 方法保存接收的文件，示例代码如下：
 
@@ -3168,7 +3169,7 @@ public String upload(@RequestPart("myfile") MultipartFile file) throws IOExcepti
 
 
 
-> 怎么实现请求转发和请求重定向？
+### 怎么实现请求转发和请求重定向？
 
 在 Spring MVC 中，可以使用 forward 进行请求转发，使用 redirect 实现请求重定向，示例代码如下：
 
@@ -3188,7 +3189,7 @@ public String rd(){
 
 
 
-> 请求转发和请求重定向有什么区别？
+### 请求转发和请求重定向有什么区别？
 
 请求转发和请求重定向主要区别有以下 4 点：
 
@@ -3201,7 +3202,7 @@ public String rd(){
 
 
 
-> Spring MVC 中文乱码问题应该如何处理？
+### Spring MVC 中文乱码问题应该如何处理？
 
 中文乱码问题通常需要设置以下两个地方。
 
@@ -3210,19 +3211,19 @@ public String rd(){
 配置如下：
 
 ```xml
-<filter>
-	<filter-name>encodingFilter</filter-name>
-	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-	<init-param>
-		<param-name>encoding</param-name>
-		<param-value>UTF-8</param-value>
-	</init-param>
-</filter>
+<filter###
+	<filter-name###encodingFilter</filter-name###
+	<filter-class###org.springframework.web.filter.CharacterEncodingFilter</filter-class###
+	<init-param###
+		<param-name###encoding</param-name###
+		<param-value###UTF-8</param-value###
+	</init-param###
+</filter###
 
-<filter-mapping>
-	<filter-name>encodingFilter</filter-name>
-	<url-pattern>/*</url-pattern>
-</filter-mapping>
+<filter-mapping###
+	<filter-name###encodingFilter</filter-name###
+	<url-pattern###/*</url-pattern###
+</filter-mapping###
 ```
 
 **② RequestMapping 中设置编码**
@@ -3235,7 +3236,7 @@ public String rd(){
 
 
 
-> request 有几种获取方式？
+### request 有几种获取方式？
 
 Spring MVC 获取 request 有以下 3 种方式：
 
@@ -3280,7 +3281,7 @@ public class HomeController{
 
 
 
-> Spring MVC 如何处理跨域问题？
+### Spring MVC 如何处理跨域问题？
 
 可以在 Spring MVC 中重写 addCorsMappings 中配置跨域问题，具体实现代码如下：
 
@@ -3311,7 +3312,7 @@ public class MyConfiguration {
 
 
 
-> 为什么会有跨域问题？
+### 为什么会有跨域问题？
 
 跨域问题本质是浏览器为了保证用户的访问安全，防止恶意网站窃取数据，所制定的一套安全策略。
 
@@ -3321,7 +3322,7 @@ Spring MVC 中重写 addCorsMappings 方法就是配置哪些 URL 需要在响�
 
 
 
-> Spring 和 Spring Boot 有什么区别？
+### Spring 和 Spring Boot 有什么区别？
 
 作为 Java 开发人员对 Spring 框架都很熟悉，Spring 为 Java 程序提供了全面的基础架构支持，包含了很多非常实用的功能，如 Spring JDBC、Spring AOP、Spring ORM、Spring Test 等，这些模块的出现，大大的缩短了应用程序的开发时间，同时提高了应用开发的效率。
 
@@ -3329,7 +3330,7 @@ Spring Boot 本质上是 Spring 框架的延伸和扩展，它的诞生是为了
 
 
 
-> Spring Boot 有什么优点？
+### Spring Boot 有什么优点？
 
 Spring Boot 具有以下特点：
 
@@ -3340,7 +3341,7 @@ Spring Boot 具有以下特点：
 
 
 
-> 说一下 Spring Boot 启动流程？
+### 说一下 Spring Boot 启动流程？
 
 Spring Boot 启动流程要从 main 方法的 run 源码说起，它的源码如下：
 
@@ -3351,7 +3352,7 @@ public ConfigurableApplicationContext run(String... args) {
     stopWatch.start();
     // 2.声明应用上下文对象和异常报告集合
     ConfigurableApplicationContext context = null;
-    Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList();
+    Collection<SpringBootExceptionReporter### exceptionReporters = new ArrayList();
     // 3.设置系统属性 headless 的值
     this.configureHeadlessProperty();
     // 4.创建所有 Spring 运行监听器并发布应用启动事件
@@ -3480,7 +3481,7 @@ Spring Boot 启动时会打印 Banner 图片
 
 
 
-> Ant、Maven 和 Gradle 有什么区别？
+### Ant、Maven 和 Gradle 有什么区别？
 
 Ant、Maven、Gradle 是 Java 领域中主要有三大构建工具，它们的区别如下：
 
@@ -3492,7 +3493,7 @@ Spring Boot 官方支持 Maven 和 Gradle 作为项目构建工具。Gradle 虽�
 
 
 
-> properties 和 yml 有什么区别？
+### properties 和 yml 有什么区别？
 
 properties 和 yml 都是 Spring Boot 支持的两种配置文件，其中 yml 格式的配置文件可以看作是对 properties  配置文件的升级。它们的主要区别有 4 点：
 
@@ -3503,7 +3504,7 @@ properties 和 yml 都是 Spring Boot 支持的两种配置文件，其中 yml �
 
 
 
-> SpringBoot 如何读取配置文件？
+### SpringBoot 如何读取配置文件？
 
 在 Spring Boot 中读取配置文件有以下 5 种方法：
 
@@ -3517,7 +3518,7 @@ properties 和 yml 都是 Spring Boot 支持的两种配置文件，其中 yml �
 
 
 
-> 配置文件中中文乱码问题如何处理？
+### 配置文件中中文乱码问题如何处理？
 
 配置文件中的中文乱码问题的解决方案如下：
 
@@ -3526,7 +3527,7 @@ properties 和 yml 都是 Spring Boot 支持的两种配置文件，其中 yml �
 
 
 
-> 如何实现拦截器？
+### 如何实现拦截器？
 
 在 Spring Boot 中拦截器的实现分为两步：
 
@@ -3599,7 +3600,7 @@ public class AppConfig implements WebMvcConfigurer {
 
 
 
-> 如何实现过滤器？
+### 如何实现过滤器？
 
 过滤器可以使用 Servlet 3.0 提供的 @WebFilter 注解，配置过滤的 URL 规则，然后再实现 Filter 接口，重写接口中的 doFilter 方法，具体实现代码如下：
 
@@ -3643,19 +3644,19 @@ public class TestFilter implements Filter {
 
 
 
-> 拦截器和过滤器有什么区别？
+### 拦截器和过滤器有什么区别？
 
 拦截器和过滤器的区别主要体现在以下 5 点：
 
 1. 出身不同：过滤器来自于 Servlet，而拦截器来自于 Spring 框架；
-2. 触发时机不同：请求的执行顺序是：请求进入容器 > 进入过滤器 > 进入 Servlet > 进入拦截器 > 执行控制器（Controller），所以过滤器和拦截器的执行时机，是过滤器会先执行，然后才会执行拦截器，最后才会进入真正的要调用的方法；
+2. 触发时机不同：请求的执行顺序是：请求进入容器 ### 进入过滤器 ### 进入 Servlet ### 进入拦截器 ### 执行控制器（Controller），所以过滤器和拦截器的执行时机，是过滤器会先执行，然后才会执行拦截器，最后才会进入真正的要调用的方法；
 3. 底层实现不同：过滤器是基于方法回调实现的，拦截器是基于动态代理（底层是反射）实现的。；
 4. 支持的项目类型不同：过滤器是 Servlet 规范中定义的，所以过滤器要依赖 Servlet 容器，它只能用在 Web 项目中；而拦截器是 Spring 中的一个组件，因此拦截器既可以用在 Web 项目中，同时还可以用在 Application 或 Swing 程序中；
 5. 使用的场景不同：因为拦截器更接近业务系统，所以拦截器主要用来实现项目中的业务判断的，比如：登录判断、权限判断、日志记录等业务；而过滤器通常是用来实现通用功能过滤的，比如：敏感词过滤、字符集编码设置、响应数据压缩等功能。
 
 
 
-> 如何操作事务？
+### 如何操作事务？
 
 在 Spring Boot 中操作事务有两种方式：编程式事务或声明式事务。
 
@@ -3678,7 +3679,7 @@ TransactionManager 实现编程式事务相对麻烦一点，它需要使用两�
 
 
 
-> 导致 @Transactional 失效的场景有哪些？
+### 导致 @Transactional 失效的场景有哪些？
 
 导致 @Transactional 失效的常见场景有以下 5 个：
 
@@ -3690,12 +3691,12 @@ TransactionManager 实现编程式事务相对麻烦一点，它需要使用两�
 
 
 
-> 为什么非 public 方法 @Transactional 会失效？
+### 为什么非 public 方法 @Transactional 会失效？
 
 因为 @Transactional 使用的是 Spring AOP 实现的，而 Spring AOP 是通过动态代理实现的，而 @Transactional 在生成代理时会判断，如果方法为非 public 修饰的方法，则不生成代理对象，这样也就没办法自动执行事务了，它的部分实现源码如下：
 
 ```java
-protected TransactionAttribute computeTransactionAttribute(Method method, Class<?> targetClass) {
+protected TransactionAttribute computeTransactionAttribute(Method method, Class<?### targetClass) {
    // 非 public 方法，设置为 null
    if (allowPublicMethodsOnly() && !Modifier.isPublic(method.getModifiers())) {
       return null;
@@ -3706,12 +3707,12 @@ protected TransactionAttribute computeTransactionAttribute(Method method, Class<
 
 
 
-> 为什么 try-catch 之后，事务不能自动回滚了？
+### 为什么 try-catch 之后，事务不能自动回滚了？
 
 造成这个问题的原因是和 @Transactional 注解的实现有关的，因为 @Transactional 在实现中，会捕捉异常，如果有异常了才会回滚事务，而程序中如果添加了 try-catch 之后，@Transactional 就感知不到异常了，从而也就不会回滚事务了，@Transactional 的部分实现源码如下：
 
 ```java
-protected Object invokeWithinTransaction(Method method, Class<?> targetClass, final InvocationCallback invocation)
+protected Object invokeWithinTransaction(Method method, Class<?### targetClass, final InvocationCallback invocation)
       throws Throwable {
    final TransactionAttribute txAttr = getTransactionAttributeSource().getTransactionAttribute(method, targetClass);
 
@@ -3747,7 +3748,7 @@ protected Object invokeWithinTransaction(Method method, Class<?> targetClass, fi
 
 
 
-> 如何处理事务不自动回滚的问题？
+### 如何处理事务不自动回滚的问题？
 
 当 @Transactional 感知不到异常时，也就是程序中加入了 try-catch 之后事务就不自动回滚了，此时的解决方案有两种：
 
@@ -3796,19 +3797,19 @@ public Object save(User user) {
 
 
 
-> 为什么调用类内部 @Transactional 事务会失效？
+### 为什么调用类内部 @Transactional 事务会失效？
 
 因为 @Transactional 是基于 Spring AOP 实现的，而 Spring AOP 又是基于动态代理实现的，而当调用类内部的方法时，不是通过代理对象完成的，而是通过 this 对象实现的，这样就绕过了代理对象，从而事务就失效了。
 
 
 
-> 说一下 @Transactional 工作原理？
+### 说一下 @Transactional 工作原理？
 
 @Transactional 是基于 AOP 实现的，AOP 又是使用动态代理实现的。如果目标对象实现了接口，默认情况下会采用 JDK 的动态代理，如果目标对象没有实现了接口,会使用 CGLIB 动态代理。@Transactional 在开始执行业务之前，通过代理先开启事务，在执行成功之后再提交事务。如果中途遇到的异常，则回滚事务。
 
 
 
-> Spring 有几种事务隔离级别？
+### Spring 有几种事务隔离级别？
 
 Spring 中事务隔离级别包含以下 5 种：
 
@@ -3820,7 +3821,7 @@ Spring 中事务隔离级别包含以下 5 种：
 
 
 
-> 说一下 Spring 事务传播机制？
+### 说一下 Spring 事务传播机制？
 
 Spring 事务传播机制是指，包含多个事务的方法在相互调用时，事务是如何在这些方法间传播的。
 
@@ -3836,19 +3837,19 @@ Spring 事务传播机制可使用 @Transactional(propagation=Propagation.REQUIR
 
 
 
-> 加入事务和嵌套事务有什么区别？
+### 加入事务和嵌套事务有什么区别？
 
 加入事务（REQUIRED）和嵌套事务（NESTED）都是事务传播机制中的两种传播级别，如果当前不存在事务，那么二者的行为是一致的；但如果当前存在事务，那么加入事务的事务传播级别当遇到异常时会回滚全部事务，而嵌套事务则是回滚部分事务。嵌套事务之所以能回滚部分事务，是因为数据库中存在一个保存点的概念，嵌套事务相对于新建了一个保存点，如果出现异常了，那么只需要回滚到保存点即可，这样就实现了部分事务的回滚。
 
 
 
-> 事务隔离级别和传播机制有什么区别？
+### 事务隔离级别和传播机制有什么区别？
 
 事务隔离级别描述的是多个事务同时执行时的某种行为；而事务传播机制是描述，包含了多个事务的方法在相互调用时事务的传播行为。所以事务隔离级别描述的是纵向事务并发调用时的行为模式，而事务传播机制描述的是横向事务传递时的行为模式
 
 
 
-> 如何进行统一异常处理？
+### 如何进行统一异常处理？
 
 在 Spring Boot 中，统一异常处理可以使用 @ControllerAdvice + @ExceptionHandler 来实现，@ControllerAdvice 表示控制器通知类，@ExceptionHandler 是异常处理器，两个结合表示当出现异常的时候执行某个通知，也就是执行某个方法事件，具体实现代码如下：
 
@@ -3860,7 +3861,7 @@ public class ErrorAdive {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Object handler(Exception e) {
-        HashMap<String, Object> map = new HashMap<>();
+        HashMap<String, Object### map = new HashMap<###();
         map.put("code", 0);
         map.put("data", null);
         map.put("msg", e.getMessage());
@@ -3873,9 +3874,9 @@ public class ErrorAdive {
 
 
 
-> Java 有几种架构类型？
+### Java 有几种架构类型？
 
-对于 Java 语言来说，它的发展经历了单体架构 -> SOA 面向服务架构 -> 微服务架构。
+对于 Java 语言来说，它的发展经历了单体架构 -### SOA 面向服务架构 -### 微服务架构。
 
 **① 单体架构**
 
@@ -3914,7 +3915,7 @@ SOA 框架的缺点如下：
 
 
 
-> RESTful 和 RPC 有什么区别？
+### RESTful 和 RPC 有什么区别？
 
 RPC 和 RESTful 都是远程调用接口。
 
@@ -3932,13 +3933,13 @@ RPC 通常是服务器和服务器之间的通信，比如和中间件的通信�
 
 
 
-> 微服务中的“服务”怎么理解？
+### 微服务中的“服务”怎么理解？
 
 微服务中的服务是一个可以独立运行、提供范围有限的功能（可以是业务功能，也有可能是非业务功能）的组件。功能具体实现隐藏在组件内部，而对外则提供访问接口，外部其他服务可以通过这些接口进行访问与交互，从这一方面来说，微服务是可以单独部署运行的。
 
 
 
-> 微服务有什么优点？
+### 微服务有什么优点？
 
 微服务的设计理念参考了 UNIX 系统，每个微服务仅承担一种职责，并把该职责做到最好。因此，这让我们的应用看起来是一系列服务的集合。微服务架构具有以下优点。
 
@@ -3950,7 +3951,7 @@ RPC 通常是服务器和服务器之间的通信，比如和中间件的通信�
 
 
 
-> 微服务有什么缺点？
+### 微服务有什么缺点？
 
 微服务的缺点有以下几个：
 
@@ -3963,7 +3964,7 @@ RPC 通常是服务器和服务器之间的通信，比如和中间件的通信�
 
 
 
-> 微服务中有哪些组件？
+### 微服务中有哪些组件？
 
 微服务中的重要组件有以下几个。
 
@@ -3976,13 +3977,13 @@ RPC 通常是服务器和服务器之间的通信，比如和中间件的通信�
 
 
 
-> 微服务和 Spring Cloud 有什么关系？
+### 微服务和 Spring Cloud 有什么关系？
 
 很多人认为微服务就是 Spring Cloud，Spring Cloud 就等于微服务，但严格意义上来说，微服务和 Spring Cloud 之间是不能直接划上等号的。微服务是一种架构和项目实现思想，而 Spring Cloud 是一套技术解决方案。比如在 Spring Cloud 出现之前，各个微服务之间的调用是非常痛苦的事，虽然市面上有很多开源的 RPC（Remote Procedure Call，远程调用）框架，如 Thrift、Dubbo、Motan、gRPC 等，但如何做好服务的动态感知就是一个非常复杂的事，比如 A 服务要调用 B 服务，但是 B 服务部署了 10 个节点，那么 A 服务如何动态维护 B 服务的 10 个不同的地址信息呢？直到 Spring Cloud 的出现，便解决了这些难题。所以可以认为 Spring Cloud 为微服务提供了一种优秀的解决方案。
 
 
 
-> 什么是 Spring Cloud？
+### 什么是 Spring Cloud？
 
 Spring Cloud 是 Pivotal 公司在 2015 年发布的一个项目，当然，Spring 和 Spring Boot 也是 Pivotal 公司发布的产品。Spring Cloud 提供了一些可以让开发者快速构建微服务应用的工具，比如配置管理、服务发现、熔断、智能路由等，这些服务可以在任何分布式环境下很好地工作。Spring Cloud 主要致力于解决如下问题：
 
@@ -4000,7 +4001,7 @@ Spring Cloud 是 Pivotal 公司在 2015 年发布的一个项目，当然，Spri
 
 
 
-> Spring Boot 和 Spring Cloud 有什么区别？
+### Spring Boot 和 Spring Cloud 有什么区别？
 
 它们的区别有以下几个：
 
@@ -4011,7 +4012,7 @@ Spring Cloud 是 Pivotal 公司在 2015 年发布的一个项目，当然，Spri
 
 
 
-> Spring Cloud 和 Dubbo 有什么区别？
+### Spring Cloud 和 Dubbo 有什么区别？
 
 Spring Cloud 提供了一些可以让开发者快速构建微服务应用的工具，比如配置管理、服务发现、熔断、智能路由等，这些服务可以在任何分布式环境下很好地工作。而 Dubbo 是一款微服务框架，为大规模微服务实践提供高性能 RPC 通信、流量治理、可观测性等解决方案，涵盖 Java、Golang 等多种语言 SDK 实现。
 
@@ -4019,7 +4020,7 @@ Spring Cloud 提供了一些可以让开发者快速构建微服务应用的工�
 
 
 
-> 什么是 Spring Cloud Netflix？
+### 什么是 Spring Cloud Netflix？
 
 Spring Cloud Netflix 是 Netflix（美国奈飞公司）提供的 Spring Cloud 规范的具体实现框架，它提供了以下组件：
 
@@ -4037,7 +4038,7 @@ Netflix 本身是一套非常好的组件，由于 Netflix 对 Zuul 1、Ribbon�
 
 
 
-> Eureka 和 ZooKeeper 有什么区别？
+### Eureka 和 ZooKeeper 有什么区别？
 
 从功能上来说 Eureka 和 ZooKeeper都可以实现服务注册与发现，但它们主要有以下四点区别。
 
@@ -4059,13 +4060,13 @@ ZooKeeper 在选举期间注册服务瘫痪，虽然服务最终会恢复，但�
 
 
 
-> 什么是 Eureka 的自我保护机制?
+### 什么是 Eureka 的自我保护机制?
 
 当Eureka Server 节点在短时间内丢失了过多实例的连接时，比如网络故障或频繁启动关闭客户端时，节点会进入自我保护模式，保护注册信息，不再删除注册数据。故障恢复时，才会自动退出自我保护模式。
 
 
 
-> Spring Cloud Alibaba 提供了什么功能？
+### Spring Cloud Alibaba 提供了什么功能？
 
 Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发布了第一个预览版本。2019 年 8 月在 Alibaba 仓库发布第一个毕业版本。它提供的主要功能有以下几个：
 
@@ -4080,7 +4081,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> Spring Cloud Alibaba 有哪些组件？
+### Spring Cloud Alibaba 有哪些组件？
 
 它提供的重要组件有以下几个：
 
@@ -4095,7 +4096,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 什么是服务注册和服务发现？
+### 什么是服务注册和服务发现？
 
 服务注册和发现的意思是服务进程在注册中心注册自己的位置，客户端应用进程向注册中心发起查询，来获取服务的位置，服务发现的一个重要作用就是提供一个可用的服务列表。
 
@@ -4104,7 +4105,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 服务发现有几种模式？
+### 服务发现有几种模式？
 
 服务发现主要有两种发现模式：客户端发现和服务端发现。
 
@@ -4113,7 +4114,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 这两种服务发现模式有什么区别？
+### 这两种服务发现模式有什么区别？
 
 客户端服务发现和服务器端服务发现的区别如下。
 
@@ -4166,7 +4167,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 问题：服务注册有几种方式？
+### 问题：服务注册有几种方式？
 
 服务注册大致分为两类：
 
@@ -4175,7 +4176,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 什么是负载均衡？
+### 什么是负载均衡？
 
 负载均衡（Load Balance，简称 LB）是高并发、高可用系统必不可少的关键组件，目标是尽力将网络流量平均分发到多个服务器上，以提高系统整体的响应速度和可用性。
 
@@ -4188,7 +4189,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 负载均衡有几种类型？
+### 负载均衡有几种类型？
 
 负载均衡从硬件的层面可分为：硬件负载均衡和软件负载均衡。同时负载均衡从服务器的类型上又可分为：服务器负载均衡和客户端负载均衡。
 
@@ -4236,7 +4237,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> 服务端负载均衡和客户端负载均衡有什么区别？
+### 服务端负载均衡和客户端负载均衡有什么区别？
 
 它们的区别主要体现在以下 2 点：
 
@@ -4247,7 +4248,7 @@ Spring Cloud Alibaba 2018 年正式入驻 Spring Cloud 官方孵化器，并发�
 
 
 
-> Ribbon 有哪些负载均衡策略？
+### Ribbon 有哪些负载均衡策略？
 
 Ribbon 内置了以下 7 种负载均衡策略。
 
@@ -4342,7 +4343,7 @@ springcloud-nacos-provider: # nacos中的服务id
 
 
 
-> 说一下什么是限流？
+### 说一下什么是限流？
 
 限流就是限制流量的意思，它是一种保护系统正常运行的机制。常见的限流场景有：
 
@@ -4357,7 +4358,7 @@ springcloud-nacos-provider: # nacos中的服务id
 
 
 
-> 限流的处理方式有哪些？
+### 限流的处理方式有哪些？
 
 常见的限流处理方式有以下 3 种：
 
@@ -4369,7 +4370,7 @@ springcloud-nacos-provider: # nacos中的服务id
 
 
 
-> 限流实现算法有哪些？
+### 限流实现算法有哪些？
 
 限流的常见算法有：
 
@@ -4411,13 +4412,13 @@ springcloud-nacos-provider: # nacos中的服务id
 
 
 
-> 什么是 Sentinel？
+### 什么是 Sentinel？
 
 Sentinel 是面向分布式、多语言异构化服务架构的流量治理组件，主要以流量为切入点，从流量路由、流量控制、流量整形、熔断降级、系统自适应过载保护、热点流量防护等多个维度来帮助开发者保障微服务的稳定性。
 
 
 
-> Sentinel 提供了哪些功能？
+### Sentinel 提供了哪些功能？
 
 Sentinel 提供的主要功能有：
 
@@ -4427,7 +4428,7 @@ Sentinel 提供的主要功能有：
 
 
 
-> Sentinel 有什么优点？
+### Sentinel 有什么优点？
 
 Sentinel 的优点主要有以下几个：
 
@@ -4438,7 +4439,7 @@ Sentinel 的优点主要有以下几个：
 
 
 
-> Sentinel 有哪些核心组件？
+### Sentinel 有哪些核心组件？
 
 Sentinel 的核心组件分为两部分：
 
@@ -4447,7 +4448,7 @@ Sentinel 的核心组件分为两部分：
 
 
 
-> Sentinel 是如何运作的？
+### Sentinel 是如何运作的？
 
 要了解 Sentinel 是如何运作的，需要先了解 Sentinel 中的两个基本概念：
 
@@ -4458,13 +4459,13 @@ Sentinel 把（每个）接口视为资源，再通过配置的规则来控制�
 
 
 
-> 什么是 Nacos？
+### 什么是 Nacos？
 
 Nacos 是 Dynamic Naming and Configuration Service 首字母缩写，它致力于帮助开发者发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管理。同时它也是 Spring Cloud Alibaba 中的重要组件。
 
 
 
-> Nacos 提供了哪些功能？
+### Nacos 提供了哪些功能？
 
 Nacos 提供了以下几个重要的功能：
 
@@ -4477,19 +4478,19 @@ Nacos 提供了以下几个重要的功能：
 
 
 
-> Nacos 生态如何？
+### Nacos 生态如何？
 
 Nacos 几乎支持所有主流语言，其中 Java/Golang/Python 已经支持 Nacos 2.0 长链接协议，能最大限度发挥 Nacos 性能。阿里微服务 DNS（Dubbo+Nacos+Spring-cloud-alibaba/Seata/Sentinel）最佳实践，是 Java 微服务生态最佳解决方案。
 
 
 
-> Nacos 组成部分有哪些？
+### Nacos 组成部分有哪些？
 
 Nacos 是由服务端（含页面控制台）和客户端程序（使用 Nacos 的程序）组成的，它里面包含了配置中心列表及管理功能、服务列表及管理功能和权限控制、集群管理等功能。
 
 
 
-> Nacos 部署方式有几种？
+### Nacos 部署方式有几种？
 
 Nacos 支持 3 种部署模式：
 
@@ -4504,7 +4505,7 @@ Nacos 安装方式有以下 2 种：
 
 
 
-> 如何启动 Nacos 服务器？
+### 如何启动 Nacos 服务器？
 
 有安装包之后，先解压安装包，然后进入安装包的 bin 目录（cd nacos/bin），如果是测试和开发环境可以使用命令：sh startup.sh -m standalone，启动 Nacos 的单机模式进行使用。
 
@@ -4514,7 +4515,7 @@ Nacos 安装方式有以下 2 种：
 
 
 
-> Nacos 单机和集群部署有什么区别吗？
+### Nacos 单机和集群部署有什么区别吗？
 
 除了启动命令和部署个数不同之外，在数据库的依赖上 Nacos 单机和集群部署也是有区别的。
 
@@ -4522,25 +4523,25 @@ Nacos 单机是不依赖任何数据库的，虽然 Nacos 本身需要存储数�
 
 
 
-> Nacos 配置中心有什么优点？
+### Nacos 配置中心有什么优点？
 
 配置中心的作用是将本地配置文件云端话，所谓的云端也就是 Nacos 的服务器端，这样既能保证配置文件中的敏感数据不会暴露，同时又提供了实时的修改、查看、回滚和动态刷新配置文件的功能，非常实用。
 
 
 
-> 如何实现 Nacos 配置项的动态刷新？
+### 如何实现 Nacos 配置项的动态刷新？
 
 在 Nacos 配置中心修改了配置文件，在不重启项目的前提下，可以实时读取到最新的配置内置。Nacos 默认会为所有获取数据成功的 Nacos 的配置项添加了监听功能，在监听到服务端配置发生变化时会实时触发 org.springframework.cloud.context.refresh.ContextRefresher 的 refresh 方法。但如果需要对 Bean 进行动态刷新，需要参照 Spring 和 Spring Cloud 规范，推荐给类添加 @RefreshScope 或 @ConfigurationProperties 注解，就可以实现配置中心的动态刷新功能了。
 
 
 
-> 当客户端连接不到 Nacos 配置服务时会怎么？
+### 当客户端连接不到 Nacos 配置服务时会怎么？
 
 Nacos 客户端有一个“配置快照”的功能，当 Nacos 客户端连接不到 Nacos 配置中心（Nacos 服务端）时，会使用本地的配置快照，类似于 Git 中的本地 commit，也类似于缓存，会在适当的时机更新，但是并没有缓存过期（expiration）的概念，当客户端无法连接到 Nacos Server 时，可以使用配置快照显示系统的整体容灾能力。
 
 
 
-> 什么是注册中心？
+### 什么是注册中心？
 
 注册中心是服务实例存储的仓库，也是服务提供者和服务消费者进行交互的桥梁。它主要提供了服务注册和服务发现这两大核心功能。
 
@@ -4554,7 +4555,7 @@ Nacos 客户端有一个“配置快照”的功能，当 Nacos 客户端连接�
 
 
 
-> Nacos 有几种服务类型？
+### Nacos 有几种服务类型？
 
 Nacos 中有两种服务类型：临时实例和永久实例。
 
@@ -4563,7 +4564,7 @@ Nacos 中有两种服务类型：临时实例和永久实例。
 
 
 
-> 说一下 Nacos 中的健康检测机制？
+### 说一下 Nacos 中的健康检测机制？
 
 Nacos 中的健康检测机制是用来检查服务健康状态的，只有健康的节点才会被服务消费端调用，这样才能保证程序稳定、正常的运行。Nacos 中提供了两种健康检测的机制：
 
@@ -4588,7 +4589,7 @@ Nacos 中的健康检测机制不能主动设置，但健康检测机制是和 N
 
 
 
-> 什么是保护阈值？
+### 什么是保护阈值？
 
 保护阈值（ProtectThreshold）是为了防止因过多实例故障，导致所有流量全部流入剩余健康实例，继而造成流量压力将剩余健康实例被压垮形成雪崩效应。应将健康保护阈值定义为⼀个 0 到 1 之间的浮点数（它的默认值为 0）。当域名健康实例数占总服务实例数的比例小于该值时，无论实例是否健康，都会将这个（健康或不健康的）实例返回给客户端。这样做虽然损失了⼀部分流量，但是保证了集群中剩余健康实例能正常工作。
 
@@ -4598,7 +4599,7 @@ Nacos 中的健康检测机制不能主动设置，但健康检测机制是和 N
 
 
 
-> Nacos 有负载均衡吗？
+### Nacos 有负载均衡吗？
 
 Nacos 0.7.0 版本中提供了负载均衡功能，它的负载均衡策略主要有两个：
 
@@ -4607,7 +4608,7 @@ Nacos 0.7.0 版本中提供了负载均衡功能，它的负载均衡策略主�
 
 
 
-> Nacos 是 AP 模式还是 CP 模式？
+### Nacos 是 AP 模式还是 CP 模式？
 
 CAP 含义如下：
 

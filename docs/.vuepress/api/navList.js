@@ -1,6 +1,5 @@
 const navList = [
     {
-        // https://www.baidu.com/favicon.ico
         title: "浏览器 | 搜索",
         arr: [
             {
@@ -44,7 +43,6 @@ const navList = [
         ],
     },
     {
-        // https://www.baidu.com/favicon.ico
         title: "后端 | 算法",
         arr: [
             {

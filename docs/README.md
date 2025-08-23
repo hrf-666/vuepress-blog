@@ -15,7 +15,7 @@ features:
 ---
 
 ::: slot footer
-MIT Licensed | Copyright © 2023-present [Evan You](https://github.com/hrf-666/vuepress-blog)
+MIT Licensed | Copyright © 2025-present [Evan You](https://github.com/hrf-666/vuepress-blog)
 :::
 
 
