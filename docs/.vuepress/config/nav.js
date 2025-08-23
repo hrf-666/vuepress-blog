@@ -19,6 +19,37 @@ const navConfig = [
     {
         text: '博文',
         link: '/blog-article/',
+        items: [
+            {
+                text: 'java',
+                link: '/blog-article/java/',
+
+            },
+            {
+                text: '数据库',
+                link: '/blog-article/database/'
+            },
+            {
+                text: 'mybatis',
+                link: '/blog-article/mybatis/'
+            },
+            {
+                text: '图床',
+                link: '/blog-article/drawing-bed/'
+            },
+            {
+                text: '前端',
+                link: '/blog-article/front-end/'
+            },
+            {
+                text: 'python',
+                link: '/blog-article/python/'
+            },
+            {
+                text: '其他',
+                link: '/blog-article/other/'
+            },
+        ]
 
     },
     {

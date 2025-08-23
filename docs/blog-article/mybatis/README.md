@@ -1,10 +1,9 @@
 ---
-title: 博文
+title: mybatis
 tags: [mybatis]
 ---
 
-- [mybatis 查询条件List集合、map集合、Array数组](./mybatis-list-map-array.md)
-- [mybatis 查询返回List集合、map集合、List＜Map＞集合](./mybatis-List-map.md)
-- [mybatis Mapper.xml类型判断](./mybatis-type-handler.md)
-- [Integer类型在mapper.xml中正确判断](./mybatis-Integer.md)
+# 简介
+## 什么是 MyBatis？
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 

@@ -1,8 +1,6 @@
 ---
-title: Redis 16 个常见使用场景
-date: 2020-04-14T16:00:00+08:00
+title: Redis16个常见使用场景
 tags: [redis,数据库]
-category: 数据库
 ---
 [[toc]]
 
