@@ -37,6 +37,13 @@ module.exports = {
         permalink: "/:year/:month/:day/:slug",
         // smoothScroll: true,//页面滚动效果
         subSidebar: 'auto', // 或者生成二级菜单
+        // vssueConfig: {
+        //     platform: 'github',
+        //     owner: 'vuepress-blog',
+        //     repo: 'study-notes',
+        //     clientId: 'Ov23liT6kbaBqI5YAarO',
+        //     clientSecret: '2a96656480c6fe49dbbd0459ff2eef8fa9434fae',
+        // },
         // // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         // repo: 'https://gitee.com/huang-ruifang/vuepress-blog',
         // // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为

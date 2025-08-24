@@ -19,6 +19,16 @@ const pluginsConfig = [
         //     }
         // }
     ],
+    // vssue评论
+    ['@vssue/vuepress-plugin-vssue', {
+        platform: 'github',
+        owner: 'hrf-666',
+        repo: 'vuepress-blog',
+        clientId: 'Ov23liC5p3NfJjZP5aDZ',
+        clientSecret: '99bdd2bf2ddd8f88f42d7366ab12faae35dd9246',
+        autoCreateIssue:true // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了
+    }],
+
     // //开启seo
     // [
     //     'sitemap',
