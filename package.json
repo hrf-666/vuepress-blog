@@ -5,6 +5,8 @@
   "author": "Rui",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "@vuepress/plugin-active-header-links": "^1.9.10",
     "@vuepress/plugin-back-to-top": "^1.9.10",
@@ -16,6 +18,10 @@
     "vuepress": "^1.9.10",
     "vuepress-plugin-copyright": "^1.0.2",
     "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-plugin-go-top": "^1.0.4",
+    "vuepress-plugin-meting": "^0.3.3",
+    "vuepress-plugin-ribbon": "^1.1.6",
     "vuepress-plugin-right-anchor": "^0.5.5",
     "vuepress-plugin-sakura": "^1.2.1",
     "vuepress-plugin-sitemap": "^2.3.1"

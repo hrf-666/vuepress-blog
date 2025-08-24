@@ -14,6 +14,7 @@ features:
   details: 每一次选择，都是对未来的投资。选择坚持，选择努力，选择相信自己，你将收获无法估量的成功。
 ---
 
+
 ::: slot footer
 MIT Licensed | Copyright © 2025-present [Evan You](https://github.com/hrf-666/vuepress-blog)
 :::

@@ -26,16 +26,16 @@ const pluginsConfig = [
         repo: 'vuepress-blog',
         clientId: 'Ov23liBnywItp38HHorP',
         clientSecret: 'da4d371b602b1d06723e5842d4a364b63e2d4db5',
-        autoCreateIssue:true // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了
+        autoCreateIssue: true // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了
     }],
-
-    // //开启seo
-    // [
-    //     'sitemap',
-    //     {
-    //         hostname: 'https://huang-ruifang.gitee.io/vuepress-blog/'
-    //     }
-    // ],
+    // 作者著作权
+    [
+        'copyright',
+        {
+            authorName: 'rui', // 选中的文字将无法被复制
+            minLength: 300, // 如果长度超过  30 个字符
+        },
+    ]
     //图片缩放
     ['@vuepress/medium-zoom'],
     // 进度条
@@ -65,26 +65,79 @@ const pluginsConfig = [
             customClass: 'your-customClass',
         }
     ],
-    [
-        'copyright',
-        {
-            authorName: 'Rui', // 选中的文字将无法被复制
-            minLength: 30, // 如果长度超过  30 个字符
-        },
-    ],
     // 鼠标点击效果
     ['cursor-effects', {
         size: 2, // size of the particle, default: 2
         shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
-    // // 上次阅读
-    // ['last-reading', {
-    //     popupConfig: {
-    //         message: '返回上次阅读',
-    //         buttonText: 'ok'
+    // 复制代码块
+    ['@xiaopanda/vuepress-plugin-code-copy', {
+        buttonStaticIcon: true,
+        buttonIconTitle: '复制',
+        buttonAlign: 'top',
+        buttonColor: '#ffffff'
+    }],
+    // 上次阅读
+    ['last-reading', {
+        popupConfig: {
+            message: '返回上次阅读',
+            buttonText: 'ok'
+        },
+    }],
+    // 彩虹带背景
+    [
+        'ribbon',
+        {
+            size: 90, // width of the ribbon, default: 90
+            opacity: 0.8, // opacity of the ribbon, default: 0.3
+            zIndex: -1, // z-index property of the background, default: -1
+        },
+    ],
+
+    // // 音乐
+    // [
+    //     'meting',
+    //     {
+    //         meting: {
+    //             // auto:'https://music.163.com/#/my/m/music/playlist?id=2549882680',
+    //             server: 'netease',
+    //             type: 'playlist',
+    //             mid: '2549882680',
+    //         }, // 不配置该项的话不会出现全局播放器
+    //         aplayer: {
+    //             // 吸底模式
+    //             fixed: true,
+    //             mini: true,
+    //             // 自动播放
+    //             autoplay: false,
+    //             // 歌曲栏折叠
+    //             listFolded: true,
+    //             // 颜色
+    //             theme: "#ccc",
+    //             // 播放顺序为随机
+    //             order: "random",
+    //             // 初始音量
+    //             volume: 0.1,
+    //             // 关闭歌词显示
+    //             lrcType: 0,
+    //         },
+    //         mobile: {
+    //             // 手机端去掉cover图
+    //             cover: false,
+    //         },
     //     },
-    // }],
+    // ],
+
+
+    // //开启seo
+    // [
+    //     'sitemap',
+    //     {
+    //         hostname: 'https://huang-ruifang.gitee.io/vuepress-blog/'
+    //     }
+    // ],
+
     // // 只要把这个放进 config的plugins中就可以了
     // ["sakura", {
     //     num: 20,  // 默认数量
@@ -107,14 +160,9 @@ const pluginsConfig = [
     //         close: '再见'
     //     }
     // }],
-    // 复制代码块
-    ['@xiaopanda/vuepress-plugin-code-copy', {
-        buttonStaticIcon: true,
-        buttonIconTitle: '复制',
-        buttonAlign: 'top',
-        buttonColor: '#ffffff'
-    }],
-    // //复制代码vuepress-plugin-nuggets-style-copy
+
+
+// //复制代码vuepress-plugin-nuggets-style-copy
     // ["vuepress-plugin-nuggets-style-copy", {
     //     copyText: "复制代码",
     //     tip: {
@@ -175,6 +223,7 @@ const pluginsConfig = [
     //     margin: '1cm',
     //     printBackground: true
     // }]
+    // 公告栏
     // ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
     //     width: '300px', // 默认 260px
     //     title: '消息提示',
