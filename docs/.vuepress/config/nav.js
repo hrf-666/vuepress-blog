@@ -21,7 +21,7 @@ const navConfig = [
         link: '/blog-article/',
         items: [
             {
-                text: 'java',
+                text: 'Java',
                 link: '/blog-article/java/',
 
             },
@@ -85,20 +85,12 @@ const navConfig = [
                 text: '关于',
                 link: '/aboutme/'
             },
+            {
+                text: '其他',
+                link: '/other/',
+            },
         ]
     },
-    {
-        text: '其他',
-        link: '/other/',
-    },
-    // {
-    //     text: 'Languages',
-    //     items: [
-    //         { text: 'Group1', items: [/*  */] },
-    //         { text: 'Group2', items: [/*  */] }
-    //     ]
-    // }
-
 ]
 
 exports.navConfig = navConfig;
