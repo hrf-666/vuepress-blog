@@ -9,7 +9,8 @@ module.exports = {
     title: 'Rui',
     head: headConfig,
     description: '点点滴滴',
-    base: '/vuepress-blog/',
+    base: '/',
+    // base: '/vuepress-blog/',
     devServer: {
         https: true
     },

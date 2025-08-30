@@ -29,13 +29,13 @@ const pluginsConfig = [
         autoCreateIssue: true // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了
     }],
     // 作者著作权
-    [
-        'copyright',
-        {
-            authorName: 'rui', // 选中的文字将无法被复制
-            minLength: 300, // 如果长度超过  30 个字符
-        },
-    ]
+    // [
+    //     'copyright',
+    //     {
+    //         authorName: 'rui', // 选中的文字将无法被复制
+    //         minLength: 300, // 如果长度超过  30 个字符
+    //     },
+    // ]
     //图片缩放
     ['@vuepress/medium-zoom'],
     // 进度条
